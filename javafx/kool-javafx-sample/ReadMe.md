@@ -26,8 +26,8 @@ The demo should create a really simple Java application that boots up a browser,
 Here's a breakdown of the source code used to implement this:
 
 * [test.kool.myapp.MyApp.kt](https://github.com/koolio/kool/blob/master/javafx/kool-javafx-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) the actual application which interacts with the DOM using the standard [kotlin.browser](http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/browser/package-summary.html) package.
-* [io.kool.javafx.WebApplication](https://github.com/koolio/kool/tree/master/javafx/kool-javafx-sample/src/main/kotlin/io/kool/javafx/WebApplication.kt) : standard kool.io browser Application
-* [io.kool.javafx.namespace](https://github.com/koolio/kool/tree/master/javafx/kool-javafx-sample/src/main/kotlin/io/kool/javafx/Main.kt) : Java main() function launcher for the JavaFX web app
+* [io.kool.javafx.WebApplication](https://github.com/koolio/kool/tree/master/javafx/kool-javafx/src/main/kotlin/io/kool/javafx/WebApplication.kt) : standard kool.io browser Application
+* [io.kool.javafx.namespace](https://github.com/koolio/kool/tree/master/javafx/kool-javafx/src/main/kotlin/io/kool/javafx/Main.kt) : Java main() function launcher for the JavaFX web app
 
 The application code - the [myapp() function](https://github.com/koolio/kool/blob/master/javafx/kool-javafx-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) should be usable when compiled to JavaScript directly. The code in the io.kool.javafx package is only required if you want to run the application on a JVM with JavaFX.
 
