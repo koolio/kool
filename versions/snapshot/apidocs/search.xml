@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searches>
+<search>
+  <href>io/kool/stream/Cursor.html</href>
+  <name>Cursor [io.kool.stream]</name>
+  <kind>trait</kind>
+</search>
+<search>
+  <href>io/kool/stream/Handler.html</href>
+  <name>Handler [io.kool.stream]</name>
+  <kind>class</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html</href>
+  <name>NonBlockingCursor [io.kool.stream]</name>
+  <kind>trait</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingHandler.html</href>
+  <name>NonBlockingHandler [io.kool.stream]</name>
+  <kind>class</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html</href>
+  <name>SimpleStream [io.kool.stream]</name>
+  <kind>class</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html</href>
+  <name>Stream [io.kool.stream]</name>
+  <kind>class</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#a(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>a() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#abbr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>abbr() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#address(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>address() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#and(io.kool.stream.Stream)</href>
+  <name>and() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#and(io.kool.stream.Stream)</href>
+  <name>and() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#area(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>area() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#article(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>article() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#aside(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>aside() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#audio(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>audio() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#b(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>b() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#base(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>base() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#bdi(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>bdi() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#bdo(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>bdo() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#blockquote(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>blockquote() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#body()</href>
+  <name>body() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#body(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>body() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#bodyString(jet.String)</href>
+  <name>bodyString() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#br(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>br() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#button(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>button() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#canvas(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>canvas() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#caption(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>caption() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#cite(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>cite() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#clone()</href>
+  <name>clone() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#clone()</href>
+  <name>clone() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#close()</href>
+  <name>close() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#close()</href>
+  <name>close() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#code(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>code() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#col(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>col() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#colgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>colgroup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#command(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>command() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/CamelContext-extensions.html#consumerTemplate()</href>
+  <name>consumerTemplate() [org.apache.camel.CamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ModelCamelContext-extensions.html#consumerTemplate()</href>
+  <name>consumerTemplate() [org.apache.camel.model.ModelCamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#convertToType(jet.Any, java.lang.Class)</href>
+  <name>convertToType() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#copy(jet.Boolean)</href>
+  <name>copy() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#copyResultsFrom(org.apache.camel.Exchange)</href>
+  <name>copyResultsFrom() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#copyResultsPreservePatternFrom(org.apache.camel.Exchange)</href>
+  <name>copyResultsPreservePatternFrom() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#datalist(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>datalist() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#dd(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dd() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#del(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>del() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#descriptiveStatistics()</href>
+  <name>descriptiveStatistics() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#details(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>details() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#dfn(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dfn() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#distinct()</href>
+  <name>distinct() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#distinct()</href>
+  <name>distinct() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#div(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>div() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#dl(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dl() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#dt(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dt() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#element(jet.String, jet.ExtensionFunction0)</href>
+  <name>element() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#em(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>em() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#embed(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>embed() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/CamelContext-extensions.html#endpoint(jet.String)</href>
+  <name>endpoint() [org.apache.camel.CamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ModelCamelContext-extensions.html#endpoint(jet.String)</href>
+  <name>endpoint() [org.apache.camel.model.ModelCamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#equals(jet.Any)</href>
+  <name>equals() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#equals(jet.Any)</href>
+  <name>equals() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#fieldset(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>fieldset() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#figcaption(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>figcaption() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#figure(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>figure() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#filter(jet.Function1)</href>
+  <name>filter() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#filter(jet.Function1)</href>
+  <name>filter() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ChoiceDefinition-extensions.html#filter(jet.ExtensionFunction0)</href>
+  <name>filter() [org.apache.camel.model.ChoiceDefinition]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#finalize()</href>
+  <name>finalize() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#finalize()</href>
+  <name>finalize() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/util/Timer-extensions.html#fixedDelayStream(jet.Long, java.util.Date)</href>
+  <name>fixedDelayStream() [java.util.Timer]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/util/Timer-extensions.html#fixedRateStream(jet.Long, java.util.Date)</href>
+  <name>fixedRateStream() [java.util.Timer]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#followedBy(io.kool.stream.Stream)</href>
+  <name>followedBy() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#followedBy(io.kool.stream.Stream)</href>
+  <name>followedBy() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#footer(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>footer() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#form(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>form() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/RoutesDefinition-extensions.html#from(jet.String, jet.ExtensionFunction0)</href>
+  <name>from() [org.apache.camel.model.RoutesDefinition]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#geometricMean()</href>
+  <name>geometricMean() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#get(jet.String)</href>
+  <name>get() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Message-extensions.html#get(jet.String)</href>
+  <name>get() [org.apache.camel.Message]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#getClass()</href>
+  <name>getClass() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#getClass()</href>
+  <name>getClass() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/io/kool/stream/Stream-extensions.html#groupBy(jet.Function1)</href>
+  <name>groupBy() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h1(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h1() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h2(jet.String, jet.ExtensionFunction0)</href>
+  <name>h2() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h3(jet.String, jet.ExtensionFunction0)</href>
+  <name>h3() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h4(jet.String, jet.ExtensionFunction0)</href>
+  <name>h4() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#handlers</href>
+  <name>handlers [io.kool.stream.SimpleStream]</name>
+  <kind>val</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#hashCode()</href>
+  <name>hashCode() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#hashCode()</href>
+  <name>hashCode() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#head(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>head() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#header(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>header() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#hgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>hgroup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#hr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>hr() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#html(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>html() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#i(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>i() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#iframe(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>iframe() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#img(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>img() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#input(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>input() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#ins(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ins() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#isClosed()</href>
+  <name>isClosed() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#isClosed()</href>
+  <name>isClosed() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#kbd(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>kbd() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#keygen(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>keygen() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#kurtosis()</href>
+  <name>kurtosis() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#label(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>label() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#legend(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>legend() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#li(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>li() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#link(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>link() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#lookupBean(jet.String)</href>
+  <name>lookupBean() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#map(jet.Function1)</href>
+  <name>map() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#map(jet.Function1)</href>
+  <name>map() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#map(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>map() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#mark(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>mark() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#max()</href>
+  <name>max() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#mean()</href>
+  <name>mean() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#menu(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>menu() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#merge(io.kool.stream.Stream)</href>
+  <name>merge() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#merge(io.kool.stream.Stream)</href>
+  <name>merge() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#meta(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>meta() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#meter(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>meter() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#min()</href>
+  <name>min() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/CamelContext-extensions.html#mockEndpoint(jet.String)</href>
+  <name>mockEndpoint() [org.apache.camel.CamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ModelCamelContext-extensions.html#mockEndpoint(jet.String)</href>
+  <name>mockEndpoint() [org.apache.camel.model.ModelCamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#nav(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>nav() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#newInstance(java.lang.Class)</href>
+  <name>newInstance() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#noscript(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>noscript() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#notify()</href>
+  <name>notify() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#notify()</href>
+  <name>notify() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#notifyAll()</href>
+  <name>notifyAll() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#notifyAll()</href>
+  <name>notifyAll() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#objectElement(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>objectElement() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingHandler.html#offerNext(T)</href>
+  <name>offerNext() [io.kool.stream.NonBlockingHandler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#ol(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ol() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Handler.html#onComplete()</href>
+  <name>onComplete() [io.kool.stream.Handler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingHandler.html#onComplete()</href>
+  <name>onComplete() [io.kool.stream.NonBlockingHandler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#onComplete()</href>
+  <name>onComplete() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Handler.html#onError(jet.Throwable)</href>
+  <name>onError() [io.kool.stream.Handler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingHandler.html#onError(jet.Throwable)</href>
+  <name>onError() [io.kool.stream.NonBlockingHandler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#onError(jet.Throwable)</href>
+  <name>onError() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Handler.html#onNext(T)</href>
+  <name>onNext() [io.kool.stream.Handler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#onNext(T)</href>
+  <name>onNext() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Handler.html#onOpen(io.kool.stream.Cursor)</href>
+  <name>onOpen() [io.kool.stream.Handler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingHandler.html#onOpen(io.kool.stream.NonBlockingCursor)</href>
+  <name>onOpen() [io.kool.stream.NonBlockingHandler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#open(io.kool.stream.Handler)</href>
+  <name>open() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#open(io.kool.stream.Handler)</href>
+  <name>open() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#openDelegate(io.kool.stream.Stream, io.kool.stream.Handler)</href>
+  <name>openDelegate() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#openDelegate(io.kool.stream.Stream, io.kool.stream.Handler)</href>
+  <name>openDelegate() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#openNonBlockingCursor(jet.Function1)</href>
+  <name>openNonBlockingCursor() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#openNonBlockingCursor(jet.Function1)</href>
+  <name>openNonBlockingCursor() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#optgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>optgroup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#option(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>option() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ChoiceDefinition-extensions.html#otherwise(jet.ExtensionFunction0)</href>
+  <name>otherwise() [org.apache.camel.model.ChoiceDefinition]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#output(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>output() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#p(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>p() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#param(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>param() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#percentile(jet.Double)</href>
+  <name>percentile() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#pre(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>pre() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/CamelContext-extensions.html#producerTemplate()</href>
+  <name>producerTemplate() [org.apache.camel.CamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ModelCamelContext-extensions.html#producerTemplate()</href>
+  <name>producerTemplate() [org.apache.camel.model.ModelCamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#progress(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>progress() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#q(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>q() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#render(java.lang.Appendable)</href>
+  <name>render() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/io/kool/template/Template-extensions.html#renderTo(java.io.File)</href>
+  <name>renderTo() [io.kool.template.Template]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#requireConvertToType(jet.Any, java.lang.Class)</href>
+  <name>requireConvertToType() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/RoutesDefinition-extensions.html#route(jet.ExtensionFunction0)</href>
+  <name>route() [org.apache.camel.model.RoutesDefinition]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/CamelContext-extensions.html#routes(jet.ExtensionFunction0)</href>
+  <name>routes() [org.apache.camel.CamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ModelCamelContext-extensions.html#routes(jet.ExtensionFunction0)</href>
+  <name>routes() [org.apache.camel.model.ModelCamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#rp(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>rp() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#rt(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>rt() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#ruby(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ruby() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#s(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>s() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#samp(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>samp() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/util/concurrent/ScheduledExecutorService-extensions.html#scheduleAtFixedRateStream(jet.Long, jet.Long, java.util.concurrent.TimeUnit)</href>
+  <name>scheduleAtFixedRateStream() [java.util.concurrent.ScheduledExecutorService]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/util/Timer-extensions.html#scheduleStream(java.util.Date)</href>
+  <name>scheduleStream() [java.util.Timer]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/util/concurrent/ScheduledExecutorService-extensions.html#scheduleStream(jet.Long, java.util.concurrent.TimeUnit)</href>
+  <name>scheduleStream() [java.util.concurrent.ScheduledExecutorService]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/util/concurrent/ScheduledExecutorService-extensions.html#scheduleWithFixedDelayStream(jet.Long, jet.Long, java.util.concurrent.TimeUnit)</href>
+  <name>scheduleWithFixedDelayStream() [java.util.concurrent.ScheduledExecutorService]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#script(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>script() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#section(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>section() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#select(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>select() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/io/kool/stream/Stream-extensions.html#sendTo(org.apache.camel.Endpoint)</href>
+  <name>sendTo() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/FilterDefinition-extensions.html#sendTo(jet.String)</href>
+  <name>sendTo() [org.apache.camel.model.FilterDefinition]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#set(jet.String, jet.Any)</href>
+  <name>set() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Message-extensions.html#set(jet.String, jet.Any)</href>
+  <name>set() [org.apache.camel.Message]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#skewness()</href>
+  <name>skewness() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#small(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>small() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#source(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>source() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#span(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>span() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#standardDeviation()</href>
+  <name>standardDeviation() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#strong(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>strong() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#style(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>style() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#sub(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>sub() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#sum()</href>
+  <name>sum() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#sumSquares()</href>
+  <name>sumSquares() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#summary(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>summary() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#sup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>sup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#table(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>table() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#take(jet.Int)</href>
+  <name>take() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#take(jet.Int)</href>
+  <name>take() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#takeWhile(jet.Function1)</href>
+  <name>takeWhile() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#takeWhile(jet.Function1)</href>
+  <name>takeWhile() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#tbody(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>tbody() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#td(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>td() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#textElement(jet.String, jet.String, jet.ExtensionFunction0)</href>
+  <name>textElement() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#textarea(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>textarea() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#tfoot(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>tfoot() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#th(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>th() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#thead(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>thead() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#time(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>time() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#timeWindow(jet.Long)</href>
+  <name>timeWindow() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#timeWindow(jet.Long)</href>
+  <name>timeWindow() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#title(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>title() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Endpoint-extensions.html#toExchangeStream()</href>
+  <name>toExchangeStream() [org.apache.camel.Endpoint]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/io/kool/stream/Cursor-extensions.html#toNonBlockingCursorCursor()</href>
+  <name>toNonBlockingCursorCursor() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/java/lang/Iterable-extensions.html#toStream(java.util.concurrent.Executor)</href>
+  <name>toStream() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Endpoint-extensions.html#toStream()</href>
+  <name>toStream() [org.apache.camel.Endpoint]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/Endpoint-extensions.html#toStreamOf(java.lang.Class)</href>
+  <name>toStreamOf() [org.apache.camel.Endpoint]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#toString()</href>
+  <name>toString() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#toString()</href>
+  <name>toString() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/io/kool/stream/Handler-extensions.html#toTimerRunnable()</href>
+  <name>toTimerRunnable() [io.kool.stream.Handler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/io/kool/stream/Handler-extensions.html#toTimerTask()</href>
+  <name>toTimerTask() [io.kool.stream.Handler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#tr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>tr() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#track(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>track() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#u(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>u() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#ul(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ul() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/camel/org/apache/camel/model/ModelCamelContext-extensions.html#use(jet.ExtensionFunction0)</href>
+  <name>use() [org.apache.camel.model.ModelCamelContext]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#varElement(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>varElement() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/math/java/lang/Iterable-extensions.html#variance()</href>
+  <name>variance() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#video(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>video() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Cursor.html#wait()</href>
+  <name>wait() [io.kool.stream.Cursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#wait()</href>
+  <name>wait() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/NonBlockingCursor.html#wakeup()</href>
+  <name>wakeup() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#wbr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>wbr() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/SimpleStream.html#window(jet.Int)</href>
+  <name>window() [io.kool.stream.SimpleStream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/stream/Stream.html#window(jet.Int)</href>
+  <name>window() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+</searches>

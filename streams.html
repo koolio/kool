@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>kool.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://kool.io/">kool.io</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="http://kool.io/">Home</a></li>
+              <li><a href="versions/snapshot/apidocs/index.html">API</a></li>
+              <li><a href="https://github.com/koolio/kool">Source</a></li>
+              <li><a href="https://groups.google.com/d/forum/kool_io">Forum</a></li>
+              <li><a href="http://twitter.com/#!/kool_io">@kool_io</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+<h2>Kool Streams</h2><p><strong>Kool Streams</strong> is a simple framework for working with aynchronous events and collections. Kool Streams are inspired by a combination of the <a href="http://msdn.microsoft.com/en-us/data/gg577609">Reactive Extensions (Rx)</a>, <a href="http://okmij.org/ftp/Streams.html">Iteratees</a> and various other similar approaches to dealing with concurrency.</p><h3>Why Kool Stream?</h3><p>Kool Streams provide a form of asynchronous collection or <strong>Event Stream</strong> that can be <a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/CollectionTest.kt#L15">composed and processed</a> like regular <a href="http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/java/util/Collection-extensions.html">collections</a> using the same kind of combinator API folks are familiar with (<a href="http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/java/util/Collection-extensions.html#filter(jet.Function1)">filter()</a>, <a href="http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/java/util/Collection-extensions.html#flatMap(jet.Function1)">flatMap()</a>, <a href="http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/java/util/Collection-extensions.html#map(jet.Function1)">map()</a>, <a href="http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/java/util/Collection-extensions.html#fold(T, jet.Function2)">fold()</a> etc) but done asynchronously to deal with time delay, network communication, to use threads efficiently and avoid blocking.</p><h3>API Overview</h3>
+<ul>
+  <li><a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html">Stream<T></a> represents a stream of asynchronous events. Its like an asynchronous collection, where events are pushed into a <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html">Handler<T></a> rather than pulled via an iterator.</li>
+  <li><a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html">Handler<T></a> is used to process the events from a stream, through you can just pass a function to handle each next event instead</li>
+</ul><p>A <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html">Stream<T></a> is then opened via the <strong>open()</strong> method either passing in a handler in <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#open(io.kool.stream.Handler)">open(Handler<T>)</a> or by passing in a function to handle even next event via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#open(jet.Function1)">open(fn: (T) -&gt; Unit)</a>.</p><p>When you <strong>open()</strong> a <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html">Stream<T></a> you get back a <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Cursor.html">Cursor</a> which can be used to close the stream.</p><h3>Stream contract</h3><p>A <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html">Stream<T></a> must only invoke a <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html">Handler<T></a> from one thread at once; so a handler does not need to worry about being thread safe.</p><p>The lifecycle of events from a <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html">Handler<T></a> perspective is a stream will invoke</p>
+<ul>
+  <li><a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html#onOpen(io.kool.stream.Cursor)">onOpen(Cursor)</a> once before any other events</li>
+  <li><a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html#onNext(T)">onNext(T)</a> zero to many times for each event on the stream after opening</li>
+  <li><a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html#onError(jet.Throwable)">onError(Throwable)</a> on errors</li>
+  <li><a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Handler.html#onComplete()">onComplete()</a> when its completed</li>
+</ul><p>This means that a Handler can choose to close a stream if it knows it has finished processing it. For example if you can use <a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/TakeTest.kt#L14">take(n)</a> to limit the size of a stream.</p><h3>Examples</h3><p>Create event streams from various things:</p>
+<ul>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/CollectionTest.kt#L10">java.util.Collection</a></li>
+  <li>bean event listeners (TODO :)</li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/TimerTest.kt#L14">java.util.Timer</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/java/util/Timer-extensions.html">extension functions</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/ScheduledExecutorServiceTest.kt#L17">java.util.concurrent.ScheduledExecutorService</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/java/util/concurrent/ScheduledExecutorService-extensions.html">extension functions</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/SimpleStreamTest.kt#L15">SimpleStream</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/EndpointConsumeTest.kt#L27">Apache Camel Endpoints</a> via extension functions on <a href="http://kool.io/versions/snapshot/apidocs/io/kool/camel/org/apache/camel/Endpoint-extensions.html">Endpoint</a></li>
+</ul><p>Combine streams with Collection-style combinators</p>
+<ul>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/CollectionTest.kt#L15">filter and map values</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#filter(jet.Function1)">filter()</a> and <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#map(jet.Function1)">map()</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/DistinctTest.kt#L14">filter distinct values</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#distinct()">distinct()</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/TakeTest.kt#L14">take a specific amount of events</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#take(jet.Int)">take(n)</a> or <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#takeWhile(jet.Function1)">takeWhile(predicate)</a></li>
+</ul><p>Using windows of events for <em>complex event processing</em> types of things</p>
+<ul>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/WindowTest.kt#L21">create a moving fixed window of events</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#window(jet.Int)">window(size)</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-stream/src/test/kotlin/test/kool/stream/TimeWindowTest.kt#L22">create a moving time window of events</a> via <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html#timeWindow(jet.Long)">timeWindow(millis)</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-math/src/test/kotlin/test/kool/math/GroupByTest.kt#L11">group events in a window</a> using <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/io/kool/stream/Stream-extensions.html#groupBy(jet.Function1)">groupBy(keyFunction)</a></li>
+</ul><p>Finally you can pipe the events from a Stream <a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/EndpointProduceTest.kt#L33">to any Apache Camel Endpoint</a></p>
+      <hr>
+
+      <footer>
+        <p>&copy; original authors 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

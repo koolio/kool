@@ -55,34 +55,11 @@
     </div>
 
     <div class="container">
-<div class="hero-unit" xmlns="http://www.w3.org/1999/html">
-<h1>kool.io</h1>
-
-<p>a <a href="http://jetbrains.github.com/kotlin/">kotlin</a> based framework for building real time web applications</p>
-
-<hr>
-
-<div class="row">
-
-    <table cellpadding="20">
-        <tr>
-            <td>
-                <a class="btn" href="http://kool.io/camel.html" title="Powerful typesafe DSL for Apache Camel">Kool Camel &raquo;</a>
-            </td>
-            <td>
-                <a class="btn" href="http://kool.io/streams.html" title="Powerful event processing DSL">Kool Streams &raquo;</a>
-            </td>
-            <td>
-                <a class="btn" href="http://kool.io/templates.html" title="Typesafe DSL for templating which can work on the client or server">Kool Templates &raquo;</a>
-            </td>
-            <td>
-                <a class="btn" href="versions/snapshot/apidocs/index.html">API &raquo;</a>
-            </td>
-        </tr>
-    </table>
-
-</div>
-</div>
+<h2>Kool Templates</h2><p><strong>Kool Templates</strong> generate HTML5 markup as a DOM using a simple statically typed template language written in <a href="http://jetbrains.github.com/kotlin/">Kotlin</a>.</p><p>The DSL is generated from the <a href="http://dev.w3.org/html5/spec/section-index.html">HTML5 specification</a> so that we can ensure that all the elements and attributes in the HTML specification are reflected in the <a href="http://kool.io/versions/snapshot/apidocs/io/kool/template/html/org/w3c/dom/Node-extensions.html">typesafe DSL</a>. You can still use strings for element and attribute names if you need to stray outside of the HTML5 specification; but for the cases where you want to stay inside HTML5 the DSL catches your typos.</p><p>Kool Templates are designed so that they can be used on the client side inside a web browser or used on the server side in a Servlet / JAXRS application. For example there is an example of using <a href="https://github.com/koolio/kool/tree/master/kool-javafx">Kool Templates in a web browser inside JavaFX</a>.</p><p>Using Kool Templates its easy to create an entire page or DOM fragment from any function or class.</p><p>However longer term we hope to allow active views to be created that automatically keep the DOM view updated as the underlying model changes using <a href="https://github.com/koolio/kool/blob/master/kool-stream/ReadMe.md">Kool Streams</a> to monitor your domain model or external events and update the correct parts of your view automatically.</p><h3>Examples</h3><p>The easiest way to get started is to check out an example:</p>
+<ul>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-template/src/test/kotlin/test/kool/template/html/HtmlTemplateTest.kt#L12">simple HTML5 example</a></li>
+  <li><a href="https://github.com/koolio/kool/tree/master/kool-javafx">using a Kool Template in a browser with JavaFX</a>.</li>
+</ul>
       <hr>
 
       <footer>

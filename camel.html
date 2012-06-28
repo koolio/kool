@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>kool.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://kool.io/">kool.io</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="http://kool.io/">Home</a></li>
+              <li><a href="versions/snapshot/apidocs/index.html">API</a></li>
+              <li><a href="https://github.com/koolio/kool">Source</a></li>
+              <li><a href="https://groups.google.com/d/forum/kool_io">Forum</a></li>
+              <li><a href="http://twitter.com/#!/kool_io">@kool_io</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+<h2>Kool Camel</h2><p><strong>Kool Camel</strong> provides a <a href="http://jetbrains.github.com/kotlin/">kotlin</a> based DSL for <a href="http://camel.apache.org/">Apache Camel</a> which is a powerful extension to the Java DSL with Kool Expressions together with adding integration with <a href="http://kool.io/streams.html">Kool Streams</a> to provide a typesafe Camel Integration and Event Processing DSL.</p><h3>Kool Expressions</h3><p>The power of the Kool Camel DSL comes from the use of Kool Expressions. These are anonymous function blocks<br/>used wherever you can use Camel Expression in the Java DSL. The function blocks take an implicit Camel <a href="http://camel.apache.org/maven/current/camel-core/apidocs/org/apache/camel/Exchange.html">Exchange</a> object which lets you immediately refer to any of the existing <a href="http://camel.apache.org/maven/current/camel-core/apidocs/org/apache/camel/Exchange.html">exchange methods</a> together with the <a href="http://kool.io/versions/snapshot/apidocs/io/kool/camel/org/apache/camel/Exchange-extensions.html">extension methods on Exchange</a> without requiring extra noise like a &lsquo;_&rsquo; expression in Scala, an &lsquo;it&rsquo; variable in Groovy or a named parameter declaration and variable in Java 8 lambdas which keeps the DSL nice and DRY.</p><p>For example you can refer to the <strong>input</strong> property to get the inbound <a href="http://camel.apache.org/maven/current/camel-core/apidocs/org/apache/camel/Message.html">Message</a> or <strong>out</strong> for the outbound message and refer to headers or properties using the <a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/TransformAndSetHeaderTest.kt#L14">subscript operators</a></p><h3>Kool Camel DSL examples</h3><p>Here are various example patterns using the Kool Camel DSL to show you how DRY it is while still being very easy to read (even if you&rsquo;ve never used kotlin before) and how Kool Expressions are integrated into the entire Java DSL:</p>
+<ul>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/FilterThenTest.kt#L12">message filter</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/ChoiceTest.kt#L15">content based router</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/TransformTest.kt#L12">message translator</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/TransformAndSetHeaderTest.kt#L12">message translator and setting headers in the same block</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/RecipientListTest.kt#L9">recipient list</a></li>
+  <li><a href="https://github.com/koolio/kool/blob/master/kool-camel/src/test/kotlin/test/kool/camel/ProcessTest.kt#L12">process block</a></li>
+</ul><h3>Camel and Kool Streams</h3><p>Kool Camel allows you to turn any Camel <a href="http://camel.apache.org/maven/current/camel-core/apidocs/org/apache/camel/Endpoint.html">Endpoint</a> into a <a href="http://kool.io/versions/snapshot/apidocs/io/kool/stream/Stream.html">Stream&lt;T&gt;</a> using a number of <a href="http://kool.io/versions/snapshot/apidocs/io/kool/camel/org/apache/camel/Endpoint-extensions.html">helper methods on the Camel Endpoint</a> class. Once you have a typesafe Stream&lt;T&gt; you can then compose event processing steps (filtering, transforming, grouping, buffering, windowing, merging, correlating etc) with <a href="http://kool.io/streams.html">Kool Streams</a> to perform powerful complex event processing.</p><p>On the flip side, you can easily send events on a <a href="http://kool.io/streams.html">Kool Stream</a> to any Camel <a href="http://camel.apache.org/maven/current/camel-core/apidocs/org/apache/camel/Endpoint.html">Endpoint</a> using the <a href="http://kool.io/versions/snapshot/apidocs/io/kool/camel/io/kool/stream/Stream-extensions.html#to(org.apache.camel.Endpoint)">to(Endpoint)</a> extension method.</p><p>This allows us to easily compose any <a href="http://kool.io/streams.html">Kool Streams</a> and Camel Endpoints and Routes together to combine powerful integration and complex event processing capabilities into a single simple type safe DSL that works directly on your domain model and generates fast statically typed java bytecode without the need for reflection or dynamic invocation.</p><p>While the Kool Camel and Stream DSLs are Kotlin based; they obviously can easily work with any JVM code for domain models, functions and services; so its easy to reuse Kool Camel routes and Streams from Java, Scala, Groovy, JavaScript, JRuby in addition to the Kotlin language.</p><h3>IDE support</h3><p>If you&rsquo;ve not tried Kotlin yet, try the <a href="http://confluence.jetbrains.net/display/Kotlin/Getting+Started">Getting Started Guide</a> to install the IDE plugin.</p>
+      <hr>
+
+      <footer>
+        <p>&copy; original authors 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

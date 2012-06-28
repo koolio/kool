@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><title>NonBlockingCursor.kt xref</title><link rel='stylesheet' type='text/css' href='highlight.css'></link></head><body><table style='white-space: pre; font-size: 10pt; font-family: Monaco, monospace'><tr><td style='margin-right: 1.5em; text-align: right'><a href='#1' name='1'>1</a>
+<a href='#2' name='2'>2</a>
+<a href='#3' name='3'>3</a>
+<a href='#4' name='4'>4</a>
+<a href='#5' name='5'>5</a>
+<a href='#6' name='6'>6</a>
+<a href='#7' name='7'>7</a>
+<a href='#8' name='8'>8</a>
+<a href='#9' name='9'>9</a>
+<a href='#10' name='10'>10</a>
+<a href='#11' name='11'>11</a>
+<a href='#12' name='12'>12</a>
+<a href='#13' name='13'>13</a>
+<a href='#14' name='14'>14</a>
+</td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span>
+
+</span><span class='hl-comment'>/**
+ * A [[Cursor]] which can woken up by a [[NonBlockingHandler]]
+ * to resume event delivery.
+ */</span><span>
+</span><span class='public'>public</span><span> </span><span class='hl-keyword'>trait</span><span> </span><span class='IDENTIFIER'>NonBlockingCursor</span><span> </span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Cursor</span><span> </span><span class='LBRACE'>{</span><span>
+
+    </span><span class='hl-comment'>/**
+     * Wakes up the cursor so that it continues to raise events.  A cursor usually
+     * goes into a sleep state if the NonBlockingHandler cannot accept another event.
+     */</span><span>
+    </span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>wakeup</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Unit</span><span>
+</span><span class='RBRACE'>}</span></td></tr></table></body></html>
