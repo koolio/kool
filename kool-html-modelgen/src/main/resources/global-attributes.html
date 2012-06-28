@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en-US-x-Hixie"><head><title>3.2.3 Global attributes &#8212; HTML5</title><link rel="stylesheet" href="alert.css"><style type="text/css">
+   pre { margin-left: 2em; white-space: pre-wrap; }
+   h2 { margin: 3em 0 1em 0; }
+   h3 { margin: 2.5em 0 1em 0; }
+   h4 { margin: 2.5em 0 0.75em 0; }
+   h5, h6 { margin: 2.5em 0 1em; }
+   h1 + h2, h1 + h2 + h2 { margin: 0.75em 0 0.75em; }
+   h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: 0.5em; }
+   p { margin: 1em 0; }
+   hr:not(.top) { display: block; background: none; border: none; padding: 0; margin: 2em 0; height: auto; }
+   dl, dd { margin-top: 0; margin-bottom: 0; }
+   dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+   dt + dt { margin-top: 0; }
+   dd dt { margin-top: 0.25em; margin-bottom: 0; }
+   dd p { margin-top: 0; }
+   dd dl + p { margin-top: 1em; }
+   dd table + p { margin-top: 1em; }
+   p + * > li, dd li { margin: 1em 0; }
+   dt, dfn { font-weight: bold; font-style: normal; }
+   i, em { font-style: italic; }
+   dt dfn { font-style: italic; }
+   pre, code { font-size: inherit; font-family: monospace; font-variant: normal; }
+   pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+   pre em { font-weight: bolder; font-style: normal; }
+   @media screen { code { color: orangered; } code :link, code :visited { color: inherit; } }
+   var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+   table { border-collapse: collapse; border-style: hidden hidden none hidden; }
+   table thead, table tbody { border-bottom: solid; }
+   table tbody th:first-child { border-left: solid; }
+   table tbody th { text-align: left; }
+   table td, table th { border-left: solid; border-right: solid; border-bottom: solid thin; vertical-align: top; padding: 0.2em; }
+   blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+
+   .bad, .bad *:not(.XXX) { color: gray; border-color: gray; background: transparent; }
+   .matrix, .matrix td { border: none; text-align: right; }
+   .matrix { margin-left: 2em; }
+   .dice-example { border-collapse: collapse; border-style: hidden solid solid hidden; border-width: thin; margin-left: 3em; }
+   .dice-example caption { width: 30em; font-size: smaller; font-style: italic; padding: 0.75em 0; text-align: left; }
+   .dice-example td, .dice-example th { border: solid thin; width: 1.35em; height: 1.05em; text-align: center; padding: 0; }
+
+   .toc dfn, h1 dfn, h2 dfn, h3 dfn, h4 dfn, h5 dfn, h6 dfn { font: inherit; }
+   img.extra, p.overview { float: right; }
+   pre.idl { border: solid thin; background: #EEEEEE; color: black; padding: 0.5em 1em; position: relative; }
+   pre.idl :link, pre.idl :visited { color: inherit; background: transparent; }
+   pre.idl::before { content: "IDL"; font: bold small sans-serif; padding: 0.5em; background: white; position: absolute; top: 0; margin: -1px 0 0 -4em; width: 1.5em; border: thin solid; border-radius: 0 0 0 0.5em }
+   pre.css { border: solid thin; background: #FFFFEE; color: black; padding: 0.5em 1em; }
+   pre.css:first-line { color: #AAAA50; }
+   dl.domintro { color: green; margin: 2em 0 2em 2em; padding: 0.5em 1em; border: none; background: #DDFFDD; }
+   hr + dl.domintro, div.impl + dl.domintro { margin-top: 2.5em; margin-bottom: 1.5em; }
+   dl.domintro dt, dl.domintro dt * { color: black; text-decoration: none; }
+   dl.domintro dd { margin: 0.5em 0 1em 2em; padding: 0; }
+   dl.domintro dd p { margin: 0.5em 0; }
+   dl.domintro:before { display: table; margin: -1em -0.5em -0.5em auto; width: auto; content: 'This box is non-normative. Implementation requirements are given below this box.'; color: black; font-style: italic; border: solid 2px; background: white; padding: 0 0.25em; }
+   dl.switch { padding-left: 2em; }
+   dl.switch > dt { text-indent: -1.5em; }
+   dl.switch > dt:before { content: '\21AA'; padding: 0 0.5em 0 0; display: inline-block; width: 1em; text-align: right; line-height: 0.5em; }
+   dl.triple { padding: 0 0 0 1em; }
+   dl.triple dt, dl.triple dd { margin: 0; display: inline }
+   dl.triple dt:after { content: ':'; }
+   dl.triple dd:after { content: '\A'; white-space: pre; }
+   .diff-old { text-decoration: line-through; color: silver; background: transparent; }
+   .diff-chg, .diff-new { text-decoration: underline; color: green; background: transparent; }
+   a .diff-new { border-bottom: 1px blue solid; }
+
+   h2 { page-break-before: always; }
+   h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+   h1 + h2, hr + h2.no-toc { page-break-before: auto; }
+
+   p  > span:not([title=""]):not([class="XXX"]):not([class="impl"]):not([class="note"]),
+   li > span:not([title=""]):not([class="XXX"]):not([class="impl"]):not([class="note"]), { border-bottom: solid #9999CC; }
+
+   div.head { margin: 0 0 1em; padding: 1em 0 0 0; }
+   div.head p { margin: 0; }
+   div.head h1 { margin: 0; }
+   div.head .logo { float: right; margin: 0 1em; }
+   div.head .logo img { border: none } /* remove border from top image */
+   div.head dl { margin: 1em 0; }
+   div.head p.copyright, div.head p.alt { font-size: x-small; font-style: oblique; margin: 0; }
+
+   body > .toc > li { margin-top: 1em; margin-bottom: 1em; }
+   body > .toc.brief > li { margin-top: 0.35em; margin-bottom: 0.35em; }
+   body > .toc > li > * { margin-bottom: 0.5em; }
+   body > .toc > li > * > li > * { margin-bottom: 0.25em; }
+   .toc, .toc li { list-style: none; }
+
+   .brief { margin-top: 1em; margin-bottom: 1em; line-height: 1.1; }
+   .brief li { margin: 0; padding: 0; }
+   .brief li p { margin: 0; padding: 0; }
+
+   .category-list { margin-top: -0.75em; margin-bottom: 1em; line-height: 1.5; }
+   .category-list::before { content: '\21D2\A0'; font-size: 1.2em; font-weight: 900; }
+   .category-list li { display: inline; }
+   .category-list li:not(:last-child)::after { content: ', '; }
+   .category-list li > span, .category-list li > a { text-transform: lowercase; }
+   .category-list li * { text-transform: none; } /* don't affect <code> nested in <a> */
+
+   .XXX { color: #E50000; background: white; border: solid red; padding: 0.5em; margin: 1em 0; }
+   .XXX > :first-child { margin-top: 0; }
+   p .XXX { line-height: 3em; }
+   .annotation { border: solid thin black; background: #0C479D; color: white; position: relative; margin: 8px 0 20px 0; }
+   .annotation:before { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin: 6px -6px -6px 6px; background: #333333; z-index: -1; content: ''; }
+   .annotation :link, .annotation :visited { color: inherit; }
+   .annotation :link:hover, .annotation :visited:hover { background: transparent; }
+   .annotation span { border: none ! important; }
+   .note { color: green; background: transparent; font-family: sans-serif; }
+   .warning { color: red; background: transparent; }
+   .note, .warning { font-weight: bolder; font-style: italic; }
+   .note em, .warning em, .note i, .warning i { font-style: normal; }
+   p.note, div.note { padding: 0.5em 2em; }
+   span.note { padding: 0 2em; }
+   .note p:first-child, .warning p:first-child { margin-top: 0; }
+   .note p:last-child, .warning p:last-child { margin-bottom: 0; }
+   .warning:before { font-style: normal; }
+   p.note:before { content: 'Note: '; }
+   p.warning:before { content: '\26A0 Warning! '; }
+
+   .bookkeeping:before { display: block; content: 'Bookkeeping details'; font-weight: bolder; font-style: italic; }
+   .bookkeeping { font-size: 0.8em; margin: 2em 0; }
+   .bookkeeping p { margin: 0.5em 2em; display: list-item; list-style: square; }
+   .bookkeeping dt { margin: 0.5em 2em 0; }
+   .bookkeeping dd { margin: 0 3em 0.5em; }
+
+   h4 { position: relative; z-index: 3; }
+   h4 + .element, h4 + div + .element { margin-top: -2.5em; padding-top: 2em; }
+   .element {
+     background: #EEEEFF;
+     color: black;
+     margin: 0 0 1em 0.15em;
+     padding: 0 1em 0.25em 0.75em;
+     border-left: solid #9999FF 0.25em;
+     position: relative;
+     z-index: 1;
+   }
+   .element:before {
+     position: absolute;
+     z-index: 2;
+     top: 0;
+     left: -1.15em;
+     height: 2em;
+     width: 0.9em;
+     background: #EEEEFF;
+     content: ' ';
+     border-style: none none solid solid;
+     border-color: #9999FF;
+     border-width: 0.25em;
+   }
+
+   .example { display: block; color: #222222; background: #FCFCFC; border-left: double; margin-left: 2em; padding-left: 1em; }
+   td > .example:only-child { margin: 0 0 0 0.1em; }
+
+   ul.domTree, ul.domTree ul { padding: 0 0 0 1em; margin: 0; }
+   ul.domTree li { padding: 0; margin: 0; list-style: none; position: relative; }
+   ul.domTree li li { list-style: none; }
+   ul.domTree li:first-child::before { position: absolute; top: 0; height: 0.6em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
+   ul.domTree li:not(:last-child)::after { position: absolute; top: 0; bottom: -0.6em; left: -0.75em; width: 0.5em; border-style: none none solid solid; content: ''; border-width: 0.1em; }
+   ul.domTree span { font-style: italic; font-family: serif; }
+   ul.domTree .t1 code { color: purple; font-weight: bold; }
+   ul.domTree .t2 { font-style: normal; font-family: monospace; }
+   ul.domTree .t2 .name { color: black; font-weight: bold; }
+   ul.domTree .t2 .value { color: blue; font-weight: normal; }
+   ul.domTree .t3 code, .domTree .t4 code, .domTree .t5 code { color: gray; }
+   ul.domTree .t7 code, .domTree .t8 code { color: green; }
+   ul.domTree .t10 code { color: teal; }
+
+   body.dfnEnabled dfn { cursor: pointer; }
+   .dfnPanel {
+     display: inline;
+     position: absolute;
+     z-index: 10;
+     height: auto;
+     width: auto;
+     padding: 0.5em 0.75em;
+     font: small sans-serif, Droid Sans Fallback;
+     background: #DDDDDD;
+     color: black;
+     border: outset 0.2em;
+   }
+   .dfnPanel * { margin: 0; padding: 0; font: inherit; text-indent: 0; }
+   .dfnPanel :link, .dfnPanel :visited { color: black; }
+   .dfnPanel p { font-weight: bolder; }
+   .dfnPanel * + p { margin-top: 0.25em; }
+   .dfnPanel li { list-style-position: inside; }
+
+   #configUI { position: absolute; z-index: 20; top: 10em; right: 1em; width: 11em; font-size: small; }
+   #configUI p { margin: 0.5em 0; padding: 0.3em; background: #EEEEEE; color: black; border: inset thin; }
+   #configUI p label { display: block; }
+   #configUI #updateUI, #configUI .loginUI { text-align: center; }
+   #configUI input[type=button] { display: block; margin: auto; }
+
+   fieldset { margin: 1em; padding: 0.5em 1em; }
+   fieldset > legend + * { margin-top: 0; }
+   fieldset > :last-child { margin-bottom: 0; }
+   fieldset p { margin: 0.5em 0; }
+
+   .stability {
+     position: fixed;
+     bottom: 0;
+     left: 0; right: 0;
+     margin: 0 auto 0 auto;
+     width: 50%;
+     background: maroon; color: yellow;
+     -webkit-border-radius: 1em 1em 0 0;
+     -moz-border-radius: 1em 1em 0 0;
+     border-radius: 1em 1em 0 0;
+     -moz-box-shadow: 0 0 1em #500;
+     -webkit-box-shadow: 0 0 1em #500;
+     box-shadow: 0 0 1em red;
+     padding: 0.5em 1em;
+     text-align: center;
+   }
+   .stability strong {
+     display: block;
+   }
+   .stability input {
+     appearance: none; margin: 0; border: 0; padding: 0.25em 0.5em; background: transparent; color: black;
+     position: absolute; top: -0.5em; right: 0; font: 1.25em sans-serif; text-align: center;
+   }
+   .stability input:hover {
+     color: white;
+     text-shadow: 0 0 2px black;
+   }
+   .stability input:active {
+     padding: 0.3em 0.45em 0.2em 0.55em;
+   }
+   .stability :link, .stability :visited,
+   .stability :link:hover, .stability :visited:hover {
+     background: transparent;
+     color: white;
+   }
+
+  </style><link href="http://www.w3.org/StyleSheets/TR/W3C-WD" rel="stylesheet" type="text/css"><meta content="noindex" name="robots"><style type="text/css">
+
+   .applies thead th > * { display: block; }
+   .applies thead code { display: block; }
+   .applies tbody th { whitespace: nowrap; }
+   .applies td { text-align: center; }
+   .applies .yes { background: yellow; }
+
+   .matrix, .matrix td { border: hidden; text-align: right; }
+   .matrix { margin-left: 2em; }
+
+   .dice-example { border-collapse: collapse; border-style: hidden solid solid hidden; border-width: thin; margin-left: 3em; }
+   .dice-example caption { width: 30em; font-size: smaller; font-style: italic; padding: 0.75em 0; text-align: left; }
+   .dice-example td, .dice-example th { border: solid thin; width: 1.35em; height: 1.05em; text-align: center; padding: 0; }
+
+   td.eg { border-width: thin; text-align: center; }
+
+   #table-example-1 { border: solid thin; border-collapse: collapse; margin-left: 3em; }
+   #table-example-1 * { font-family: "Essays1743", serif; line-height: 1.01em; }
+   #table-example-1 caption { padding-bottom: 0.5em; }
+   #table-example-1 thead, #table-example-1 tbody { border: none; }
+   #table-example-1 th, #table-example-1 td { border: solid thin; }
+   #table-example-1 th { font-weight: normal; }
+   #table-example-1 td { border-style: none solid; vertical-align: top; }
+   #table-example-1 th { padding: 0.5em; vertical-align: middle; text-align: center; }
+   #table-example-1 tbody tr:first-child td { padding-top: 0.5em; }
+   #table-example-1 tbody tr:last-child td { padding-bottom: 1.5em; }
+   #table-example-1 tbody td:first-child { padding-left: 2.5em; padding-right: 0; width: 9em; }
+   #table-example-1 tbody td:first-child::after { content: leader(". "); }
+   #table-example-1 tbody td { padding-left: 2em; padding-right: 2em; }
+   #table-example-1 tbody td:first-child + td { width: 10em; }
+   #table-example-1 tbody td:first-child + td ~ td { width: 2.5em; }
+   #table-example-1 tbody td:first-child + td + td + td ~ td { width: 1.25em; }
+
+   .apple-table-examples { border: none; border-collapse: separate; border-spacing: 1.5em 0em; width: 40em; margin-left: 3em; }
+   .apple-table-examples * { font-family: "Times", serif; }
+   .apple-table-examples td, .apple-table-examples th { border: none; white-space: nowrap; padding-top: 0; padding-bottom: 0; }
+   .apple-table-examples tbody th:first-child { border-left: none; width: 100%; }
+   .apple-table-examples thead th:first-child ~ th { font-size: smaller; font-weight: bolder; border-bottom: solid 2px; text-align: center; }
+   .apple-table-examples tbody th::after, .apple-table-examples tfoot th::after { content: leader(". ") }
+   .apple-table-examples tbody th, .apple-table-examples tfoot th { font: inherit; text-align: left; }
+   .apple-table-examples td { text-align: right; vertical-align: top; }
+   .apple-table-examples.e1 tbody tr:last-child td { border-bottom: solid 1px; }
+   .apple-table-examples.e1 tbody + tbody tr:last-child td { border-bottom: double 3px; }
+   .apple-table-examples.e2 th[scope=row] { padding-left: 1em; }
+   .apple-table-examples sup { line-height: 0; }
+
+   .details-example img { vertical-align: top; }
+
+   #base64-table {
+     white-space: nowrap;
+     font-size: 0.6em;
+     column-width: 6em;
+     column-count: 5;
+     column-gap: 1em;
+     -moz-column-width: 6em;
+     -moz-column-count: 5;
+     -moz-column-gap: 1em;
+     -webkit-column-width: 6em;
+     -webkit-column-count: 5;
+     -webkit-column-gap: 1em;
+   }
+   #base64-table thead { display: none; }
+   #base64-table * { border: none; }
+   #base64-table tbody td:first-child:after { content: ':'; }
+   #base64-table tbody td:last-child { text-align: right; }
+
+   #named-character-references-table {
+     white-space: nowrap;
+     font-size: 0.6em;
+     column-width: 30em;
+     column-gap: 1em;
+     -moz-column-width: 30em;
+     -moz-column-gap: 1em;
+     -webkit-column-width: 30em;
+     -webkit-column-gap: 1em;
+   }
+   #named-character-references-table > table > tbody > tr > td:first-child + td,
+   #named-character-references-table > table > tbody > tr > td:last-child { text-align: center; }
+   #named-character-references-table > table > tbody > tr > td:last-child:hover > span { position: absolute; top: auto; left: auto; margin-left: 0.5em; line-height: 1.2; font-size: 5em; border: outset; padding: 0.25em 0.5em; background: white; width: 1.25em; height: auto; text-align: center; }
+   #named-character-references-table > table > tbody > tr#entity-CounterClockwiseContourIntegral > td:first-child { font-size: 0.5em; }
+
+   .glyph.control { color: red; }
+
+   @font-face {
+     font-family: 'Essays1743';
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743.ttf');
+   }
+   @font-face {
+     font-family: 'Essays1743';
+     font-weight: bold;
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743-Bold.ttf');
+   }
+   @font-face {
+     font-family: 'Essays1743';
+     font-style: italic;
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743-Italic.ttf');
+   }
+   @font-face {
+     font-family: 'Essays1743';
+     font-style: italic;
+     font-weight: bold;
+     src: url('http://www.whatwg.org/specs/web-apps/current-work/fonts/Essays1743-BoldItalic.ttf');
+   }
+
+  </style><link href="data:text/css," id="complete" rel="stylesheet" title="Complete specification"><link href="data:text/css,.impl%20%7B%20display:%20none;%20%7D%0Ahtml%20%7B%20border:%20solid%20yellow;%20%7D%20.domintro:before%20%7B%20display:%20none;%20%7D" id="author" rel="alternate stylesheet" title="Author documentation only"><link href="data:text/css,.impl%20%7B%20background:%20%23FFEEEE;%20%7D%20.domintro:before%20%7B%20background:%20%23FFEEEE;%20%7D" id="highlight" rel="alternate stylesheet" title="Highlight implementation requirements"><script type="text/javascript">
+   function getCookie(name) {
+     var params = location.search.substr(1).split("&");
+     for (var index = 0; index < params.length; index++) {
+       if (params[index] == name)
+         return "1";
+       var data = params[index].split("=");
+       if (data[0] == name)
+         return unescape(data[1]);
+     }
+     var cookies = document.cookie.split("; ");
+     for (var index = 0; index < cookies.length; index++) {
+       var data = cookies[index].split("=");
+       if (data[0] == name)
+         return unescape(data[1]);
+     }
+     return null;
+   }
+  </script>
+  <script src="link-fixup.js"></script>
+  <link href="elements.html" title="3.2 Elements" rel="prev">
+  <link href="index.html#contents" title="Table of contents" rel="contents">
+  <link href="element-definitions.html" title="3.2.4 Element definitions" rel="next">
+  </head><body onload="fixBrokenLink();" class="split chapter"><div class="head" id="head">
+   <p><a href="http://www.w3.org/"><img alt="W3C" height="48" src="http://www.w3.org/Icons/w3c_home" width="72"></a></p>
+
+   <h1>HTML5</h1>
+   <h2 class="no-num no-toc" id="a-vocabulary-and-associated-apis-for-html-and-xhtml">A vocabulary and associated APIs for HTML and XHTML</h2><p>This is revision 1.5610.</p>
+
+   <h2 class="no-num no-toc" id="w3c-working-draft-20-april-2012">W3C Working Draft 20 April 2012</h2>
+   </div>
+
+  <nav class="prev_next">
+   <a href="elements.html">&#8592; 3.2 Elements</a> &#8211;
+   <a href="index.html#contents">Table of contents</a> &#8211;
+   <a href="element-definitions.html">3.2.4 Element definitions &#8594;</a>
+  <ol class="toc"><li><ol><li><ol><li><a href="global-attributes.html#global-attributes"><span class="secno">3.2.3 </span>Global attributes</a>
+      <ol><li><a href="global-attributes.html#the-id-attribute"><span class="secno">3.2.3.1 </span>The <code>id</code> attribute</a></li><li><a href="global-attributes.html#the-title-attribute"><span class="secno">3.2.3.2 </span>The <code>title</code> attribute</a></li><li><a href="global-attributes.html#the-lang-and-xml:lang-attributes"><span class="secno">3.2.3.3 </span>The <code title="attr-lang">lang</code> and <code title="attr-xml-lang">xml:lang</code> attributes</a></li><li><a href="global-attributes.html#the-translate-attribute"><span class="secno">3.2.3.4 </span>The <code title="attr-translate">translate</code> attribute</a></li><li><a href="global-attributes.html#the-xml:base-attribute-xml-only"><span class="secno">3.2.3.5 </span>The <code>xml:base</code>
+  attribute (XML only)</a></li><li><a href="global-attributes.html#the-dir-attribute"><span class="secno">3.2.3.6 </span>The <code>dir</code> attribute</a></li><li><a href="global-attributes.html#classes"><span class="secno">3.2.3.7 </span>The <code>class</code> attribute</a></li><li><a href="global-attributes.html#the-style-attribute"><span class="secno">3.2.3.8 </span>The <code>style</code> attribute</a></li><li><a href="global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes"><span class="secno">3.2.3.9 </span>Embedding custom non-visible data with the <code title="attr-data-*">data-*</code> attributes</a></li></ol></li></ol></li></ol></li></ol></nav>
+
+  <h4 id="global-attributes"><span class="secno">3.2.3 </span><dfn>Global attributes</dfn></h4>
+
+  <p>The following attributes are common to and may be specified on
+  all <a href="infrastructure.html#html-elements">HTML elements</a><span class="impl"> (even those not
+  defined in this specification)</span>:</p>
+
+  <ul class="brief"><li><code title="attr-accesskey"><a href="editing.html#the-accesskey-attribute">accesskey</a></code></li>
+   <li><code title="attr-class"><a href="#classes">class</a></code></li>
+   <li><code title="attr-contenteditable"><a href="editing.html#attr-contenteditable">contenteditable</a></code></li>
+   <li><code title="attr-contextmenu"><a href="the-menu-element.html#attr-contextmenu">contextmenu</a></code></li>
+   <li><code title="attr-dir"><a href="#the-dir-attribute">dir</a></code></li>
+   <li><code title="attr-draggable"><a href="dnd.html#the-draggable-attribute">draggable</a></code></li>
+   <li><code title="attr-dropzone"><a href="dnd.html#the-dropzone-attribute">dropzone</a></code></li>
+   <li><code title="attr-hidden"><a href="editing.html#the-hidden-attribute">hidden</a></code></li>
+   <li><code title="attr-id"><a href="#the-id-attribute">id</a></code></li>
+   <li><code title="attr-lang"><a href="#attr-lang">lang</a></code></li>
+   <li><code title="attr-spellcheck"><a href="editing-apis.html#attr-spellcheck">spellcheck</a></code></li>
+   <li><code title="attr-style"><a href="#the-style-attribute">style</a></code></li>
+   <li><code title="attr-tabindex"><a href="editing.html#attr-tabindex">tabindex</a></code></li>
+   <li><code title="attr-title"><a href="#the-title-attribute">title</a></code></li>
+   <li><code title="attr-translate"><a href="#attr-translate">translate</a></code></li>
+  </ul><div class="impl">
+
+  <p>These attributes are only defined by this specification as
+  attributes for <a href="infrastructure.html#html-elements">HTML elements</a>. When this specification
+  refers to elements having these attributes, elements from namespaces
+  that are not defined as having these attributes must not be
+  considered as being elements with these attributes.</p>
+
+  <div class="example">
+
+   <p>For example, in the following XML fragment, the "<code title="">bogus</code>" element does not have a <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute as defined in this
+   specification, despite having an attribute with the literal name
+   "<code title="">dir</code>". Thus, <a href="#the-directionality">the directionality</a>
+   of the inner-most <code><a href="the-span-element.html#the-span-element">span</a></code> element is '<a href="#concept-rtl" title="concept-rtl">rtl</a>', inherited from the
+   <code><a href="the-div-element.html#the-div-element">div</a></code> element indirectly through the "<code title="">bogus</code>" element.</p>
+
+   <pre class="bad">&lt;div xmlns="http://www.w3.org/1999/html" dir="rtl"&gt;
+ &lt;bogus xmlns="http://example.net/ns" dir="ltr"&gt;
+  &lt;span xmlns="http://www.w3.org/1999/html"&gt;
+  &lt;/span&gt;
+ &lt;/bogus&gt;
+&lt;/div&gt;</pre>
+
+  </div>
+
+  </div>
+
+  <hr><p>The following <a href="webappapis.html#event-handler-content-attributes">event handler content attributes</a> may
+  be specified on any <a href="infrastructure.html#html-elements" title="HTML elements">HTML
+  element</a>:</p>
+
+  <ul class="brief"><li><code title="handler-onabort"><a href="webappapis.html#handler-onabort">onabort</a></code></li>
+   <li><code title="handler-onblur"><a href="webappapis.html#handler-onblur">onblur</a></code>*</li>
+   <li><code title="handler-oncanplay"><a href="webappapis.html#handler-oncanplay">oncanplay</a></code></li>
+   <li><code title="handler-oncanplaythrough"><a href="webappapis.html#handler-oncanplaythrough">oncanplaythrough</a></code></li>
+   <li><code title="handler-onchange"><a href="webappapis.html#handler-onchange">onchange</a></code></li>
+   <li><code title="handler-onclick"><a href="webappapis.html#handler-onclick">onclick</a></code></li>
+   <li><code title="handler-oncontextmenu"><a href="webappapis.html#handler-oncontextmenu">oncontextmenu</a></code></li>
+   <li><code title="handler-oncuechange"><a href="webappapis.html#handler-oncuechange">oncuechange</a></code></li>
+   <li><code title="handler-ondblclick"><a href="webappapis.html#handler-ondblclick">ondblclick</a></code></li>
+   <li><code title="handler-ondrag"><a href="webappapis.html#handler-ondrag">ondrag</a></code></li>
+   <li><code title="handler-ondragend"><a href="webappapis.html#handler-ondragend">ondragend</a></code></li>
+   <li><code title="handler-ondragenter"><a href="webappapis.html#handler-ondragenter">ondragenter</a></code></li>
+   <li><code title="handler-ondragleave"><a href="webappapis.html#handler-ondragleave">ondragleave</a></code></li>
+   <li><code title="handler-ondragover"><a href="webappapis.html#handler-ondragover">ondragover</a></code></li>
+   <li><code title="handler-ondragstart"><a href="webappapis.html#handler-ondragstart">ondragstart</a></code></li>
+   <li><code title="handler-ondrop"><a href="webappapis.html#handler-ondrop">ondrop</a></code></li>
+   <li><code title="handler-ondurationchange"><a href="webappapis.html#handler-ondurationchange">ondurationchange</a></code></li>
+   <li><code title="handler-onemptied"><a href="webappapis.html#handler-onemptied">onemptied</a></code></li>
+   <li><code title="handler-onended"><a href="webappapis.html#handler-onended">onended</a></code></li>
+   <li><code title="handler-onerror"><a href="webappapis.html#handler-onerror">onerror</a></code>*</li>
+   <li><code title="handler-onfocus"><a href="webappapis.html#handler-onfocus">onfocus</a></code>*</li>
+   <li><code title="handler-oninput"><a href="webappapis.html#handler-oninput">oninput</a></code></li>
+   <li><code title="handler-oninvalid"><a href="webappapis.html#handler-oninvalid">oninvalid</a></code></li>
+   <li><code title="handler-onkeydown"><a href="webappapis.html#handler-onkeydown">onkeydown</a></code></li>
+   <li><code title="handler-onkeypress"><a href="webappapis.html#handler-onkeypress">onkeypress</a></code></li>
+   <li><code title="handler-onkeyup"><a href="webappapis.html#handler-onkeyup">onkeyup</a></code></li>
+   <li><code title="handler-onload"><a href="webappapis.html#handler-onload">onload</a></code>*</li>
+   <li><code title="handler-onloadeddata"><a href="webappapis.html#handler-onloadeddata">onloadeddata</a></code></li>
+   <li><code title="handler-onloadedmetadata"><a href="webappapis.html#handler-onloadedmetadata">onloadedmetadata</a></code></li>
+   <li><code title="handler-onloadstart"><a href="webappapis.html#handler-onloadstart">onloadstart</a></code></li>
+   <li><code title="handler-onmousedown"><a href="webappapis.html#handler-onmousedown">onmousedown</a></code></li>
+   <li><code title="handler-onmousemove"><a href="webappapis.html#handler-onmousemove">onmousemove</a></code></li>
+   <li><code title="handler-onmouseout"><a href="webappapis.html#handler-onmouseout">onmouseout</a></code></li>
+   <li><code title="handler-onmouseover"><a href="webappapis.html#handler-onmouseover">onmouseover</a></code></li>
+   <li><code title="handler-onmouseup"><a href="webappapis.html#handler-onmouseup">onmouseup</a></code></li>
+   <li><code title="handler-onmousewheel"><a href="webappapis.html#handler-onmousewheel">onmousewheel</a></code></li>
+   <li><code title="handler-onpause"><a href="webappapis.html#handler-onpause">onpause</a></code></li>
+   <li><code title="handler-onplay"><a href="webappapis.html#handler-onplay">onplay</a></code></li>
+   <li><code title="handler-onplaying"><a href="webappapis.html#handler-onplaying">onplaying</a></code></li>
+   <li><code title="handler-onprogress"><a href="webappapis.html#handler-onprogress">onprogress</a></code></li>
+   <li><code title="handler-onratechange"><a href="webappapis.html#handler-onratechange">onratechange</a></code></li>
+   <li><code title="handler-onreset"><a href="webappapis.html#handler-onreset">onreset</a></code></li>
+   <li><code title="handler-onscroll"><a href="webappapis.html#handler-onscroll">onscroll</a></code>*</li>
+   <li><code title="handler-onseeked"><a href="webappapis.html#handler-onseeked">onseeked</a></code></li>
+   <li><code title="handler-onseeking"><a href="webappapis.html#handler-onseeking">onseeking</a></code></li>
+   <li><code title="handler-onselect"><a href="webappapis.html#handler-onselect">onselect</a></code></li>
+   <li><code title="handler-onshow"><a href="webappapis.html#handler-onshow">onshow</a></code></li>
+   <li><code title="handler-onstalled"><a href="webappapis.html#handler-onstalled">onstalled</a></code></li>
+   <li><code title="handler-onsubmit"><a href="webappapis.html#handler-onsubmit">onsubmit</a></code></li>
+   <li><code title="handler-onsuspend"><a href="webappapis.html#handler-onsuspend">onsuspend</a></code></li>
+   <li><code title="handler-ontimeupdate"><a href="webappapis.html#handler-ontimeupdate">ontimeupdate</a></code></li>
+   <li><code title="handler-onvolumechange"><a href="webappapis.html#handler-onvolumechange">onvolumechange</a></code></li>
+   <li><code title="handler-onwaiting"><a href="webappapis.html#handler-onwaiting">onwaiting</a></code></li>
+  </ul><p class="note">The attributes marked with an asterisk have a
+  different meaning when specified on <code><a href="the-body-element.html#the-body-element">body</a></code> elements as
+  those elements expose <a href="webappapis.html#event-handlers">event handlers</a> of the
+  <code><a href="browsers.html#window">Window</a></code> object with the same names.</p>
+
+  <p class="note">While these attributes apply to all elements, they
+  are not useful on all elements. For example, only <a href="media-elements.html#media-element" title="media
+  element">media elements</a> will ever receive a <code title="event-media-volumechange"><a href="media-elements.html#event-media-volumechange">volumechange</a></code> event fired by
+  the user agent.</p>
+
+  <hr><p><a href="#custom-data-attribute" title="custom data attribute">Custom data attributes</a>
+  (e.g. <code title="">data-foldername</code> or <code title="">data-msgid</code>) can be specified on any <a href="infrastructure.html#html-elements" title="HTML elements">HTML element</a>, to store custom data
+  specific to the page.</p>
+
+  <hr><p>In <a href="infrastructure.html#html-documents">HTML documents</a>, elements in the <a href="namespaces.html#html-namespace-0">HTML
+  namespace</a> may have an <code title="">xmlns</code> attribute
+  specified, if, and only if, it has the exact value
+  "<code>http://www.w3.org/1999/xhtml</code>". This does not apply to
+  <a href="infrastructure.html#xml-documents">XML documents</a>.</p>
+
+  <p class="note">In HTML, the <code title="">xmlns</code> attribute
+  has absolutely no effect. It is basically a talisman. It is allowed
+  merely to make migration to and from XHTML mildly easier. When
+  parsed by an <a href="parsing.html#html-parser">HTML parser</a>, the attribute ends up in no
+  namespace, not the "<code>http://www.w3.org/2000/xmlns/</code>"
+  namespace like namespace declaration attributes in XML do.</p>
+
+  <p class="note">In XML, an <code title="">xmlns</code> attribute is
+  part of the namespace declaration mechanism, and an element cannot
+  actually have an <code title="">xmlns</code> attribute in no
+  namespace specified.</p>
+
+  <hr><p>The XML specification also allows the use of the <code title="attr-xml-space">xml:space</code> attribute in the <a href="namespaces.html#xml-namespace">XML
+  namespace</a> on any element in an <a href="infrastructure.html#xml-documents" title="XML
+  documents">XML document</a>. This attribute has no effect on
+  <a href="infrastructure.html#html-elements">HTML elements</a>, as the default behavior in HTML is to
+  preserve whitespace. <a href="references.html#refsXML">[XML]</a></p>
+
+  <p class="note">There is no way to serialize the <code title="attr-xml-space">xml:space</code> attribute on <a href="infrastructure.html#html-elements">HTML
+  elements</a> in the <code><a href="iana.html#text-html">text/html</a></code> syntax.</p>
+
+  <hr><p>To enable assistive technology products to expose a more
+  fine-grained interface than is otherwise possible with HTML elements
+  and attributes, a set of <a href="wai-aria.html#wai-aria" title="WAI-ARIA">annotations for
+  assistive technology products</a> can be specified (the ARIA
+  <code title="attr-aria-role">role</code> and <code title="attr-aria-*">aria-*</code> attributes).</p>
+
+
+  <h5 id="the-id-attribute"><span class="secno">3.2.3.1 </span>The <dfn title="attr-id"><code>id</code></dfn> attribute</h5>
+
+  <p>The <code title="attr-id"><a href="#the-id-attribute">id</a></code> attribute specifies its
+  element's <a href="infrastructure.html#concept-id" title="concept-id">unique identifier (ID)</a>. <a href="references.html#refsDOMCORE">[DOMCORE]</a></p>
+
+  <p>The value must be unique amongst all the <a href="infrastructure.html#concept-id" title="concept-id">IDs</a> in the element's <a href="infrastructure.html#home-subtree">home
+  subtree</a> and must contain at least one character. The value
+  must not contain any <a href="common-microsyntaxes.html#space-character" title="space character">space
+  characters</a>.</p>
+
+  
+
+  <p class="note">An element's <a href="infrastructure.html#concept-id" title="concept-id">unique
+  identifier</a> can be used for a variety of purposes, most
+  notably as a way to link to specific parts of a document using
+  fragment identifiers, as a way to target an element when scripting,
+  and as a way to style a specific element from CSS.</p>
+
+  <div class="impl">
+
+  <p>Identifiers are opaque strings. Particular meanings should not be
+  derived from the value of the <code title="attr-id"><a href="#the-id-attribute">id</a></code>
+  attribute.</p>
+
+  </div>
+
+
+  <h5 id="the-title-attribute"><span class="secno">3.2.3.2 </span>The <dfn title="attr-title"><code>title</code></dfn> attribute</h5>
+
+  <p>The <code title="attr-title"><a href="#the-title-attribute">title</a></code> attribute
+  <a href="rendering.html#represents">represents</a> advisory information for the element, such
+  as would be appropriate for a tooltip. On a link, this could be the
+  title or a description of the target resource; on an image, it could
+  be the image credit or a description of the image; on a paragraph,
+  it could be a footnote or commentary on the text; on a citation, it
+  could be further information about the source; and so forth. The
+  value is text.</p>
+
+  <p>If this attribute is omitted from an element, then it implies
+  that the <code title="attr-title"><a href="#the-title-attribute">title</a></code> attribute of the
+  nearest ancestor <a href="infrastructure.html#html-elements" title="HTML elements">HTML element</a>
+  with a <code title="attr-title"><a href="#the-title-attribute">title</a></code> attribute set is also
+  relevant to this element. Setting the attribute overrides this,
+  explicitly stating that the advisory information of any ancestors is
+  not relevant to this element. Setting the attribute to the empty
+  string indicates that the element has no advisory information.</p>
+
+  <p>If the <code title="attr-title"><a href="#the-title-attribute">title</a></code> attribute's value
+  contains "LF" (U+000A) characters, the content is split into
+  multiple lines. Each "LF" (U+000A) character represents a
+  line break.</p>
+
+  <div class="example">
+
+   <p>Caution is advised with respect to the use of newlines in <code title="attr-title"><a href="#the-title-attribute">title</a></code> attributes.</p>
+
+   <p>For instance, the following snippet actually defines an
+   abbreviation's expansion <em>with a line break in it</em>:</p>
+
+   <pre class="bad">&lt;p&gt;My logs show that there was some interest in &lt;abbr title="Hypertext
+Transport Protocol"&gt;HTTP&lt;/abbr&gt; today.&lt;/p&gt;</pre>
+
+  </div>
+
+  <p>Some elements, such as <code><a href="the-link-element.html#the-link-element">link</a></code>, <code><a href="the-abbr-element.html#the-abbr-element">abbr</a></code>, and
+  <code><a href="the-input-element.html#the-input-element">input</a></code>, define additional semantics for the <code title="attr-title"><a href="#the-title-attribute">title</a></code> attribute beyond the semantics
+  described above.</p>
+
+  <div class="impl">
+
+  <hr><p>The <dfn id="dom-title" title="dom-title"><code>title</code></dfn> IDL attribute
+  must <a href="common-dom-interfaces.html#reflect">reflect</a> the <code title="attr-title"><a href="#the-title-attribute">title</a></code>
+  content attribute.</p>
+
+  </div>
+
+
+
+  <h5 id="the-lang-and-xml:lang-attributes"><span class="secno">3.2.3.3 </span>The <code title="attr-lang"><a href="#attr-lang">lang</a></code> and <code title="attr-xml-lang"><a href="#attr-xml-lang">xml:lang</a></code> attributes</h5>
+
+  <p>The <dfn id="attr-lang" title="attr-lang"><code>lang</code></dfn> attribute (in
+  no namespace) specifies the primary language for the element's
+  contents and for any of the element's attributes that contain
+  text. Its value must be a valid BCP 47 language tag, or the empty
+  string. Setting the attribute to the empty string indicates that the
+  primary language is unknown. <a href="references.html#refsBCP47">[BCP47]</a></p>
+
+  <p>The <dfn id="attr-xml-lang" title="attr-xml-lang"><code title="">lang</code></dfn>
+  attribute in the <a href="namespaces.html#xml-namespace">XML namespace</a> is defined in XML. <a href="references.html#refsXML">[XML]</a></p>
+
+  <p>If these attributes are omitted from an element, then the
+  language of this element is the same as the language of its parent
+  element, if any.</p>
+
+  <p>The <code title="attr-lang"><a href="#attr-lang">lang</a></code> attribute in no namespace
+  may be used on any <a href="infrastructure.html#html-elements" title="HTML elements">HTML
+  element</a>.</p>
+
+  <p>The <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code>
+  attribute in the <span>XML namespace</span></a> may be used on
+  <a href="infrastructure.html#html-elements">HTML elements</a> in <a href="infrastructure.html#xml-documents">XML documents</a>, as well as
+  elements in other namespaces if the relevant specifications allow it
+  (in particular, MathML and SVG allow <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code> attributes in the
+  <span>XML namespace</span></a> to be specified on their
+  elements). If both the <code title="attr-lang"><a href="#attr-lang">lang</a></code> attribute
+  in no namespace and the <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code> attribute in the <span>XML
+  namespace</span></a> are specified on the same element, they must
+  have exactly the same value when compared in an <a href="infrastructure.html#ascii-case-insensitive">ASCII
+  case-insensitive</a> manner.</p>
+
+  <p>Authors must not use the <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code> attribute in the <span>XML
+  namespace</span></a> on <a href="infrastructure.html#html-elements">HTML elements</a> in <a href="infrastructure.html#html-documents">HTML
+  documents</a>. To ease migration to and from XHTML, authors may
+  specify an attribute in no namespace with no prefix and with the
+  literal localname "<code title="">xml:lang</code>" on <a href="infrastructure.html#html-elements">HTML
+  elements</a> in <a href="infrastructure.html#html-documents">HTML documents</a>, but such attributes
+  must only be specified if a <code title="attr-lang"><a href="#attr-lang">lang</a></code>
+  attribute in no namespace is also specified, and both attributes
+  must have the same value when compared in an <a href="infrastructure.html#ascii-case-insensitive">ASCII
+  case-insensitive</a> manner.</p>
+
+  <p class="note">The attribute in no namespace with no prefix and
+  with the literal localname "<code title="">xml:lang</code>" has no
+  effect on language processing.</p>
+
+  <div class="impl">
+
+  <hr><p>To determine the <dfn id="language">language</dfn> of a node, user agents must
+  look at the nearest ancestor element (including the element itself
+  if the node is an element) that has a <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code> attribute in the
+  <span>XML namespace</span></a> set or is an <a href="infrastructure.html#html-elements" title="HTML
+  elements">HTML element</a> and has a <code title="attr-lang"><a href="#attr-lang">lang</a></code> in no namespace attribute set. That
+  attribute specifies the language of the node (regardless of its
+  value).</p>
+
+  <p>If both the <code title="attr-lang"><a href="#attr-lang">lang</a></code> attribute in no
+  namespace and the <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code> attribute in the <span>XML
+  namespace</span></a> are set on an element, user agents must use
+  the <a href="#attr-xml-lang" title="attr-xml-lang"><code title="">lang</code> attribute
+  in the <span>XML namespace</span></a>, and the <code title="attr-lang"><a href="#attr-lang">lang</a></code> attribute in no namespace must be
+  <a href="infrastructure.html#ignore" title="ignore">ignored</a> for the purposes of determining
+  the element's language.</p>
+
+  <p>If none of the node's ancestors, including the <a href="infrastructure.html#root-element">root
+  element</a>, have either attribute set, but there is a
+  <a href="the-meta-element.html#pragma-set-default-language">pragma-set default language</a> set, then that is the
+  language of the node. If there is no <a href="the-meta-element.html#pragma-set-default-language">pragma-set default
+  language</a> set, then language information from a higher-level
+  protocol (such as HTTP), if any, must be used as the final fallback
+  language instead. In the absence of any such language information,
+  and in cases where the higher-level protocol reports multiple
+  languages, the language of the node is unknown, and the
+  corresponding language tag is the empty string.</p>
+
+  <p>If the resulting value is not a recognized language tag, then it
+  must be treated as an unknown language having the given language
+  tag, distinct from all other languages. For the purposes of
+  round-tripping or communicating with other services that expect
+  language tags, user agents should pass unknown language tags
+  through unmodified.</p>
+
+  <p class="example">Thus, for instance, an element with <code title="">lang="xyzzy"</code> would be matched by the selector <code title="">:lang(xyzzy)</code> (e.g. in CSS), but it would not be
+  matched by <code title="">:lang(abcde)</code>, even though both are
+  equally invalid. Similarly, if a Web browser and screen reader
+  working in unison communicated about the language of the element,
+  the browser would tell the screen reader that the language was
+  "xyzzy", even if it knew it was invalid, just in case the screen
+  reader actually supported a language with that tag after all.</p>
+
+  <p>If the resulting value is the empty string, then it must be
+  interpreted as meaning that the language of the node is explicitly
+  unknown.</p>
+
+  <hr><p>User agents may use the element's language to determine proper
+  processing or rendering (e.g. in the selection of appropriate fonts
+  or pronunciations, for dictionary selection, or for the user
+  interfaces of form controls such as date pickers). </p>
+
+  
+
+  <hr><p>The <dfn id="dom-lang" title="dom-lang"><code>lang</code></dfn> IDL attribute
+  must <a href="common-dom-interfaces.html#reflect">reflect</a> the <code title="attr-lang"><a href="#attr-lang">lang</a></code>
+  content attribute in no namespace.</p>
+
+  </div>
+
+
+
+  <h5 id="the-translate-attribute"><span class="secno">3.2.3.4 </span>The <code title="attr-translate"><a href="#attr-translate">translate</a></code> attribute</h5>
+
+  <p>The <dfn id="attr-translate" title="attr-translate"><code>translate</code></dfn>
+  attribute is an <a href="common-microsyntaxes.html#enumerated-attribute">enumerated attribute</a> that is used to
+  specify whether an element's attribute values and the values of its
+  <code><a href="infrastructure.html#text">Text</a></code> node children are to be translated when the page
+  is localized, or whether to leave them unchanged.</p>
+
+  <p>The attribute's keywords are the empty string, <code title="">yes</code>, and <code title="">no</code>. The empty string
+  and the <code title="">yes</code> keyword map to the <i>yes</i>
+  state. The <code title="">no</code> keyword maps to the <i>no</i>
+  state. In addition, there is a third state, the <i>inherit</i>
+  state, which is the <i>missing value default</i> (and the <i>invalid
+  value default</i>).</p>
+
+  <p>Each element has a <dfn id="translation-mode">translation mode</dfn>, which is in
+  either the <a href="#translate-enabled">translate-enabled</a> state or the
+  <a href="#no-translate">no-translate</a> state. If the element's <code title="attr-translate"><a href="#attr-translate">translate</a></code> attribute is in the
+  <i>yes</i> state, then the element's <a href="#translation-mode">translation mode</a>
+  is in the <a href="#translate-enabled">translate-enabled</a> state. Otherwise, if the
+  element's <code title="attr-translate"><a href="#attr-translate">translate</a></code> attribute is
+  in the <i>no</i> state, then the element's <a href="#translation-mode">translation
+  mode</a> is in the <a href="#no-translate">no-translate</a> state. Otherwise,
+  the element's <code title="attr-translate"><a href="#attr-translate">translate</a></code>
+  attribute is in the <i>inherit</i> state; in that case, the
+  element's <a href="#translation-mode">translation mode</a> is in the same state as its
+  parent element, if any, or in the <a href="#translate-enabled">translate-enabled</a>
+  state, if the element is a <a href="infrastructure.html#root-element">root element</a>.</p>
+
+  <p>When an element is in the <dfn id="translate-enabled">translate-enabled</dfn> state, the
+  element's attribute values and the values of its <code><a href="infrastructure.html#text">Text</a></code>
+  node children are to be translated when the page is localized.</p>
+
+  <p>When an element is in the <dfn id="no-translate">no-translate</dfn> state, the
+  element's attribute values and the values of its <code><a href="infrastructure.html#text">Text</a></code>
+  node children are to be left as-is when the page is localized, e.g.
+  because the element contains a person's name or a the name of a
+  computer program.</p>
+
+  <div class="impl">
+
+  <hr><p>The <dfn id="dom-translate" title="dom-translate"><code>translate</code></dfn> IDL
+  attribute must, on getting, return true if the element's
+  <a href="#translation-mode">translation mode</a> is <a href="#translate-enabled">translate-enabled</a>, and
+  false otherwise. On setting, it must set the content attribute's
+  value to "<code title="">yes</code>" if the new value is true, and
+  set the content attribute's value to "<code title="">no</code>
+  otherwise.</p>
+
+  </div>
+
+  <div class="example">
+
+   <p>In this example, everything in the document is to be translated
+   when the page is localised, except the sample keyboard input and
+   sample program output:</p>
+
+   <pre>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt; &lt;!-- default on the root element is translate=yes --&gt;
+ &lt;head&gt;
+  &lt;title&gt;The Bee Game&lt;/title&gt; &lt;!-- implied translate=yes inherited from ancestors --&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;The Bee Game is a text adventure game in English.&lt;/p&gt;
+  &lt;p&gt;When the game launches, the first thing you should do is type
+  &lt;kbd <strong>translate=no</strong>&gt;eat honey&lt;/kbd&gt;. The game will respond with:&lt;/p&gt;
+  &lt;pre&gt;&lt;samp <strong>translate=no</strong>&gt;Yum yum! That was some good honey!&lt;/samp&gt;&lt;/pre&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+  </div>
+
+
+
+  <h5 id="the-xml:base-attribute-xml-only"><span class="secno">3.2.3.5 </span>The <dfn title="attr-xml-base"><code>xml:base</code></dfn>
+  attribute (XML only)</h5>
+
+  <p>The <code title="attr-xml-base"><a href="#the-xml:base-attribute-xml-only">xml:base</a></code> attribute is
+  defined in XML Base. <a href="references.html#refsXMLBASE">[XMLBASE]</a></p>
+
+  <p>The <code title="attr-xml-base"><a href="#the-xml:base-attribute-xml-only">xml:base</a></code> attribute may be
+  used on elements of <a href="infrastructure.html#xml-documents">XML documents</a>. Authors must not
+  use the <code title="attr-xml-base"><a href="#the-xml:base-attribute-xml-only">xml:base</a></code> attribute in
+  <a href="infrastructure.html#html-documents">HTML documents</a>.</p>
+
+
+  <h5 id="the-dir-attribute"><span class="secno">3.2.3.6 </span>The <dfn title="attr-dir"><code>dir</code></dfn> attribute</h5>
+
+  <p>The <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute specifies the
+  element's text directionality. The attribute is an <a href="common-microsyntaxes.html#enumerated-attribute">enumerated
+  attribute</a> with the following keywords and states:</p>
+
+  <dl><dt>The <dfn id="attr-dir-ltr" title="attr-dir-ltr"><code>ltr</code></dfn> keyword, which maps to the <dfn id="attr-dir-ltr-state" title="attr-dir-ltr-state">ltr</dfn> state</dt>
+
+   <dd>
+
+    <p>Indicates that the contents of the element are explicitly
+    directionally embedded left-to-right text.</p>
+
+   </dd>
+
+   <dt>The <dfn id="attr-dir-rtl" title="attr-dir-rtl"><code>rtl</code></dfn> keyword, which maps to the <dfn id="attr-dir-rtl-state" title="attr-dir-rtl-state">rtl</dfn> state</dt>
+
+   <dd>
+
+    <p>Indicates that the contents of the element are explicitly
+    directionally embedded right-to-left text.</p>
+
+   </dd>
+
+   <dt>The <dfn id="attr-dir-auto" title="attr-dir-auto"><code>auto</code></dfn> keyword, which maps to the <dfn id="attr-dir-auto-state" title="attr-dir-auto-state">auto</dfn> state</dt>
+
+   <dd>
+
+    <p>Indicates that the contents of the element are explicitly
+    embedded text, but that the direction is to be determined
+    programmatically using the contents of the element (as described
+    below).</p>
+
+    <p class="note">The heuristic used by this state is very crude (it
+    just looks at the first character with a strong directionality, in
+    a manner analogous to the Paragraph Level determination in the
+    bidirectional algorithm). Authors are urged to only use this value
+    as a last resort when the direction of the text is truly unknown
+    and no better server-side heuristic can be applied.</p>
+
+    <p class="note">For <code><a href="the-textarea-element.html#the-textarea-element">textarea</a></code> and <code><a href="the-pre-element.html#the-pre-element">pre</a></code>
+    elements, the heuristic is applied on a per-paragraph level.</p>
+
+   </dd>
+
+  </dl><p>The attribute has no <i>invalid value default</i> and no
+  <i>missing value default</i>.</p>
+
+  <p><dfn id="the-directionality">The directionality</dfn> of an element is either '<dfn id="concept-ltr" title="concept-ltr">ltr</dfn>' or '<dfn id="concept-rtl" title="concept-rtl">rtl</dfn>', and is determined as per the first
+  appropriate set of steps from the following list:</p>
+
+  <dl class="switch"><dt>If the element's <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is
+   in the <a href="#attr-dir-ltr-state" title="attr-dir-ltr-state">ltr</a> state</dt>
+
+   <dd><p><a href="#the-directionality">The directionality</a> of the element is '<a href="#concept-ltr" title="concept-ltr">ltr</a>'.</p></dd>
+
+
+   <dt>If the element's <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is
+   in the <a href="#attr-dir-rtl-state" title="attr-dir-rtl-state">rtl</a> state</dt>
+
+   <dd><p><a href="#the-directionality">The directionality</a> of the element is '<a href="#concept-rtl" title="concept-rtl">rtl</a>'.</p></dd>
+
+
+   <dt>If the element is an <code><a href="the-input-element.html#the-input-element">input</a></code> element whose <code title="attr-input-type"><a href="the-input-element.html#attr-input-type">type</a></code> attribute is in the <a href="states-of-the-type-attribute.html#text-type-text-state-and-search-state-type-search" title="attr-input-type-text">Text</a>, <a href="states-of-the-type-attribute.html#text-type-text-state-and-search-state-type-search" title="attr-input-type-search">Search</a>, <a href="states-of-the-type-attribute.html#telephone-state-type-tel" title="attr-input-type-tel">Telephone</a>, <a href="states-of-the-type-attribute.html#url-state-type-url" title="attr-input-type-url">URL</a>, or <a href="states-of-the-type-attribute.html#e-mail-state-type-email" title="attr-input-type-email">E-mail</a> state, and the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is in the <a href="#attr-dir-auto-state" title="attr-dir-auto-state">auto</a> state</dt>
+
+   <dt>If the element is a <code><a href="the-textarea-element.html#the-textarea-element">textarea</a></code> element and the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is in the <a href="#attr-dir-auto-state" title="attr-dir-auto-state">auto</a> state</dt>
+
+   <dd>
+
+    <p>If the element's <a href="attributes-common-to-form-controls.html#concept-fe-value" title="concept-fe-value">value</a>
+    contains a character of bidirectional character type AL or R, and
+    there is no character of bidirectional character type L anywhere
+    before it in the element's <a href="attributes-common-to-form-controls.html#concept-fe-value" title="concept-fe-value">value</a>, then <a href="#the-directionality">the
+    directionality</a> of the element is '<a href="#concept-rtl" title="concept-rtl">rtl</a>'. Otherwise, <a href="#the-directionality">the
+    directionality</a> of the element is '<a href="#concept-ltr" title="concept-ltr">ltr</a>'.</p>
+
+   </dd>
+
+
+
+   <dt>If the element's <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is
+   in the <a href="#attr-dir-auto-state" title="attr-dir-auto-state">auto</a> state</dt>
+
+   <dt>If the element is a <code><a href="the-bdi-element.html#the-bdi-element">bdi</a></code> element and the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is not in a defined state
+   (i.e. it is not present or has an invalid value)</dt>
+
+   <dd>
+
+    <p>Find the first character in <a href="infrastructure.html#tree-order">tree order</a> that
+    matches the following criteria:</p>
+
+    <ul><li><p>The character is from a <code><a href="infrastructure.html#text">Text</a></code> node that is a
+     descendant of the element whose <a href="#the-directionality" title="the
+     directionality">directionality</a> is being
+     determined.</p></li>
+
+     <li><p>The character is of bidirectional character type L, AL,
+     or R. <a href="references.html#refsBIDI">[BIDI]</a></p></li>
+
+     <li>
+
+      <p>The character is not in a <code><a href="infrastructure.html#text">Text</a></code> node that has an
+      ancestor element that is a descendant of the element whose <a href="#the-directionality" title="the directionality">directionality</a> is being
+      determined and that is either:</p>
+
+      <ul class="brief"><li>A <code><a href="the-bdi-element.html#the-bdi-element">bdi</a></code> element.
+       </li><li>A <code><a href="the-script-element.html#the-script-element">script</a></code> element.
+       </li><li>A <code><a href="the-style-element.html#the-style-element">style</a></code> element.
+       </li><li>A <code><a href="the-textarea-element.html#the-textarea-element">textarea</a></code> element.
+       </li><li>An element with a <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute in a defined state.
+      </li></ul></li>
+
+    </ul><p>If such a character is found and it is of bidirectional
+    character type AL or R, <a href="#the-directionality">the directionality</a> of the
+    element is '<a href="#concept-rtl" title="concept-rtl">rtl</a>'.</p>
+
+    <p>Otherwise, <a href="#the-directionality">the directionality</a> of the element is
+    '<a href="#concept-ltr" title="concept-ltr">ltr</a>'.</p>
+
+   </dd>
+
+
+   <dt>If the element is a <a href="infrastructure.html#root-element">root element</a> and the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is not in a defined state
+   (i.e. it is not present or has an invalid value)</dt>
+
+   <dd><p><a href="#the-directionality">The directionality</a> of the element is '<a href="#concept-ltr" title="concept-ltr">ltr</a>'.</p></dd>
+
+
+   <dt>If the element has a parent element and the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute is not in a defined state
+   (i.e. it is not present or has an invalid value)</dt>
+
+   <dd><p><a href="#the-directionality">The directionality</a> of the element is the same
+   as the element's parent element's <a href="#the-directionality" title="the
+   directionality">directionality</a>.</p></dd>
+
+
+  </dl><p>The effect of this attribute is primarily on the presentation
+  layer. For example, the rendering section in this specification
+  defines a mapping from this attribute to the CSS 'direction' and
+  'unicode-bidi' properties, and CSS defines rendering in terms of
+  those properties.</p>
+
+  <hr><dl class="domintro"><dt><var title="">document</var> . <code title="dom-dir"><a href="#dom-dir">dir</a></code> [ = <var title="">value</var> ]</dt>
+   <dd>
+    <p>Returns <a href="dom.html#the-html-element-0">the <code>html</code> element</a>'s <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute's value, if any.</p>
+    <p>Can be set, to either "<code title="">ltr</code>", "<code title="">rtl</code>", or "<code title="">auto</code>" to replace <a href="dom.html#the-html-element-0">the <code>html</code> element</a>'s <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute's value.</p>
+    <p>If there is no <a href="dom.html#the-html-element-0" title="the html element"><code>html</code> element</a>, returns the empty string and ignores new values.</p>
+   </dd>
+
+  </dl><div class="impl">
+
+  <p>The <dfn id="dom-dir" title="dom-dir"><code>dir</code></dfn> IDL attribute on
+  an element must <a href="common-dom-interfaces.html#reflect">reflect</a> the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> content attribute of that element,
+  <a href="common-dom-interfaces.html#limited-to-only-known-values">limited to only known values</a>.</p>
+
+  <p>The <dfn id="dom-document-dir" title="dom-document-dir"><code>dir</code></dfn> IDL
+  attribute on <code><a href="dom.html#document">Document</a></code> objects must
+  <a href="common-dom-interfaces.html#reflect">reflect</a> the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> content
+  attribute of <a href="dom.html#the-html-element-0">the <code>html</code> element</a>, if any,
+  <a href="common-dom-interfaces.html#limited-to-only-known-values">limited to only known values</a>. If there is no such
+  element, then the attribute must return the empty string and do
+  nothing on setting.</p>
+
+  </div>
+
+  <p class="note">Authors are strongly encouraged to use the <code title="attr-dir"><a href="#the-dir-attribute">dir</a></code> attribute to indicate text direction
+  rather than using CSS, since that way their documents will continue
+  to render correctly even in the absence of CSS (e.g. as interpreted
+  by search engines).</p>
+
+  <div class="example">
+
+   <p>This markup fragment is of an IM conversation.</p>
+
+   <pre>&lt;p dir=auto class="u1"&gt;&lt;b&gt;&lt;bdi&gt;Student&lt;/bdi&gt;:&lt;/b&gt; How do you write "What's your name?" in Arabic?&lt;/p&gt;
+&lt;p dir=auto class="u2"&gt;&lt;b&gt;&lt;bdi&gt;Teacher&lt;/bdi&gt;:&lt;/b&gt; &#1605;&#1575; &#1575;&#1587;&#1605;&#1603;&#1567;&lt;/p&gt;
+&lt;p dir=auto class="u1"&gt;&lt;b&gt;&lt;bdi&gt;Student&lt;/bdi&gt;:&lt;/b&gt; Thanks.&lt;/p&gt;
+&lt;p dir=auto class="u2"&gt;&lt;b&gt;&lt;bdi&gt;Teacher&lt;/bdi&gt;:&lt;/b&gt; That's written "&#1588;&#1603;&#1585;&#1611;&#1575;".&lt;/p&gt;
+&lt;p dir=auto class="u2"&gt;&lt;b&gt;&lt;bdi&gt;Teacher&lt;/bdi&gt;:&lt;/b&gt; Do you know how to write "Please"?&lt;/p&gt;
+&lt;p dir=auto class="u1"&gt;&lt;b&gt;&lt;bdi&gt;Student&lt;/bdi&gt;:&lt;/b&gt; "&#1605;&#1606; &#1601;&#1590;&#1604;&#1603;", right?&lt;/p&gt;</pre>
+
+
+
+   <p>Given a suitable style sheet and the default alignment styles
+   for the <code><a href="the-p-element.html#the-p-element">p</a></code> element, namely to align the text to the
+   <i>start edge</i> of the paragraph, the resulting rendering could
+   be as follows:</p>
+
+   <p><img alt="Each paragraph rendered as a separate block, with the paragraphs left-aligned except the second paragraph and the last one, which would  be right aligned, with the usernames ('Student' and 'Teacher' in this example) flush right, with a colon to their left, and the text first to the left of that." src="http://dev.w3.org/html5/spec/images/im.png"></p>
+
+   <p>As noted earlier, the <code title="attr-dir-auto"><a href="#attr-dir-auto">auto</a></code>
+   value is not a panacea. The final paragraph in this example is
+   misinterpreted as being right-to-left text, since it begins with an
+   Arabic character, which causes the "right?" to be to the left of
+   the Arabic text.</p>
+
+  </div>
+
+
+
+  <h5 id="classes"><span class="secno">3.2.3.7 </span>The <dfn title="attr-class"><code>class</code></dfn> attribute</h5>
+
+  <p>Every <a href="infrastructure.html#html-elements" title="HTML elements">HTML element</a> may have a
+  <code title="attr-class"><a href="#classes">class</a></code> attribute specified.</p>
+
+  <p>The attribute, if specified, must have a value that is a
+  <a href="common-microsyntaxes.html#set-of-space-separated-tokens">set of space-separated tokens</a> representing the various
+  classes that the element belongs to.</p>
+
+  <div class="impl">
+
+  <p>The classes that an <a href="infrastructure.html#html-elements" title="HTML elements">HTML
+  element</a> has assigned to it consists of all the classes
+  returned when the value of the <code title="attr-class"><a href="#classes">class</a></code>
+  attribute is <a href="common-microsyntaxes.html#split-a-string-on-spaces" title="split a string on spaces">split on
+  spaces</a>. (Duplicates are ignored.)</p>
+
+  </div>
+
+  <p class="note">Assigning classes to an element affects class
+  matching in selectors in CSS, the <code title="dom-document-getElementsByClassName">getElementsByClassName()</code>
+  method in the DOM, and other such features.</p>
+
+  <p>There are no additional restrictions on the tokens authors can
+  use in the <code title="attr-class"><a href="#classes">class</a></code> attribute, but
+  authors are encouraged to use values that describe the nature of the
+  content, rather than values that describe the desired presentation
+  of the content.</p>
+
+  <div class="impl">
+
+  <hr><p>The <dfn id="dom-classname" title="dom-className"><code>className</code></dfn> and
+  <dfn id="dom-classlist" title="dom-classList"><code>classList</code></dfn> IDL
+  attributes must both <a href="common-dom-interfaces.html#reflect">reflect</a> the <code title="attr-class"><a href="#classes">class</a></code> content attribute.</p>
+
+  </div>
+
+
+
+  <h5 id="the-style-attribute"><span class="secno">3.2.3.8 </span>The <dfn title="attr-style"><code>style</code></dfn> attribute</h5>
+
+  <p>All <a href="infrastructure.html#html-elements">HTML elements</a> may have the <code title="attr-style"><a href="#the-style-attribute">style</a></code> content attribute set. This is a
+  <span>CSS styling attribute</span> as defined by the CSS Styling
+  Attribute Syntax specification. <a href="references.html#refsCSSATTR">[CSSATTR]</a></p>
+
+  <div class="impl">
+
+  <p>In user agents that support CSS, the attribute's value must be
+  parsed when the attribute is added or has its value changed, according
+  to the rules given for <span>CSS styling attributes</span>. <a href="references.html#refsCSSATTR">[CSSATTR]</a></p>
+
+  </div>
+
+  <p>Documents that use <code title="attr-style"><a href="#the-style-attribute">style</a></code>
+  attributes on any of their elements must still be comprehensible and
+  usable if those attributes were removed.</p>
+
+  <p class="note">In particular, using the <code title="attr-style"><a href="#the-style-attribute">style</a></code> attribute to hide and show content,
+  or to convey meaning that is otherwise not included in the document,
+  is non-conforming. (To hide and show content, use the <code title="attr-hidden"><a href="editing.html#the-hidden-attribute">hidden</a></code> attribute.)</p>
+
+  <hr><dl class="domintro"><dt><var title="">element</var> . <code title="dom-style"><a href="#dom-style">style</a></code></dt>
+   <dd>
+    <p>Returns a <code><a href="infrastructure.html#cssstyledeclaration">CSSStyleDeclaration</a></code> object for the element's <code title="attr-style"><a href="#the-style-attribute">style</a></code> attribute.</p>
+   </dd>
+
+  </dl><div class="impl">
+
+  <p>The <dfn id="dom-style" title="dom-style"><code>style</code></dfn> IDL attribute
+  must return a <code><a href="infrastructure.html#cssstyledeclaration">CSSStyleDeclaration</a></code> whose value
+  represents the declarations specified in the attribute, if
+  present. Mutating the <code><a href="infrastructure.html#cssstyledeclaration">CSSStyleDeclaration</a></code> object must
+  create a <code title="attr-style"><a href="#the-style-attribute">style</a></code> attribute on the
+  element (if there isn't one already) and then change its value to be
+  a value representing the serialized form of the
+  <code><a href="infrastructure.html#cssstyledeclaration">CSSStyleDeclaration</a></code> object. The same object must be
+  returned each time. <a href="references.html#refsCSSOM">[CSSOM]</a></p>
+
+  </div>
+
+  <div class="example">
+
+   <p>In the following example, the words that refer to colors are
+   marked up using the <code><a href="the-span-element.html#the-span-element">span</a></code> element and the <code title="attr-style"><a href="#the-style-attribute">style</a></code> attribute to make those words show
+   up in the relevant colors in visual media.</p>
+
+   <pre>&lt;p&gt;My sweat suit is &lt;span style="color: green; background:
+transparent"&gt;green&lt;/span&gt; and my eyes are &lt;span style="color: blue;
+background: transparent"&gt;blue&lt;/span&gt;.&lt;/p&gt;</pre>
+
+  </div>
+
+
+
+  <h5 id="embedding-custom-non-visible-data-with-the-data-attributes"><span class="secno">3.2.3.9 </span><dfn>Embedding custom non-visible data</dfn> with the <code title="attr-data-*"><a href="#attr-data">data-*</a></code> attributes</h5>
+
+  <p>A <dfn id="custom-data-attribute">custom data attribute</dfn> is an attribute in no
+  namespace whose name starts with the string "<dfn id="attr-data" title="attr-data-*"><code>data-</code></dfn>", has at least one
+  character after the hyphen, is <a href="infrastructure.html#xml-compatible">XML-compatible</a>, and
+  contains no characters in the range U+0041 to U+005A (LATIN CAPITAL
+  LETTER A to LATIN CAPITAL LETTER Z).</p>
+
+  <p class="note">All attributes on <a href="infrastructure.html#html-elements">HTML elements</a> in
+  <a href="infrastructure.html#html-documents">HTML documents</a> get ASCII-lowercased automatically, so
+  the restriction on ASCII uppercase letters doesn't affect such
+  documents.</p>
+
+  <p><a href="#custom-data-attribute" title="custom data attribute">Custom data attributes</a>
+  are intended to store custom data private to the page or
+  application, for which there are no more appropriate attributes or
+  elements.</p>
+
+  <p>These attributes are not intended for use by software that is
+  independent of the site that uses the attributes.</p>
+
+  <div class="example">
+
+   <p>For instance, a site about music could annotate list items
+   representing tracks in an album with custom data attributes
+   containing the length of each track. This information could then be
+   used by the site itself to allow the user to sort the list by track
+   length, or to filter the list for tracks of certain lengths.</p>
+
+   <pre>&lt;ol&gt;
+ &lt;li data-length="2m11s"&gt;Beyond The Sea&lt;/li&gt;
+ ...
+&lt;/ol&gt;</pre>
+
+   <p>It would be inappropriate, however, for the user to use generic
+   software not associated with that music site to search for tracks
+   of a certain length by looking at this data.</p>
+
+   <p>This is because these attributes are intended for use by the
+   site's own scripts, and are not a generic extension mechanism for
+   publicly-usable metadata.</p>
+
+  </div>
+
+  <p>Every <a href="infrastructure.html#html-elements" title="HTML elements">HTML element</a> may have
+  any number of <a href="#custom-data-attribute" title="custom data attribute">custom data
+  attributes</a> specified, with any value.</p>
+
+  <hr><dl class="domintro"><dt><var title="">element</var> . <code title="dom-dataset"><a href="#dom-dataset">dataset</a></code></dt>
+   <dd>
+
+    <p>Returns a <code><a href="common-dom-interfaces.html#domstringmap">DOMStringMap</a></code> object for the element's <code title="attr-data-*"><a href="#attr-data">data-*</a></code> attributes.</p>
+
+    <p>Hyphenated names become camel-cased. For example, <code title="">data-foo-bar=""</code> becomes <code title="">element.dataset.fooBar</code>.</p>
+
+   </dd>
+
+  </dl><div class="impl">
+
+  <p>The <dfn id="dom-dataset" title="dom-dataset"><code>dataset</code></dfn> IDL
+  attribute provides convenient accessors for all the <code title="attr-data-*"><a href="#attr-data">data-*</a></code> attributes on an element. On
+  getting, the <code title="dom-dataset"><a href="#dom-dataset">dataset</a></code> IDL attribute
+  must return a <code><a href="common-dom-interfaces.html#domstringmap">DOMStringMap</a></code> object, associated with the
+  following algorithms, which expose these attributes on their
+  element:</p>
+
+  <dl><dt>The algorithm for getting the list of name-value pairs</dt>
+
+   <dd>
+    <ol><li>Let <var title="">list</var> be an empty list of name-value
+     pairs.</li>
+
+     <li>For each content attribute on the element whose first five
+     characters are the string "<code title="">data-</code>" and whose
+     remaining characters (if any) do not include any characters in
+     the range U+0041 to U+005A (LATIN CAPITAL LETTER A to LATIN
+     CAPITAL LETTER Z), add a name-value pair to <var title="">list</var> whose name is the attribute's name with the
+     first five characters removed and whose value is the attribute's
+     value.</li>
+
+     <li>For each name on the list, for each "-" (U+002D) character in the name that is followed by a character in the
+     range U+0061 to U+007A (<a href="common-microsyntaxes.html#lowercase-ascii-letters">lowercase ASCII letters</a>), remove the U+002D HYPHEN-MINUS character
+     (-) and replace the character that followed it by the same
+     character <a href="infrastructure.html#converted-to-ascii-uppercase">converted to ASCII uppercase</a>.</li>
+
+     <li>Return <var title="">list</var>.</li>
+
+    </ol></dd>
+
+   <dt>The algorithm for setting names to certain values</dt>
+
+   <dd>
+    <ol><li>Let <var title="">name</var> be the name passed to the
+     algorithm.</li>
+
+     <li>Let <var title="">value</var> be the value passed to the
+     algorithm.</li>
+
+     <li>If <var title="">name</var> contains a "-" (U+002D) character followed by a character in the range U+0061 to
+     U+007A (<a href="common-microsyntaxes.html#lowercase-ascii-letters">lowercase ASCII letters</a>), throw a <code><a href="infrastructure.html#syntaxerror">SyntaxError</a></code> exception and abort these
+     steps.</li>
+
+     <li>For each character in the range U+0041 to U+005A (<a href="common-microsyntaxes.html#uppercase-ascii-letters">uppercase ASCII letters</a>) in <var title="">name</var>, insert a "-" (U+002D) character
+     before the character and replace the character with the same
+     character <a href="infrastructure.html#converted-to-ascii-lowercase">converted to ASCII lowercase</a>.</li>
+
+     <li>Insert the string <code title="">data-</code> at the front of
+     <var title="">name</var>.</li>
+
+     <li>Set the value of the attribute with the name <var title="">name</var>, to the value <var title="">value</var>,
+     replacing any previous value if the attribute already existed. If
+     <code title="">setAttribute()</code> would have thrown an
+     exception when setting an attribute with the name <var title="">name</var>, then this must throw the same
+     exception.</li>
+
+    </ol></dd>
+
+   <dt>The algorithm for deleting names</dt>
+
+   <dd>
+    <ol><li>Let <var title="">name</var> be the name passed to the
+     algorithm.</li>
+
+     <li>For each character in the range U+0041 to U+005A (<a href="common-microsyntaxes.html#uppercase-ascii-letters">uppercase ASCII letters</a>) in <var title="">name</var>, insert a "-" (U+002D) character
+     before the character and replace the character with the same
+     character <a href="infrastructure.html#converted-to-ascii-lowercase">converted to ASCII lowercase</a>.</li>
+
+     <li>Insert the string <code title="">data-</code> at the front of
+     <var title="">name</var>.</li>
+
+     <li>Remove the attribute with the name <var title="">name</var>,
+     if such an attribute exists. Do nothing otherwise.</li>
+
+    </ol></dd>
+
+  </dl><p>The same object must be returned each time.</p>
+
+  </div>
+
+  <div class="example">
+
+   <p>If a Web page wanted an element to represent a space ship,
+   e.g. as part of a game, it would have to use the <code title="attr-class"><a href="#classes">class</a></code> attribute along with <code title="attr-data-*"><a href="#attr-data">data-*</a></code> attributes:</p>
+
+   <pre>&lt;div class="spaceship" data-ship-id="92432"
+     data-weapons="laser 2" data-shields="50%"
+     data-x="30" data-y="10" data-z="90"&gt;
+ &lt;button class="fire"
+         onclick="spaceships[this.parentNode.dataset.shipId].fire()"&gt;
+  Fire
+ &lt;/button&gt;
+&lt;/div&gt;</pre>
+
+   <p>Notice how the hyphenated attribute name becomes camel-cased in
+   the API.</p>
+
+  </div>
+
+  <p>Authors should carefully design such extensions so that when the
+  attributes are ignored and any associated CSS dropped, the page is
+  still usable.</p>
+
+  <div class="impl">
+
+  <p>User agents must not derive any implementation behavior from
+  these attributes or values. Specifications intended for user agents
+  must not define these attributes to have any meaningful values.</p>
+
+  </div>
+
+  <p>JavaScript libraries may use the <a href="#custom-data-attribute" title="custom data
+  attribute">custom data attributes</a>, as they are considered to
+  be part of the page on which they are used. Authors of libraries
+  that are reused by many authors are encouraged to include their name
+  in the attribute names, to reduce the risk of clashes. Where it
+  makes sense, library authors are also encouraged to make the exact
+  name used in the attribute names customizable, so that libraries
+  whose authors unknowingly picked the same name can be used on the
+  same page, and so that multiple versions of a particular library can
+  be used on the same page even when those versions are not mutually
+  compatible.</p>
+
+  <div class="example">
+
+   <p>For example, a library called "DoQuery" could use attribute
+   names like <code title="">data-doquery-range</code>, and a library
+   called "jJo" could use attributes names like <code title="">data-jjo-range</code>. The jJo library could also provide
+   an API to set which prefix to use (e.g. <code title="">J.setDataPrefix('j2')</code>, making the attributes have
+   names like <code title="">data-j2-range</code>).</p>
+
+  </div>
+
+
+  </body></html>

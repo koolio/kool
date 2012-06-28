@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.fusesource</groupId>
+        <artifactId>fusesource-pom</artifactId>
+        <version>1.9</version>
+    </parent>
+
+    <groupId>io.kool</groupId>
+    <artifactId>kool-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <camel.version>2.9.2</camel.version>
+        <common-math-version>2.2</common-math-version>
+        <javax.servlet.api.version>3.0.1</javax.servlet.api.version>
+        <junit-version>4.10</junit-version>
+        <kotlin.version>0.1-SNAPSHOT</kotlin.version>
+        <pegdown.version>1.1.0</pegdown.version>
+        <surefire-version>2.12</surefire-version>
+        <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>jetbrains-release</id>
+            <name>jetbrains-release</name>
+            <url>http://repository.jetbrains.com/releases</url>
+        </repository>
+        <repository>
+            <snapshots/>
+            <id>jetbrains-snapshots</id>
+            <name>jetbrains-snapshots</name>
+            <url>http://repository.jetbrains.com/snapshots</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>jetbrains-repo</id>
+            <name>jetbrains-repo</name>
+            <url>http://repository.jetbrains.com/repo</url>
+        </pluginRepository>
+        <pluginRepository>
+            <snapshots/>
+            <id>jetbrains-repo-snapshots</id>
+            <name>jetbrains-repo-snapshots</name>
+            <url>http://repository.jetbrains.com/repo</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <modules>
+        <module>kool-stream</module>
+        <module>kool-math</module>
+        <module>kool-camel</module>
+        <module>kool-html-parse</module>
+        <module>kool-template</module>
+        <module>kool-web</module>
+        <module>kool-html-modelgen</module>
+        <module>kool-js-library</module>
+        <module>kool-ui</module>
+        <module>apidoc</module>
+        <module>website</module>
+    </modules>
+
+    <build>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                    <artifactId>kotlin-maven-plugin</artifactId>
+                    <version>${kotlin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>compile</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+
+                        <execution>
+                            <id>test-compile</id>
+                            <phase>test-compile</phase>
+                            <goals>
+                                <goal>test-compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire-version}</version>
+                <configuration>
+                    <forkMode>once</forkMode>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <useManifestOnlyJar>false</useManifestOnlyJar>
+                    <failIfNoTests>false</failIfNoTests>
+                    <includes>
+                        <include>**/*Test.*</include>
+                    </includes>
+                    <excludes>
+                    </excludes>
+                    <systemProperties>
+                        <project.version>${project.version}</project.version>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>jdk7</id>
+            <activation>
+                <jdk>7</jdk>
+            </activation>
+            <modules>
+                <module>javafx</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <jetty.version>8.1.2.v20120308</jetty.version>
+    </properties>
+
+    <parent>
+        <groupId>io.kool</groupId>
+        <artifactId>kool-project</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>apidoc</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math</artifactId>
+            <version>${common-math-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pegdown</groupId>
+            <artifactId>pegdown</artifactId>
+            <version>${pegdown.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kdoc-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <configuration>
+                    <sources>
+                        <source>${basedir}/../kool-camel/src/main/kotlin</source>
+                        <source>${basedir}/../kool-math/src/main/kotlin</source>
+                        <source>${basedir}/../kool-stream/src/main/kotlin</source>
+                        <source>${basedir}/../kool-template/src/main/kotlin</source>
+<!--
+                        <source>${basedir}/../kool-ui/src/main/kotlin</source>
+-->
+                    </sources>
+                    <title>kool.io API</title>
+                    <ignorePackages>
+                        <ignorePackage>com</ignorePackage>
+                        <ignorePackage>sun</ignorePackage>
+                        <ignorePackage>java</ignorePackage>
+                        <ignorePackage>jet</ignorePackage>
+                        <ignorePackage>org.p</ignorePackage>
+                        <ignorePackage>org.w</ignorePackage>
+                        <ignorePackage>org.slf4j</ignorePackage>
+                        <ignorePackage>org.xml</ignorePackage>
+                        <ignorePackage>org.apache</ignorePackage>
+                        <ignorePackage>io.kool.camel.support</ignorePackage>
+                        <ignorePackage>io.kool.stream.beans</ignorePackage>
+                        <ignorePackage>io.kool.stream.support</ignorePackage>
+                        <ignorePackage>io.kool.template.markdown</ignorePackage>
+                    </ignorePackages>
+                    <sourceRootHref>https://github.com/koolio/kool/tree/master</sourceRootHref>
+                    <projectRootDir>${project.basedir}/..</projectRootDir>
+                    <packageDescriptionFiles>
+                        <io.kool.stream>${project.basedir}/../kool-stream/ReadMe.md</io.kool.stream>
+                        <io.kool.template.html>${project.basedir}/../kool-template/ReadMe.md</io.kool.template.html>
+                    </packageDescriptionFiles>
+                    <packageSummaryText>
+                        <io.kool.camel>[Kool Camel DSL](http://kool.io/camel.html), extensions and integration with [Kool Streams](http://kool.io/streams.html)</io.kool.camel>
+                        <io.kool.math>Extension functions using [Apache Commons Math](http://commons.apache.org/math/) to easily perform calculations and statistics on collections</io.kool.math>
+                        <io.kool.stream>[Kool Streams](http://kool.io/streams.html) for working with events and asynchronous collections</io.kool.stream>                  ah lemme check :)
+
+                        <io.kool.template>Text processing helper classes</io.kool.template>
+                        <io.kool.template.html>[Kool Templates](http://kool.io/templates.html) a HTML5 [template engine](http://kool.io/versions/snapshot/apidocs/io/kool/template/html/org/w3c/dom/Node-extensions.html)</io.kool.template.html>
+                    </packageSummaryText>
+                    <packagePrefixToUrls>
+                        <kotlin>http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/</kotlin>
+                        <org.apache.camel>http://camel.apache.org/maven/current/camel-core/apidocs/</org.apache.camel>
+                        <org.apache.commons.math>http://commons.apache.org/math/api-2.2/</org.apache.commons.math>
+                    </packagePrefixToUrls>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>apidoc</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>apidoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
