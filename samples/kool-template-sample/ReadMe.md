@@ -4,6 +4,12 @@ This sample is a really basic little web page that shows dynamic content generat
 
 You can run this sample in a web browser using JavaScript, or in a rich Java client with JavaFX.
 
+Here's a breakdown of the source code used to implement this:
+
+* [test.kool.myapp.MyApp.kt](https://github.com/koolio/kool/blob/master/samples/kool-template-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) the actual application which interacts with the DOM using the standard [kotlin.browser](http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/browser/package-summary.html) package.
+* [sampleTemplate()](https://github.com/koolio/kool/blob/master/samples/kool-template-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L24) a function which is a simple [Kool Template](http://kool.io/templates.html) that generates a DOM fragment in the client
+
+
 ## Using a web browser
 
 Just run a build, then open the sample.html
@@ -33,17 +39,12 @@ To run the sample try...
 
 Assuming you've Java 7 enabled and JAVA_HOME points to the JRE/JDK for Java 7 or later.
 
-### Demo code walkthrough
+### Kool JavaFX code walkthrough
 
-The demo should create a really simple Java application that boots up a browser, loads a local file then dynamically updates the DOM using [Kool Templates](http://kool.io/templates.html).
+Here's a breakdown of the kool-javafx source code used to implement this:
 
-Here's a breakdown of the source code used to implement this:
-
-* [test.kool.myapp.MyApp.kt](https://github.com/koolio/kool/blob/master/samples/kool-template-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) the actual application which interacts with the DOM using the standard [kotlin.browser](http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/browser/package-summary.html) package.
 * [io.kool.javafx.WebApplication](https://github.com/koolio/kool/tree/master/kool-javafx/src/main/kotlin/io/kool/javafx/WebApplication.kt) : standard kool.io browser Application
 * [io.kool.javafx.namespace](https://github.com/koolio/kool/tree/master/kool-javafx/src/main/kotlin/io/kool/javafx/Main.kt) : Java main() function launcher for the JavaFX web app
-
-The application code - the [myapp() function](https://github.com/koolio/kool/blob/master/samples/kool-template-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) should be usable when compiled to JavaScript directly. The code in the io.kool.javafx package is only required if you want to run the application on a JVM with JavaFX.
 
 ### How a kool.io JavaFX application works
 
