@@ -1,6 +1,20 @@
-## Kool JavaFX
+# Kool Template Sample
 
-**NOTE** this module requires [Java 7 update 4](http://www.oracle.com/technetwork/java/javase/overview/index.html) or later which ships with JavaFX. If you install Java 7 and use a Mac you might want to run this first...
+This sample is a really basic little web page that shows dynamic content generation using [Kool Templates](http://kool.io/templates.html) on the client side to dynamically render DOM content in a web browser.
+
+You can run this sample in a web browser using JavaScript, or in a rich Java client with JavaFX.
+
+## Using a web browser
+
+Just run a build, then open the sample.html
+
+    mvn install
+    open sample.html
+
+
+## Using Kool JavaFX
+
+**NOTE** JavaFX requires [Java 7 update 4](http://www.oracle.com/technetwork/java/javase/overview/index.html) or later which ships with JavaFX. If you install Java 7 and use a Mac you might want to run this first...
 
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
     export PATH=$JAVA_HOME/bin:$PATH
