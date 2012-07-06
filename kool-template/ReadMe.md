@@ -14,6 +14,6 @@ However longer term we hope to allow active views to be created that automatical
 
 The easiest way to get started is to check out an example:
 
-* [simple HTML5 example](https://github.com/koolio/kool/blob/master/kool-template/src/test/kotlin/test/kool/template/html/HtmlTemplateTest.kt#L12)
-* [using a Kool Template in a browser with JavaFX](https://github.com/koolio/kool/tree/master/kool-javafx).
+* [simple HTML5 template example](https://github.com/koolio/kool/blob/master/kool-template/src/test/kotlin/test/kool/template/html/HtmlTemplateTest.kt#L12)
+* [using a Kool Template in a web browser or in JavaFX](https://github.com/koolio/kool/tree/master/samples/kool-template-sample).
 
