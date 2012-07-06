@@ -7,18 +7,13 @@
 
     <parent>
         <groupId>io.kool</groupId>
-        <artifactId>javafx</artifactId>
+        <artifactId>samples</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kool-javafx-sample</artifactId>
+    <artifactId>kool-template-sample</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>io.kool</groupId>
-            <artifactId>kool-javafx</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>io.kool</groupId>
             <artifactId>kool-template</artifactId>
@@ -29,6 +24,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit-version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -71,12 +67,20 @@
     </build>
 
     <profiles>
-        <!-- runs the JavaFX UI -->
+        <!-- runs the JavaFX UI - requires Java 7 -->
         <profile>
             <id>ui</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>io.kool</groupId>
+                    <artifactId>kool-javafx</artifactId>
+                    <version>${project.version}</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>

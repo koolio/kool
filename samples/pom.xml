@@ -11,12 +11,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>javafx</artifactId>
+    <artifactId>samples</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>kool-javafx</module>
-        <module>kool-javafx-sample</module>
+        <module>kool-template-sample</module>
     </modules>
 
 </project>

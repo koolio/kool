@@ -71,6 +71,7 @@
         <module>kool-html-modelgen</module>
         <module>kool-js-library</module>
         <module>kool-ui</module>
+        <module>samples</module>
         <module>apidoc</module>
         <module>website</module>
     </modules>
@@ -135,7 +136,7 @@
                 <jdk>7</jdk>
             </activation>
             <modules>
-                <module>javafx</module>
+                <module>kool-javafx</module>
             </modules>
         </profile>
     </profiles>

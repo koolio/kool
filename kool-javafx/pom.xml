@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>io.kool</groupId>
-        <artifactId>javafx</artifactId>
+        <artifactId>kool-project</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
