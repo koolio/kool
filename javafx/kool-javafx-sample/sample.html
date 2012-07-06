@@ -5,6 +5,7 @@
 
     <!-- this is the bootstrap mechanism to initialise our Kotlin application -->
     <script type="text/javascript" src="src/main/js/jquery.js"></script>
+    <script type="text/javascript" src="target/js/kotlin-lib-ecma3.js"></script>
     <script type="text/javascript" src="target/js/kotlin-lib.js"></script>
     <script type="text/javascript" src="target/js/kool-javafx-sample.js"></script>
 </head>
@@ -18,7 +19,7 @@
 <p>Should have generated stuff above...</p>
 
 <script  type="text/javascript">
-    $(document).ready(test.kool.myapp.myApp)
+    $(document).ready(Kotlin.modules['kool-javafx-sample'].test.kool.myapp.myApp)
 </script>
 
 </body>
