@@ -124,8 +124,29 @@ class GenerateHtmlModel: Runnable {
                                 }
                                 val arguments = safeIdentifiers.makeString(", ")
                                 val textArgument = if (empty) "" else "text, "
-                                writer.println("""${args.makeString(", ")}): Element = $fnName($textArgument$arguments) {}""")
+                                writer.println("""${args.makeString(", ")}): Element = this.$fnName($textArgument$arguments) {}""")
                                 writer.println("")
+
+                                if (name == "html") {
+                                    // lets generate a top level function for creating a HTML document
+                                    // lets avoid the use of the initialisation block
+                                    writer.println("/** Creates a HTML document */")
+                                    writer.print("fun html(")
+                                    val args = ArrayList<String>()
+                                    args.add("text: String? = null")
+                                    for (id in safeIdentifiers) {
+                                        args.add("$id: String? = null")
+                                    }
+                                    val arguments = safeIdentifiers.makeString(", ")
+                                    writer.println("""${args.makeString(", ")}, init: Element.()-> Unit): Document {
+  val doc = createDocument()
+  val root = doc.html(text, $arguments, init)
+  doc.appendChild(root)
+  return doc
+}
+
+""")
+                                }
                             }
                         }
                     }
