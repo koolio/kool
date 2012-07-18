@@ -66,8 +66,6 @@
 <a href='#65' name='65'>65</a>
 <a href='#66' name='66'>66</a>
 <a href='#67' name='67'>67</a>
-<a href='#68' name='68'>68</a>
-<a href='#69' name='69'>69</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>template</span><span class='DOT'>.</span><span class='IDENTIFIER'>html</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>kotlin</span><span class='DOT'>.</span><span class='IDENTIFIER'>dom</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
@@ -83,10 +81,8 @@
 </span><span class='RBRACE'>}</span><span>
 
 </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>Node</span><span class='DOT'>.</span><span class='IDENTIFIER'>textElement</span><span class='LPAR'>(</span><span class='IDENTIFIER'>localName</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>String</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>text</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>String</span><span class='QUEST'>?</span><span> </span><span class='EQ'>=</span><span> </span><span class='hl-keyword'>null</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>init</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Element</span><span class='DOT'>.</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Unit</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Element</span><span> </span><span class='LBRACE'>{</span><span>
-    </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>answer</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>element</span><span class='LPAR'>(</span><span class='IDENTIFIER'>localName</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
-        </span><span class='hl-keyword'>if</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>text</span><span> </span><span class='EXCLEQ'>!=</span><span> </span><span class='hl-keyword'>null</span><span class='RPAR'>)</span><span> </span><span class='IDENTIFIER'>addText</span><span class='LPAR'>(</span><span class='IDENTIFIER'>text</span><span class='RPAR'>)</span><span>
-    </span><span class='RBRACE'>}</span><span>
-    </span><span class='IDENTIFIER'>answer</span><span class='DOT'>.</span><span class='IDENTIFIER'>init</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
+    </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>answer</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>element</span><span class='LPAR'>(</span><span class='IDENTIFIER'>localName</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>init</span><span class='RPAR'>)</span><span>
+    </span><span class='hl-keyword'>if</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>text</span><span> </span><span class='EXCLEQ'>!=</span><span> </span><span class='hl-keyword'>null</span><span class='RPAR'>)</span><span> </span><span class='IDENTIFIER'>answer</span><span class='DOT'>.</span><span class='IDENTIFIER'>addText</span><span class='LPAR'>(</span><span class='IDENTIFIER'>text</span><span class='RPAR'>)</span><span>
     </span><span class='hl-keyword'>return</span><span> </span><span class='IDENTIFIER'>answer</span><span>
 </span><span class='RBRACE'>}</span><span>
 
