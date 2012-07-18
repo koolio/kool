@@ -16,4 +16,5 @@ The easiest way to get started is to check out an example:
 
 * [simple HTML5 template example](https://github.com/koolio/kool/blob/master/kool-template/src/test/kotlin/test/kool/template/html/HtmlTemplateTest.kt#L12)
 * [using a Kool Template in a web browser or in JavaFX](https://github.com/koolio/kool/tree/master/samples/kool-template-sample).
+* [using kotlin, Kool Templates and vert.x together](https://github.com/alextkachman/vertex-kotlin/blob/master/test/org/vertx/kotlin/examples/koolio/sample.kt#L14) with  [instructions for running the sample](https://github.com/alextkachman/vertex-kotlin/blob/master/ReadMe.md). Its also worth checking out [vert.x](http://vertx.io/) and the [vert.x kotlin support](https://github.com/alextkachman/vertex-kotlin)
 
