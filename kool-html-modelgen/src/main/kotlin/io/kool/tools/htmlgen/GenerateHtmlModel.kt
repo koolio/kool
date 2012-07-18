@@ -123,7 +123,8 @@ class GenerateHtmlModel: Runnable {
                                     args.add("$id: String? = null")
                                 }
                                 val arguments = safeIdentifiers.makeString(", ")
-                                writer.println("""${args.makeString(", ")}): Element = $fnName($arguments) {}""")
+                                val textArgument = if (empty) "" else "text, "
+                                writer.println("""${args.makeString(", ")}): Element = $fnName($textArgument$arguments) {}""")
                                 writer.println("")
                             }
                         }

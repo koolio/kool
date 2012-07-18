@@ -13,10 +13,8 @@ fun Node.element(localName: String, init: Element.()-> Unit): Element {
 }
 
 fun Node.textElement(localName: String, text: String? = null, init: Element.()-> Unit): Element {
-    val answer = element(localName) {
-        if (text != null) addText(text)
-    }
-    answer.init()
+    val answer = element(localName, init)
+    if (text != null) answer.addText(text)
     return answer
 }
 

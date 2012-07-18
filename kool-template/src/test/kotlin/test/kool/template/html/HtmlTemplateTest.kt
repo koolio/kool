@@ -2,13 +2,13 @@ package test.kool.template.html
 
 import io.kool.template.html.*
 import org.w3c.dom.*
-
 import kotlin.dom.*
 
-import org.junit.Test
+import org.junit.Test as test
+import kotlin.test.*
 
 class HtmlTemplateTest {
-    Test fun createDom() {
+    test fun createDom() {
         val document = createDocument()
         val dom = document.html {
             body {
@@ -17,7 +17,7 @@ class HtmlTemplateTest {
                     text = "my title"
                 }
                 p {
-                    a(href = "hey", text = "link text")
+                    a(href = "foo.html", text = "link text")
 
                     this + "some text"
 
@@ -28,5 +28,16 @@ class HtmlTemplateTest {
             }
         }
         println("HTML is ${dom.toXmlString()}")
+        val links = dom["a"]
+        val a1 = links[0]
+        println("first a ${a1.toXmlString()}")
+        //assertEquals("foo.html", a1["@href"])
+        assertEquals("foo.html", a1.getAttribute("href"))
+        assertEquals("link text", a1.text)
+
+        val a2 = links[1]
+        println("second a ${a2.toXmlString()}")
+        //assertEquals("cheese.html", a2["@href"])
+        assertEquals("cheese.html", a2.getAttribute("href"))
     }
 }
