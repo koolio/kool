@@ -33,6 +33,8 @@ class GenerateHtmlModel: Runnable {
 
     var globalAttributes = ArrayList<String>()
 
+    val headerTags = arrayList("h1", "h2", "h3", "h4", "h5", "h6")
+
     public override fun run() {
         println("Loading the HTML5 spec from $htmlSpecUrl")
 
@@ -81,71 +83,82 @@ class GenerateHtmlModel: Runnable {
                                 if (emptyTd.text == "empty") {
                                     empty = true
                                 }
-                                val attributesTd = tds[4]
-                                val attributeNames = attributesTd["a"].drop(1).map<Element, String>{ it.text } + globalAttributes
-                                println("Element $name empty $empty attributes $attributeNames")
-                                val fnName = safeIdentifier(name)
-                                val elementDescription = description.children().map{ it.toXmlString() }.makeString("")
-                                val elementDescriptionText = description.children().map{ it.text }.makeString("")
-                                val linkText = """<a href="$href" title="$elementDescriptionText">$name</a>"""
-                                val safeIdentifiers = attributeNames.map { safeIdentifier(it) }
 
-                                writer.println("/** Creates a new $linkText element: ${elementDescription} */")
-                                writer.print("fun Node.$fnName(")
-                                if (!empty) writer.print("text: String? = null, ")
-                                for (id in safeIdentifiers) {
-                                    writer.print("$id: String? = null, ")
-                                }
-                                writer.println("""init: Element.()-> Unit): Element {""")
-                                writer.print("    val answer = ")
-                                if (empty)
-                                    writer.println("""element("$name", init)""")
-                                else
-                                    writer.println("""textElement("$name", text, init)""")
+                                fun makeFunctionsForTag(name: String) {
+                                    val attributesTd = tds[4]
+                                    val attributeNames = attributesTd["a"].drop(1).map<Element, String>{ it.text } + globalAttributes
+                                    println("Element $name empty $empty attributes $attributeNames")
+                                    val fnName = safeIdentifier(name)
+                                    val elementDescription = description.children().map{ it.toXmlString() }.makeString("")
+                                    val elementDescriptionText = description.children().map{ it.text }.makeString("")
+                                    val linkText = """<a href="$href" title="$elementDescriptionText">$name</a>"""
+                                    val safeIdentifiers = attributeNames.map { safeIdentifier(it) }
 
-                                for (a in attributeNames) {
-                                    val id = safeIdentifier(a)
-                                    writer.println("""    if ($id != null) answer.setAttribute("$a", $id)""")
-                                }
-                                writer.println("    return answer")
-                                writer.println("}")
-                                writer.println("")
+                                    writer.println("/** Creates a new $linkText element: ${elementDescription} */")
+                                    writer.print("fun Node.$fnName(")
+                                    if (!empty) writer.print("text: String? = null, ")
+                                    for (id in safeIdentifiers) {
+                                        writer.print("$id: String? = null, ")
+                                    }
+                                    writer.println("""init: Element.()-> Unit): Element {""")
+                                    writer.print("    val answer = ")
+                                    if (empty)
+                                        writer.println("""element("$name", init)""")
+                                    else
+                                        writer.println("""textElement("$name", text, init)""")
 
-                                // lets avoid the use of the initialisation block
-                                writer.println("/** Creates a new $linkText element: ${elementDescription} */")
-                                writer.print("fun Node.$fnName(")
-                                val args = ArrayList<String>()
-                                var first = false
-                                if (!empty) {
-                                    args.add("text: String? = null")
-                                }
-                                for (id in safeIdentifiers) {
-                                    args.add("$id: String? = null")
-                                }
-                                val arguments = safeIdentifiers.makeString(", ")
-                                val textArgument = if (empty) "" else "text, "
-                                writer.println("""${args.makeString(", ")}): Element = this.$fnName($textArgument$arguments) {}""")
-                                writer.println("")
+                                    for (a in attributeNames) {
+                                        val id = safeIdentifier(a)
+                                        writer.println("""    if ($id != null) answer.setAttribute("$a", $id)""")
+                                    }
+                                    writer.println("    return answer")
+                                    writer.println("}")
+                                    writer.println("")
 
-                                if (name == "html") {
-                                    // lets generate a top level function for creating a HTML document
                                     // lets avoid the use of the initialisation block
-                                    writer.println("/** Creates a HTML document */")
-                                    writer.print("fun html(")
+                                    writer.println("/** Creates a new $linkText element: ${elementDescription} */")
+                                    writer.print("fun Node.$fnName(")
                                     val args = ArrayList<String>()
-                                    args.add("text: String? = null")
+                                    var first = false
+                                    if (!empty) {
+                                        args.add("text: String? = null")
+                                    }
                                     for (id in safeIdentifiers) {
                                         args.add("$id: String? = null")
                                     }
                                     val arguments = safeIdentifiers.makeString(", ")
-                                    writer.println("""${args.makeString(", ")}, init: Element.()-> Unit): Document {
-  val doc = createDocument()
-  val root = doc.html(text, $arguments, init)
-  doc.appendChild(root)
-  return doc
-}
+                                    val textArgument = if (empty) "" else "text, "
+                                    writer.println("""${args.makeString(", ")}): Element = this.$fnName($textArgument$arguments) {}""")
+                                    writer.println("")
 
-""")
+                                    if (name == "html") {
+                                        // lets generate a top level function for creating a HTML document
+                                        // lets avoid the use of the initialisation block
+                                        writer.println("/** Creates a HTML document */")
+                                        writer.print("fun html(")
+                                        val args = ArrayList<String>()
+                                        args.add("text: String? = null")
+                                        for (id in safeIdentifiers) {
+                                            args.add("$id: String? = null")
+                                        }
+                                        val arguments = safeIdentifiers.makeString(", ")
+                                        writer.println("""${args.makeString(", ")}, init: Element.()-> Unit): Document {
+      val doc = createDocument()
+      val root = doc.html(text, $arguments, init)
+      doc.appendChild(root)
+      return doc
+    }
+
+    """)
+                                    }
+                                }
+
+                                if (name == "h1") {
+                                    for (n in headerTags) {
+                                        makeFunctionsForTag(n)
+                                    }
+                                } else {
+                                    makeFunctionsForTag(name)
                                 }
                             }
                         }

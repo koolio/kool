@@ -1005,6 +1005,126 @@ fun Node.h1(text: String? = null, accesskey: String? = null, klass: String? = nu
 /** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h1</a> element: Section heading */
 fun Node.h1(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null): Element = this.h1(text, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate) {}
 
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h2</a> element: Section heading */
+fun Node.h2(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
+    val answer = textElement("h2", text, init)
+    if (accesskey != null) answer.setAttribute("accesskey", accesskey)
+    if (klass != null) answer.setAttribute("class", klass)
+    if (contenteditable != null) answer.setAttribute("contenteditable", contenteditable)
+    if (contextmenu != null) answer.setAttribute("contextmenu", contextmenu)
+    if (dir != null) answer.setAttribute("dir", dir)
+    if (draggable != null) answer.setAttribute("draggable", draggable)
+    if (dropzone != null) answer.setAttribute("dropzone", dropzone)
+    if (hidden != null) answer.setAttribute("hidden", hidden)
+    if (id != null) answer.setAttribute("id", id)
+    if (lang != null) answer.setAttribute("lang", lang)
+    if (spellcheck != null) answer.setAttribute("spellcheck", spellcheck)
+    if (style != null) answer.setAttribute("style", style)
+    if (tabindex != null) answer.setAttribute("tabindex", tabindex)
+    if (title != null) answer.setAttribute("title", title)
+    if (translate != null) answer.setAttribute("translate", translate)
+    return answer
+}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h2</a> element: Section heading */
+fun Node.h2(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null): Element = this.h2(text, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate) {}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h3</a> element: Section heading */
+fun Node.h3(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
+    val answer = textElement("h3", text, init)
+    if (accesskey != null) answer.setAttribute("accesskey", accesskey)
+    if (klass != null) answer.setAttribute("class", klass)
+    if (contenteditable != null) answer.setAttribute("contenteditable", contenteditable)
+    if (contextmenu != null) answer.setAttribute("contextmenu", contextmenu)
+    if (dir != null) answer.setAttribute("dir", dir)
+    if (draggable != null) answer.setAttribute("draggable", draggable)
+    if (dropzone != null) answer.setAttribute("dropzone", dropzone)
+    if (hidden != null) answer.setAttribute("hidden", hidden)
+    if (id != null) answer.setAttribute("id", id)
+    if (lang != null) answer.setAttribute("lang", lang)
+    if (spellcheck != null) answer.setAttribute("spellcheck", spellcheck)
+    if (style != null) answer.setAttribute("style", style)
+    if (tabindex != null) answer.setAttribute("tabindex", tabindex)
+    if (title != null) answer.setAttribute("title", title)
+    if (translate != null) answer.setAttribute("translate", translate)
+    return answer
+}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h3</a> element: Section heading */
+fun Node.h3(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null): Element = this.h3(text, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate) {}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h4</a> element: Section heading */
+fun Node.h4(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
+    val answer = textElement("h4", text, init)
+    if (accesskey != null) answer.setAttribute("accesskey", accesskey)
+    if (klass != null) answer.setAttribute("class", klass)
+    if (contenteditable != null) answer.setAttribute("contenteditable", contenteditable)
+    if (contextmenu != null) answer.setAttribute("contextmenu", contextmenu)
+    if (dir != null) answer.setAttribute("dir", dir)
+    if (draggable != null) answer.setAttribute("draggable", draggable)
+    if (dropzone != null) answer.setAttribute("dropzone", dropzone)
+    if (hidden != null) answer.setAttribute("hidden", hidden)
+    if (id != null) answer.setAttribute("id", id)
+    if (lang != null) answer.setAttribute("lang", lang)
+    if (spellcheck != null) answer.setAttribute("spellcheck", spellcheck)
+    if (style != null) answer.setAttribute("style", style)
+    if (tabindex != null) answer.setAttribute("tabindex", tabindex)
+    if (title != null) answer.setAttribute("title", title)
+    if (translate != null) answer.setAttribute("translate", translate)
+    return answer
+}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h4</a> element: Section heading */
+fun Node.h4(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null): Element = this.h4(text, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate) {}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h5</a> element: Section heading */
+fun Node.h5(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
+    val answer = textElement("h5", text, init)
+    if (accesskey != null) answer.setAttribute("accesskey", accesskey)
+    if (klass != null) answer.setAttribute("class", klass)
+    if (contenteditable != null) answer.setAttribute("contenteditable", contenteditable)
+    if (contextmenu != null) answer.setAttribute("contextmenu", contextmenu)
+    if (dir != null) answer.setAttribute("dir", dir)
+    if (draggable != null) answer.setAttribute("draggable", draggable)
+    if (dropzone != null) answer.setAttribute("dropzone", dropzone)
+    if (hidden != null) answer.setAttribute("hidden", hidden)
+    if (id != null) answer.setAttribute("id", id)
+    if (lang != null) answer.setAttribute("lang", lang)
+    if (spellcheck != null) answer.setAttribute("spellcheck", spellcheck)
+    if (style != null) answer.setAttribute("style", style)
+    if (tabindex != null) answer.setAttribute("tabindex", tabindex)
+    if (title != null) answer.setAttribute("title", title)
+    if (translate != null) answer.setAttribute("translate", translate)
+    return answer
+}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h5</a> element: Section heading */
+fun Node.h5(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null): Element = this.h5(text, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate) {}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h6</a> element: Section heading */
+fun Node.h6(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
+    val answer = textElement("h6", text, init)
+    if (accesskey != null) answer.setAttribute("accesskey", accesskey)
+    if (klass != null) answer.setAttribute("class", klass)
+    if (contenteditable != null) answer.setAttribute("contenteditable", contenteditable)
+    if (contextmenu != null) answer.setAttribute("contextmenu", contextmenu)
+    if (dir != null) answer.setAttribute("dir", dir)
+    if (draggable != null) answer.setAttribute("draggable", draggable)
+    if (dropzone != null) answer.setAttribute("dropzone", dropzone)
+    if (hidden != null) answer.setAttribute("hidden", hidden)
+    if (id != null) answer.setAttribute("id", id)
+    if (lang != null) answer.setAttribute("lang", lang)
+    if (spellcheck != null) answer.setAttribute("spellcheck", spellcheck)
+    if (style != null) answer.setAttribute("style", style)
+    if (tabindex != null) answer.setAttribute("tabindex", tabindex)
+    if (title != null) answer.setAttribute("title", title)
+    if (translate != null) answer.setAttribute("translate", translate)
+    return answer
+}
+
+/** Creates a new <a href="http://dev.w3.org/html5/spec/the-h1-h2-h3-h4-h5-and-h6-elements.html#the-h1-h2-h3-h4-h5-and-h6-elements" title="Section heading">h6</a> element: Section heading */
+fun Node.h6(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null): Element = this.h6(text, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate) {}
+
 /** Creates a new <a href="http://dev.w3.org/html5/spec/the-head-element.html#the-head-element" title="Container for document metadata">head</a> element: Container for document metadata */
 fun Node.head(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
     val answer = textElement("head", text, init)
@@ -1128,13 +1248,13 @@ fun Node.html(text: String? = null, manifest: String? = null, accesskey: String?
 
 /** Creates a HTML document */
 fun html(text: String? = null, manifest: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Document {
-  val doc = createDocument()
-  val root = doc.html(text, manifest, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate, init)
-  doc.appendChild(root)
-  return doc
-}
+      val doc = createDocument()
+      val root = doc.html(text, manifest, accesskey, klass, contenteditable, contextmenu, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate, init)
+      doc.appendChild(root)
+      return doc
+    }
 
-
+    
 /** Creates a new <a href="http://dev.w3.org/html5/spec/the-i-element.html#the-i-element" title="Alternate voice">i</a> element: Alternate voice */
 fun Node.i(text: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {
     val answer = textElement("i", text, init)

@@ -13,7 +13,7 @@ class HtmlDocTemplateTest {
             body {
                 h1("Hey")
                 h2 {
-                    text = "my title"
+                    text("my title")
                 }
                 p {
                     a(href = "foo.html", text = "link text")
