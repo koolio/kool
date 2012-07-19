@@ -25,6 +25,13 @@
             <version>1.9.6.2</version>
         </dependency>
 
+        <!-- testing -->
+        <dependency>
+            <groupId>io.kool</groupId>
+            <artifactId>kool-template</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
