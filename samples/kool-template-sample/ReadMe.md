@@ -1,4 +1,4 @@
-# Kool Template Sample
+# Kool Template Sample in browser or in JavaFX
 
 This sample is a really basic little web page that shows dynamic content generation using [Kool Templates](http://kool.io/templates.html) on the client side to dynamically render DOM content in a web browser.
 
@@ -27,9 +27,9 @@ Just run a build, then open the sample.html
 
 You can check you have JavaFX in your JDK install via
 
-    ls -l $JAVA_HOME/lib/javafx-mx.jar
+    ls -l $JAVA_HOME/jre/lib/jfxrt.jar
 
-which should find the javafx jar.
+which should find the JavaFX runtime jar (jfxrt.jar).
 
 ### Running the sample
 
