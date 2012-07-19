@@ -30,7 +30,7 @@
           <artifactId>jfxrt</artifactId>
           <version>2.1</version>
           <scope>system</scope>
-          <systemPath>${java.home}/lib/jfxrt.jar</systemPath>
+          <systemPath>${javafx-jar}</systemPath>
        </dependency>
 
 

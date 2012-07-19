@@ -23,6 +23,7 @@
     <properties>
         <camel.version>2.9.2</camel.version>
         <common-math-version>2.2</common-math-version>
+        <javafx-jar>${java.home}/lib/jfxrt.jar</javafx-jar>
         <javax.servlet.api.version>3.0.1</javax.servlet.api.version>
         <junit-version>4.10</junit-version>
         <kotlin.version>0.1-SNAPSHOT</kotlin.version>
@@ -138,7 +139,7 @@
             <id>javafx</id>
             <activation>
                 <file>
-                    <exists>${java.home}/lib/jfxrt.jar</exists>
+                    <exists>${javafx-jar}</exists>
                 </file>
             </activation>
             <modules>
