@@ -61,7 +61,7 @@
             <snapshots/>
             <id>jetbrains-repo-snapshots</id>
             <name>jetbrains-repo-snapshots</name>
-            <url>http://repository.jetbrains.com/repo</url>
+            <url>http://repository.jetbrains.com/snapshots</url>
         </pluginRepository>
     </pluginRepositories>
 
