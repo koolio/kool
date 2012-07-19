@@ -81,8 +81,8 @@
     </modules>
 
     <build>
-        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
 
         <pluginManagement>
             <plugins>
@@ -135,9 +135,11 @@
 
     <profiles>
         <profile>
-            <id>jdk7</id>
+            <id>javafx</id>
             <activation>
-                <jdk>7</jdk>
+                <file>
+                    <exists>${java.home}/lib/jfxrt.jar</exists>
+                </file>
             </activation>
             <modules>
                 <module>kool-javafx</module>
