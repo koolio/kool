@@ -18,3 +18,8 @@ The easiest way to get started is to check out an example:
 * [using a Kool Template in a web browser or in JavaFX](https://github.com/koolio/kool/tree/master/samples/kool-template-sample).
 * [using kotlin, Kool Templates and vert.x together](https://github.com/alextkachman/vertex-kotlin/blob/master/test/org/vertx/kotlin/examples/koolio/sample.kt#L14) with  [instructions for running the sample](https://github.com/alextkachman/vertex-kotlin/blob/master/ReadMe.md). Its also worth checking out [vert.x](http://vertx.io/) and the [vert.x kotlin support](https://github.com/alextkachman/vertex-kotlin)
 
+### Converting HTML into Kool Templates
+
+There are helper functions and an executable main() in the [io.kool.html.tokool](https://github.com/koolio/kool/blob/master/kool-html-parse/src/main/kotlin/io/kool/html/tokool/HtmlToKool.kt#L12) package which generates Kotlin source code using Kool Templates from a HTML document. So if you have any HTML you wish to generate you can easily turn it into a Kool Template!
+
+See [this test case](https://github.com/koolio/kool/blob/master/kool-html-parse/src/test/kotlin/test/kool/html/tokool/HtmlToKoolTest.kt#L6) which takes this [sample.html](https://github.com/koolio/kool/blob/master/kool-html-parse/src/test/resources/sample.html#L1) and generates [this template](https://github.com/koolio/kool/blob/master/kool-html-parse/src/test/kotlin/generated/GeneratedTemplate.kt#L7) to see how its done.
