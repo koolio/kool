@@ -16,6 +16,7 @@
 
     <modules>
         <module>kool-template-sample</module>
+        <module>kool-template-bind-sample</module>
     </modules>
 
 </project>

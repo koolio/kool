@@ -13,6 +13,8 @@ class BindContentTest {
 
         val document = html {
             body {
+                h1("Content Refresh Example")
+
                 h2 {
                     bind {
                         text = "Orders for ${person.name}"
