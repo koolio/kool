@@ -29,13 +29,13 @@ class HtmlTemplateTest {
         }
         println("HTML is ${dom.toXmlString()}")
         val links = dom["a"]
-        val a1 = links[0]
+        val a1 = links[0]!!
         println("first a ${a1.toXmlString()}")
         //assertEquals("foo.html", a1["@href"])
         assertEquals("foo.html", a1.getAttribute("href"))
         assertEquals("link text", a1.text)
 
-        val a2 = links[1]
+        val a2 = links[1]!!
         println("second a ${a2.toXmlString()}")
         //assertEquals("cheese.html", a2["@href"])
         assertEquals("cheese.html", a2.getAttribute("href"))
