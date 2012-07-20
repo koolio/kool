@@ -7,8 +7,8 @@ import kotlin.dom.*
 import org.junit.Test as test
 import kotlin.test.*
 
-class BindTemplateTest {
-    test fun refreshingTextContent() {
+class BindTextTest {
+    test fun refreshBinding() {
         val person = Person("name1")
 
         val bind = Binder()
