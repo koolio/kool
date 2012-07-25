@@ -18,6 +18,7 @@ import io.kool.stream.Handler
 import io.kool.stream.Cursor
 import javax.annotation.processing.Processor
 import org.apache.camel.Exchange
+import org.apache.camel.Endpoint
 
 import org.junit.Test as test
 import kotlin.test.*
@@ -26,12 +27,12 @@ class EndpointProduceTest {
 
     test fun endpointExchangeStream() {
         val context = createCamelContext()
-        context.use {
+        context.use<Unit> {
 
             val inStream = context.endpoint("timer://foo?fixedRate=true&period=1000").toExchangeStream()
 
             val resultsEndpoint = context.endpoint("seda:resultsEndpoint")
-            inStream.sendTo(resultsEndpoint)
+            inStream.sendTo<Exchange>(resultsEndpoint)
 
             val outStream = resultsEndpoint.toStream()
             val cursor = outStream.take(4).open{ println("handler consuming from $resultsEndpoint got $it of type ${it.javaClass}") }

@@ -26,7 +26,7 @@ class EndpointConsumeTest {
 
     test fun endpointExchangeStream() {
         val context = createCamelContext()
-        context.use {
+        context.use<Unit> {
             val stream = context.endpoint("timer://foo?fixedRate=true&period=1000").toExchangeStream()
             val cursor = stream.take(4).open{ println("Stream Exchange handler got $it of type ${it.javaClass} with properties ${it.getProperties()}") }
 
@@ -37,7 +37,7 @@ class EndpointConsumeTest {
 
     test fun endpointStream() {
         val context = createCamelContext()
-        context.use {
+        context.use<Unit> {
             val stream = context.endpoint("timer://foo?fixedRate=true&period=1000").toStream()
             val cursor = stream.take(4).open{ println("Stream Message handler got $it of type ${it.javaClass} with headers ${it.getHeaders()}") }
 
@@ -48,7 +48,7 @@ class EndpointConsumeTest {
 
     test fun endpointStreamMapToHeader() {
         val context = createCamelContext()
-        context.use {
+        context.use<Unit> {
             val stream = context.endpoint("timer://foo?fixedRate=true&period=1000").toStream()
             val cursor = stream.map{ it.getHeader<String>("firedTime", javaClass<String>()) }.take(4).open{
                 println("Stream String handler got $it of type ${it.javaClass}")
@@ -61,7 +61,7 @@ class EndpointConsumeTest {
 
     test fun endpointHeaderStreamByFunction() {
         val context = createCamelContext()
-        context.use {
+        context.use<Unit> {
             val stream = context.endpoint("timer://foo?fixedRate=true&period=1000").toStream {
                 it.getIn()?.getHeader<String>("firedTime", javaClass<String>())
             }

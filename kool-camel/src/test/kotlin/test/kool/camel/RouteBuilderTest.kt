@@ -9,7 +9,7 @@ class RouteBuilderTest {
     test fun createRoute() {
         val context = createCamelContext()
 
-        context.use {
+        context.use<Unit> {
             val result = mockEndpoint("mock:result")
             routes {
                 from("seda:foo") {
