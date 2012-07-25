@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <searches>
 <search>
+  <href>io/kool/template/html/Binder.html</href>
+  <name>Binder [io.kool.template.html]</name>
+  <kind>class</kind>
+</search>
+<search>
   <href>io/kool/stream/Cursor.html</href>
   <name>Cursor [io.kool.stream]</name>
   <kind>trait</kind>
@@ -159,6 +164,11 @@
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#blockquote(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>blockquote() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/Binder.html#blocks</href>
+  <name>blocks [io.kool.template.html.Binder]</name>
+  <kind>val</kind>
 </search>
 <search>
   <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#body()</href>
@@ -771,6 +781,11 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/Binder.html#invoke(jet.Function0)</href>
+  <name>invoke() [io.kool.template.html.Binder]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/stream/Cursor.html#isClosed()</href>
   <name>isClosed() [io.kool.stream.Cursor]</name>
   <kind>fun</kind>
@@ -1193,6 +1208,11 @@
 <search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#q(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>q() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/Binder.html#refresh()</href>
+  <name>refresh() [io.kool.template.html.Binder]</name>
   <kind>fun</kind>
 </search>
 <search>
