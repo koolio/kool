@@ -6,8 +6,8 @@ You can run this sample in a web browser using JavaScript, or in a rich Java cli
 
 Here's a breakdown of the source code used to implement this:
 
-* [test.kool.myapp.MyApp.kt](https://github.com/koolio/kool/blob/master/samples/kool-template-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) the actual application which interacts with the DOM using the standard [kotlin.browser](http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/browser/package-summary.html) package.
-* [sampleTemplate()](https://github.com/koolio/kool/blob/master/samples/kool-template-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L24) a function which is a simple [Kool Template](http://kool.io/templates.html) that generates a DOM fragment in the client
+* [test.kool.myapp.MyApp.kt](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt) the actual application which interacts with the DOM using the standard [kotlin.browser](http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/kotlin/browser/package-summary.html) package.
+* [sampleTemplate()](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L24) a function which is a simple [Kool Template](http://kool.io/templates.html) that generates a DOM fragment in the client including listening to click events on the button (see the use of the [onClick() function on the button](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L35))
 
 
 ## Using a web browser
