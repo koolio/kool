@@ -12,6 +12,7 @@ Kool Templates are designed so that they can be used on the client side inside a
 ### Updating the DOM and event binding
 
 Since Kool Templates are based on the DOM API, you can bind directly to DOM events from inside the template DSL.
+
 For example see the use of the [onClick() function on the button in this example](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L35))
 
 Also using a **Binder** to bind expressions to nodes, its easy to allow in-place updates of the DOM using the [bind function](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L28) so that you can easily [refresh](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L45) just the parts of the DOM you need when events occur, such as a [button click](https://github.com/koolio/kool/blob/master/samples/kool-template-bind-sample/src/main/kotlin/test/kool/myapp/MyApp.kt#L35).

@@ -34,13 +34,13 @@ class MyApp {
             }
             button(id = "clickButton", text = "Click Me!") {
                 onClick {
-                    onButtonClicked()
+                    updateCounter()
                 }
             }
         }
     }
 
-    fun onButtonClicked() {
+    fun updateCounter() {
         ++clickCount
         bind.refresh()
     }
