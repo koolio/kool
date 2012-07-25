@@ -18,8 +18,7 @@ class TimeWindowTest {
         }
 
         val stream = SimpleStream<Double>()
-        // TODO compile error if you miss out this type
-        val window: Stream<List<Double>> = stream.timeWindow(1000)
+        val window = stream.timeWindow(1000)
         window.take(9).open { println("Has window of $it") }
 
         for (i in 0.upto(10)) {

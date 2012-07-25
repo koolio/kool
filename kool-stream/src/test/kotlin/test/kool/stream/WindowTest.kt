@@ -16,11 +16,7 @@ class WindowTest {
             list += i * 1.1
         }
 
-        // TODO compile error if you miss out this type
-        // val window = list.toStream().window(4)
-        val window: Stream<List<Double>> = list.toStream().window(4)
-
-        //window.take(9).open { (q: List<Double>) -> println("Has queue of $q") }
+        val window = list.toStream().window(4)
         window.take(9).open { println("Has window of $it") }
         Thread.sleep(2000)
     }
