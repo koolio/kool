@@ -194,10 +194,15 @@
 <a href='#193' name='193'>193</a>
 <a href='#194' name='194'>194</a>
 <a href='#195' name='195'>195</a>
+<a href='#196' name='196'>196</a>
+<a href='#197' name='197'>197</a>
+<a href='#198' name='198'>198</a>
+<a href='#199' name='199'>199</a>
+<a href='#200' name='200'>200</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Closeable</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Closeable</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Queue</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>List</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Map</span><span>
@@ -385,8 +390,13 @@
  * using the given *toKey* function to calculate the key to use in the map for each value
  */</span><span>
 </span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>K</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>lang</span><span class='DOT'>.</span><span class='IDENTIFIER'>Iterable</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='DOT'>.</span><span class='IDENTIFIER'>groupBy</span><span class='LPAR'>(</span><span class='IDENTIFIER'>toKey</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>K</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>K</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>List</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
-    </span><span class='hl-keyword'>return</span><span> </span><span class='hl-keyword'>this</span><span class='DOT'>.</span><span class='IDENTIFIER'>map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>K</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>List</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
-        </span><span class='IDENTIFIER'>it</span><span class='DOT'>.</span><span class='IDENTIFIER'>groupBy</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span class='IDENTIFIER'>K</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>toKey</span><span class='RPAR'>)</span><span>
-    </span><span class='RBRACE'>}</span><span>
+</span><span class='BLOCK_COMMENT'>/*
+    TODO: depends on http://youtrack.jetbrains.com/issue/KT-2513 being fixed
+
+    return this.map&lt;Map&lt;K, List&lt;T&gt;&gt;&gt; { (t: java.lang.Iterable&lt;T&gt;) -&gt;
+        t.groupBy&lt;T,K&gt;(toKey)
+    }
+*/</span><span>
+    </span><span class='hl-keyword'>throw</span><span> </span><span class='IDENTIFIER'>UnsupportedOperationException</span><span class='LPAR'>(</span><span class='OPEN_QUOTE'>&quot;</span><span class='REGULAR_STRING_PART'>TODO: requires http://youtrack.jetbrains.com/issue/KT-2513 being fixed</span><span class='CLOSING_QUOTE'>&quot;</span><span class='RPAR'>)</span><span>
 </span><span class='RBRACE'>}</span><span>
 </span></td></tr></table></body></html>

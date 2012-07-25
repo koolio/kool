@@ -31,13 +31,28 @@
   <kind>class</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#a(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>a() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#a(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>a() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#abbr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>abbr() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#abbr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>abbr() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#address(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>address() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -56,8 +71,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#area(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>area() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#area(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>area() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#article(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>article() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -66,8 +91,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#aside(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>aside() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#aside(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>aside() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#audio(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>audio() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -76,8 +111,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#b(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>b() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#b(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>b() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#base(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>base() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -86,13 +131,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#bdi(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>bdi() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#bdi(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>bdi() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#bdo(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>bdo() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#bdo(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>bdo() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#blockquote(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>blockquote() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -106,6 +166,11 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#body(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>body() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#body(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>body() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
@@ -116,8 +181,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#br(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>br() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#br(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>br() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#button(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>button() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -126,13 +201,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#canvas(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>canvas() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#canvas(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>canvas() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#caption(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>caption() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#caption(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>caption() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#cite(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>cite() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -161,8 +251,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#code(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>code() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#code(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>code() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#col(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>col() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -171,8 +271,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#colgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>colgroup() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#colgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>colgroup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#command(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>command() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -211,13 +321,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#datalist(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>datalist() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#datalist(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>datalist() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#dd(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dd() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#dd(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>dd() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#del(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>del() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -231,8 +356,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#details(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>details() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#details(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>details() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#dfn(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dfn() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -251,8 +386,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#div(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>div() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#div(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>div() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#dl(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dl() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -261,8 +406,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#dt(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>dt() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#dt(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>dt() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#element(jet.String, jet.ExtensionFunction0)</href>
+  <name>element() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -271,8 +426,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#em(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>em() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#em(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>em() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#embed(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>embed() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -301,13 +466,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#fieldset(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>fieldset() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#fieldset(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>fieldset() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#figcaption(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>figcaption() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#figcaption(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>figcaption() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#figure(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>figure() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -361,8 +541,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#footer(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>footer() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#footer(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>footer() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#form(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>form() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -406,23 +596,63 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#h1(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h1() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h1(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>h1() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
-  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h2(jet.String, jet.ExtensionFunction0)</href>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#h2(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h2() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h2(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>h2() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
-  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h3(jet.String, jet.ExtensionFunction0)</href>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#h3(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h3() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h3(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>h3() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
-  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h4(jet.String, jet.ExtensionFunction0)</href>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#h4(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h4() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h4(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>h4() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#h5(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h5() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h5(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h5() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#h6(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h6() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#h6(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>h6() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -441,8 +671,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#head(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>head() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#head(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>head() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#header(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>header() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -451,8 +691,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#hgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>hgroup() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#hgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>hgroup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#hr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>hr() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -461,8 +711,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#html(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>html() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#html(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>html() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#i(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>i() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -471,8 +731,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#iframe(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>iframe() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#iframe(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>iframe() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#img(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>img() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -481,8 +751,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#input(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>input() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#input(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>input() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#ins(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ins() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -501,8 +781,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#kbd(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>kbd() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#kbd(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>kbd() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#keygen(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>keygen() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -516,8 +806,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#label(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>label() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#label(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>label() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#legend(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>legend() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -526,8 +826,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#li(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>li() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#li(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>li() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#link(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>link() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -551,8 +861,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#map(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>map() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#map(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>map() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#mark(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>mark() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -571,6 +891,11 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#menu(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>menu() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#menu(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>menu() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
@@ -586,8 +911,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#meta(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>meta() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#meta(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>meta() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#meter(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>meter() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -611,6 +946,11 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#nav(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>nav() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#nav(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>nav() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
@@ -618,6 +958,11 @@
 <search>
   <href>io/kool/camel/org/apache/camel/Exchange-extensions.html#newInstance(java.lang.Class)</href>
   <name>newInstance() [org.apache.camel.Exchange]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#noscript(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>noscript() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -646,6 +991,11 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#objectElement(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>objectElement() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#objectElement(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>objectElement() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
@@ -653,6 +1003,11 @@
 <search>
   <href>io/kool/stream/NonBlockingHandler.html#offerNext(T)</href>
   <name>offerNext() [io.kool.stream.NonBlockingHandler]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#ol(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ol() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -741,8 +1096,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#optgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>optgroup() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#optgroup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>optgroup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#option(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>option() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -756,13 +1121,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#output(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>output() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#output(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>output() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#p(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>p() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#p(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>p() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#param(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>param() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -773,6 +1153,11 @@
 <search>
   <href>io/kool/math/java/lang/Iterable-extensions.html#percentile(jet.Double)</href>
   <name>percentile() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#pre(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>pre() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -791,13 +1176,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#progress(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>progress() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#progress(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>progress() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#q(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>q() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#q(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>q() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#render(java.lang.Appendable)</href>
+  <name>render() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -831,8 +1231,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#rp(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>rp() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#rp(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>rp() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#rt(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>rt() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -841,13 +1251,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#ruby(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ruby() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#ruby(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>ruby() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#s(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>s() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#s(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>s() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#samp(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>samp() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -876,13 +1301,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#script(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>script() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#script(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>script() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#section(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>section() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#section(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>section() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#select(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>select() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -916,13 +1356,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#small(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>small() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#small(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>small() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#source(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>source() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#source(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>source() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#span(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>span() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -936,13 +1391,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#strong(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>strong() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#strong(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>strong() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#style(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>style() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#style(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>style() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#sub(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>sub() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -961,13 +1431,28 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#summary(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>summary() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#summary(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>summary() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#sup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>sup() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#sup(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>sup() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#table(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>table() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -996,8 +1481,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#tbody(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>tbody() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#tbody(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>tbody() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#td(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>td() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1006,8 +1501,23 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#text(jet.String)</href>
+  <name>text() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#textElement(jet.String, jet.String, jet.ExtensionFunction0)</href>
+  <name>textElement() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#textElement(jet.String, jet.String, jet.ExtensionFunction0)</href>
   <name>textElement() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#textarea(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>textarea() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1016,8 +1526,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#tfoot(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>tfoot() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#tfoot(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>tfoot() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#th(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>th() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1026,8 +1546,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#thead(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>thead() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#thead(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>thead() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#time(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>time() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1043,6 +1573,11 @@
 <search>
   <href>io/kool/stream/Stream.html#timeWindow(jet.Long)</href>
   <name>timeWindow() [io.kool.stream.Stream]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#title(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>title() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1096,8 +1631,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#tr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>tr() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#tr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>tr() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#track(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>track() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1106,8 +1651,18 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#u(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>u() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#u(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>u() [org.w3c.dom.Node]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#ul(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>ul() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1121,6 +1676,11 @@
   <kind>fun</kind>
 </search>
 <search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#varElement(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>varElement() [org.w3c.dom.Element]</name>
+  <kind>fun</kind>
+</search>
+<search>
   <href>io/kool/template/html/org/w3c/dom/Node-extensions.html#varElement(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
   <name>varElement() [org.w3c.dom.Node]</name>
   <kind>fun</kind>
@@ -1128,6 +1688,11 @@
 <search>
   <href>io/kool/math/java/lang/Iterable-extensions.html#variance()</href>
   <name>variance() [java.lang.Iterable]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#video(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>video() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
@@ -1148,6 +1713,11 @@
 <search>
   <href>io/kool/stream/NonBlockingCursor.html#wakeup()</href>
   <name>wakeup() [io.kool.stream.NonBlockingCursor]</name>
+  <kind>fun</kind>
+</search>
+<search>
+  <href>io/kool/template/html/org/w3c/dom/Element-extensions.html#wbr(jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String, jet.String)</href>
+  <name>wbr() [org.w3c.dom.Element]</name>
   <kind>fun</kind>
 </search>
 <search>
