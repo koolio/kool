@@ -1,7 +1,7 @@
 package io.kool.stream
 
-import java.io.Closeable
 import io.kool.stream.support.*
+import java.io.Closeable
 import java.util.Queue
 import java.util.List
 import java.util.Map
@@ -189,7 +189,7 @@ public abstract class Stream<out T> {
  * using the given *toKey* function to calculate the key to use in the map for each value
  */
 public fun <T, K> Stream<java.lang.Iterable<T>>.groupBy(toKey: (T) -> K): Stream<Map<K, List<T>>> {
-    return this.map<Map<K, List<T>>> {
-        it.groupBy<T,K>(toKey)
+    return this.map<Map<K, List<T>>> { (t: java.lang.Iterable<T>) ->
+        t.groupBy<T,K>(toKey)
     }
 }
