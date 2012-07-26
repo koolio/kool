@@ -2,10 +2,7 @@ package test.kool.math
 
 import io.kool.math.*
 import io.kool.stream.*
-import java.util.*
-
 import org.junit.Test as test
-import org.junit.Ignore as ignore
 
 class GroupByTest {
 
@@ -13,9 +10,7 @@ class GroupByTest {
         fun toString() = "Trade($symbol, $price, $amount)"
     }
 
-    // TODO requires http://youtrack.jetbrains.com/issue/KT-2513 being fixed
-    // test
-    ignore fun streamGroupBy() {
+    test fun streamGroupBy() {
         val trades = arrayList(
                 Trade("AAPL", 630.0, 100.0),
                 Trade("GOOG", 626.0, 50.0),

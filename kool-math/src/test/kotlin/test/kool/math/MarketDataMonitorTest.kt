@@ -3,13 +3,11 @@ package test.kool.math
 import io.kool.math.*
 import io.kool.stream.*
 import java.util.*
-
 import org.junit.Test as test
-import org.junit.Ignore as ignore
 
 /*
- * based on this Esper sample http://esper.codehaus.org/esper-4.5.0/doc/reference/en/html/examples.html#examples-marketdata-monitor
- */
+* based on this Esper sample http://esper.codehaus.org/esper-4.5.0/doc/reference/en/html/examples.html#examples-marketdata-monitor
+*/
 class MarketDataMonitorTest {
 
     class Trade(val symbol: String, val price: Double, val amount: Double) {
@@ -46,9 +44,7 @@ class MarketDataMonitorTest {
         }
     }
 
-    // TODO requires http://youtrack.jetbrains.com/issue/KT-2513 being fixed
-    // test
-    ignore fun streamGroupBy() {
+    test fun streamGroupBy() {
         val trades = arrayList(
                 Trade("AAPL", 630.0, 100.0),
                 Trade("GOOG", 626.0, 50.0),
