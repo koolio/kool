@@ -11,7 +11,7 @@ import org.w3c.dom.Node
  * This approach is not as good as using an actual listener on the underlying domain model itself
  * but can be simpler to implement - and can be more efficient on low power devices.
  */
-class Binder {
+public class Binder {
     private val blocks = ArrayList<() -> Unit>()
 
     fun invoke(block: () -> Unit): Unit {
