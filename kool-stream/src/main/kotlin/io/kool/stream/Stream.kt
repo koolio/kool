@@ -60,6 +60,16 @@ public abstract class Stream<out T> {
     }
 
     /**
+     * Returns a new [[Stream]] which processes each event with the given handler first before calling the underlying
+     * handler
+     */
+    fun forEach(block: (T) -> Unit): Stream<T>  {
+        return DelegateStream(this) {
+            ForEachHandler(it, block)
+        }
+    }
+
+    /**
      * Returns a [[Stream]] which consumes events from *this* stream and *that* stream
      * and then raises events of type [[#(A,B)]] when there is an event on *stream1* followed by an event on *stream2*
      *

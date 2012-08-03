@@ -2,13 +2,13 @@ package io.kool.stream.support
 
 import io.kool.stream.*
 import java.io.Closeable
-import java.util.concurrent.atomic.AtomicBoolean
 import java.util.ArrayDeque
 import java.util.Queue
+import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * Useful base class for [[Handler]] to avoid having to implement [[onComplete()]] or [[onError()]]
- */
+* Useful base class for [[Handler]] to avoid having to implement [[onComplete()]] or [[onError()]]
+*/
 abstract class AbstractHandler<T> : Handler<T>(), Closeable {
     private val closedFlag = AtomicBoolean(false)
 
@@ -89,5 +89,16 @@ class FilterHandler<T>(delegate: Handler<T>, val predicate: (T) -> Boolean): Del
         if ((predicate)(next)) {
             delegate.onNext(next)
         }
+    }
+}
+
+/**
+ * A [[Handler]] which processes elements in the stream with a function first before delegating to the underlying handler
+ */
+class ForEachHandler<T>(delegate: Handler<T>, val fn: (T) -> Unit): DelegateHandler<T,T>(delegate) {
+
+    public override fun onNext(next: T) {
+        (fn)(next)
+        delegate.onNext(next)
     }
 }

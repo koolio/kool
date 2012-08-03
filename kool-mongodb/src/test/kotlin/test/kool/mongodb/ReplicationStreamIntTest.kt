@@ -1,15 +1,13 @@
 package test.kool.mongodb
 
 import io.kool.mongodb.*
-import com.mongodb.Mongo
-
+import io.kool.stream.MockHandler
 import org.junit.Test as test
-import kotlin.test.*
 
 /**
- * Tests using a replication stream
- */
-class ReplicationStreamIntTest : MongoTestSupport() {
+* Tests using a replication stream
+*/
+class ReplicationStreamIntTest: MongoTestSupport() {
     val testCollectionName = "replicationStreamTest"
 
     test fun stream() {
@@ -18,34 +16,40 @@ class ReplicationStreamIntTest : MongoTestSupport() {
         collection.drop()
 
         // create a replication stream
-        val stream = mongo.replicationStream(tail = true).filter { it.databaseName == testDbName && it.collectionName == testCollectionName }
-        stream.open {
+        val stream = mongo.replicationStream(tail = true) filter {
+            it.databaseName == testDbName && it.collectionName == testCollectionName
+        } forEach {
             println("Got tail replication: ${it.json}")
         }
 
+        val mock1 = MockHandler<ReplicaEvent>()
+        mock1.expectReceive(1)
+        stream.open(mock1)
+
+        // TODO: lets wait for the handler to be opened
+        Thread.sleep(1000)
+
         // now lets insert some data to force events to be raised
-
-        // lets wait for some objects to be written
-        Thread.sleep(2000)
-
         val o = dbObject("name" to "James", "location" to "Mells")
         println("Inserting object $o")
         val result = collection.insert(o)
-        println("result $result")
 
         println("Now waiting for tail notifications....")
-        Thread.sleep(10000)
-
+        mock1.assertExpectations()
 
 
         // now we should be able to process the stream without tailing from the beginning
-        val nonTailStream = mongo.replicationStream().filter { it.databaseName == testDbName && it.collectionName == testCollectionName }.take(1)
-        nonTailStream.open {
+        val nonTailStream = mongo.replicationStream() filter {
+            it.databaseName == testDbName && it.collectionName == testCollectionName
+        } forEach {
             println("Got head replication: ${it.json}")
         }
 
-        println("Now waiting for head notifications....")
-        Thread.sleep(10000)
-    }
+        val mock2 = MockHandler<ReplicaEvent>()
+        mock2.expectReceive(1)
+        nonTailStream.open(mock2)
 
+        println("Now waiting for head notifications....")
+        mock2.assertExpectations()
+    }
 }
