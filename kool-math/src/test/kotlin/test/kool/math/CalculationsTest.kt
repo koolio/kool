@@ -18,10 +18,6 @@ class CalculationsTest {
         assertTrue(v > 0)
     }
 
-    /**
-    TODO compiler issue
-    see: http://youtrack.jetbrains.com/issue/KT-1761
-
     test fun calculationsOnInts() {
         val numbers = arrayList(1, 2, 3)
         val v = numbers.variance()
@@ -30,5 +26,4 @@ class CalculationsTest {
 
         assertTrue(v > 0)
     }
-    */
 }
