@@ -2,6 +2,7 @@ package io.kool.stream.support
 
 import java.util.ArrayList
 import kotlin.test.assertTrue
+import java.util.List
 
 public trait Expectation {
     val failMessage: String
@@ -43,14 +44,22 @@ public fun java.lang.Iterable<Expectation>.isSatisfied(): Boolean {
 }
 
 /**
- * Asserts that all the expectations are satisfied, throwing a failure exception for any that are not
+ * Returns the list of failure messages
  */
-public fun java.lang.Iterable<Expectation>.assertSatisfied() {
+public fun java.lang.Iterable<Expectation>.failures(): List<String> {
     val failures = ArrayList<String>()
     for (expectation in this) {
         if (expectation() == false) {
             failures.add(expectation.failMessage)
         }
     }
+    return failures
+}
+
+/**
+ * Asserts that all the expectations are satisfied, throwing a failure exception for any that are not
+ */
+public fun java.lang.Iterable<Expectation>.assertSatisfied() {
+    val failures = this.failures()
     assertTrue(failures.isEmpty(), failures.makeString(", "))
 }
