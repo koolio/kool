@@ -12,13 +12,18 @@ class TimerTest {
         var results = arrayList<Long>()
 
         val timer = Timer()
-        val c1 = timer.fixedDelayStream(1000).take(3).open {
+        val stream = timer.fixedDelayStream(1000).take(3).forEach {
             println("Timer fired at $it")
             results += it
         }
+        val mock = MockHandler<Long>()
+        mock.expectReceive(3)
+        stream.open(mock)
+        mock.assertExpectations()
+        mock.assertWaitForClose()
 
-        Thread.sleep(5000)
         println("Interval Stream generated: results: $results")
+        println("Mock events: ${mock.events}")
     }
 
 
