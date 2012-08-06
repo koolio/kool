@@ -135,7 +135,9 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
     }
 
     // Collection API
-    public override fun <T: Any?> toArray(a: Array<T>): Array<T> = collection.toArray(a)
+    public override fun <R: Any?> toArray(a: Array<out R>): Array<R> {
+        return collection.toArray(a)
+    }
 
     public override fun toArray(): Array<Any?> = collection.toArray()
 
