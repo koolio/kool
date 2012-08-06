@@ -7,6 +7,7 @@ import com.mongodb.Mongo
 import org.bson.types.BSONTimestamp
 import com.mongodb.DBObject
 import com.mongodb.BasicDBObject
+import io.kool.mongodb.support.ReplicationStream
 
 /**
  * Creates a [[Stream<ReplicationEntry>]] from the given Mongo.
