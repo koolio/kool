@@ -12,6 +12,9 @@ import java.util.ListIterator
 import java.util.Map
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.LinkedHashMap
+import io.kool.collection.ObservableCollection
+import io.kool.collection.CollectionEventListener
+import io.kool.collection.support.CollectionEventPublisher
 
 /**
 * Returns the primary key of the given database object
@@ -22,7 +25,10 @@ val DBObject.id: Any?
 /**
  * Represents an active collection which is kept to date using replication events
  */
-public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObject? = null): Collection<DBObject> {
+public class ObservableDbCollection(val dbCollection: DBCollection, val query: DBObject? = null): ObservableCollection<DBObject> {
+    val publisher = CollectionEventPublisher<DBObject>(this)
+
+    private val updateLocalCollectionEagerly = false
     private var _idMap: Map<Any?, DBObject> = HashMap<Any?, DBObject>()
 
     val handler = ActiveDbCollectionHandler(this)
@@ -31,7 +37,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
     public override fun toString(): String = "ActiveDbCollection($dbCollection, $query)"
 
     public override fun equals(o: Any?): Boolean {
-        return if (o is ActiveDbCollection) {
+        return if (o is ObservableDbCollection) {
             this.dbCollection == o.dbCollection && this.query == o.query
         } else false
     }
@@ -42,6 +48,14 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
             answer += query.hashCode()
         }
         return answer;
+    }
+
+    public override fun addCollectionEventListener(listener: CollectionEventListener<DBObject>) {
+        publisher.addCollectionEventListener(listener)
+    }
+
+    public override fun removeCollectionEventListener(listener: CollectionEventListener<DBObject>) {
+        publisher.removeCollectionEventListener(listener)
     }
 
     protected val collection: Collection<DBObject>
@@ -70,6 +84,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
                     if (event.isDelete()) {
                         if (old != null) {
                             _idMap.remove(id)
+                            publisher.fireRemoveEvent(old)
                         }
                     } else {
                         // TODO if we have a query defined we may need to
@@ -78,10 +93,12 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
                         // or include it if it does match
                         if (old != null) {
                             // lets process an update
-                            val newValue = old.merge(change)
-                            _idMap.put(id, newValue)
+                            val update = old.merge(change)
+                            _idMap.put(id, update)
+                            publisher.fireUpdateEvent(update)
                         } else {
                             _idMap.put(id, change)
+                            publisher.fireAddEvent(change)
                         }
                     }
                 }
@@ -142,11 +159,22 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
     public override fun toArray(): Array<Any?> = collection.toArray()
 
     public override fun add(element: DBObject): Boolean {
+        println("Adding $element")
         val result = dbCollection.save(element)
-        val id = result?.getField("_id") ?: element.id
-        val old = idMap.get(id)
-        idMap.put(id, element)
-        return old == null
+        if (updateLocalCollectionEagerly) {
+            val id = result?.getField("_id") ?: element.id
+            val old = idMap.get(id)
+            println("added id $id for $element and found old $old")
+            idMap.put(id, element)
+            if (old != null) {
+                publisher.fireUpdateEvent(element)
+            } else {
+                publisher.fireAddEvent(element)
+            }
+            return old == null
+        } else {
+            return result?.getN() ?: 0 > 0
+        }
     }
 
     public override fun addAll(c: Collection<out DBObject>): Boolean {
@@ -158,8 +186,12 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
     }
 
     public override fun clear() {
+        val removed = ArrayList<DBObject>()
         dbCollection.drop()
         flush()
+        for (element in removed) {
+            publisher.fireRemoveEvent(element)
+        }
     }
 
     public override fun contains(element: Any?): Boolean {
@@ -183,11 +215,16 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
 
     public override fun remove(element: Any?): Boolean {
         if (element is DBObject) {
-            val id = element.id
-            val old = idMap.remove(id)
-            if (old != null) {
-                dbCollection.remove(element)
-                return true
+            val result = dbCollection.remove(element)
+            if (updateLocalCollectionEagerly) {
+                val id = element.id
+                val old = idMap.remove(id)
+                if (old != null) {
+                    publisher.fireRemoveEvent(element)
+                    return true
+                }
+            } else {
+                return result?.getN() ?: 0 > 0
             }
         }
         return false
@@ -209,7 +246,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
 }
 
 
-class ActiveDbCollectionHandler(val activeCollection: ActiveDbCollection): AbstractHandler<ReplicaEvent>() {
+class ActiveDbCollectionHandler(val activeCollection: ObservableDbCollection): AbstractHandler<ReplicaEvent>() {
 
     public override fun toString(): String = "ActiveDbCollectionHandler($activeCollection)"
 

@@ -27,16 +27,16 @@ public fun Mongo.replicaLog(val replicaLogDatabaseName: String = "local", replic
 /**
  * Creates an active collection from the given database.
  */
-public fun DB.activeCollection(val collName: String): ActiveDbCollection {
+public fun DB.observableCollection(val collName: String): ObservableDbCollection {
     val dbCollection = getCollection(collName)!!
-    return ActiveDbCollection(dbCollection)
+    return ObservableDbCollection(dbCollection)
 }
 
 /**
  * Creates an active collection for this underlying [[DBCollection]]
  */
-public fun DBCollection.activeCollection(): ActiveDbCollection {
-    return ActiveDbCollection(this)
+public fun DBCollection.observable(): ObservableDbCollection {
+    return ObservableDbCollection(this)
 }
 
 /**

@@ -4,17 +4,23 @@ import io.kool.mongodb.*
 import io.kool.stream.MockHandler
 import org.junit.Test as test
 import io.kool.stream.Cursor
+import io.kool.collection.*
 import kotlin.test.*
 
-class ActiveDbCollectionIntTest: MongoTestSupport() {
-    val testCollectionName = "activeDbCollectionTest"
+class ObservableDbCollectionIntTest: MongoTestSupport() {
+    val testCollectionName = "observableDbCollectionTest"
 
     test fun stream() {
+        val results = arrayList<String>()
+
         // clear the test dbCollection
         val dbCollection = db.getCollection(testCollectionName)!!
         dbCollection.drop()
 
-        val activeCollection = db.activeCollection(testCollectionName)
+        val activeCollection = db.observableCollection(testCollectionName)
+        activeCollection.onCollectionEvent {
+            results.add("${it.kindText}:${it.element["name"]}")
+        }
         assertEquals(0, activeCollection.size())
 
         // now lets insert into the dbCollection
@@ -28,6 +34,7 @@ class ActiveDbCollectionIntTest: MongoTestSupport() {
 
         // now the active dbCollection should contain some values
         assertEquals(1, activeCollection.size())
+        assertEquals(arrayList("Add:James"), results)
 
         // now lets update the value
         person1.put("name", "James2")
@@ -37,11 +44,11 @@ class ActiveDbCollectionIntTest: MongoTestSupport() {
         waitForActiveChange()
 
         assertEquals(1, activeCollection.size())
+        assertEquals(arrayList("Add:James", "Update:James2"), results)
 
         // now lets insert directly into the database and active collection
         val person2 = dbObject("name" to "Hiram")
         activeCollection.add(person2)
-        assertEquals(2, activeCollection.size())
 
         // lets check that the underlying collection has changed
         val list = dbCollection.find().iterator().toList()
@@ -49,6 +56,7 @@ class ActiveDbCollectionIntTest: MongoTestSupport() {
 
         waitForActiveChange()
         assertEquals(2, activeCollection.size())
+        assertEquals(arrayList("Add:James", "Update:James2", "Add:Hiram"), results)
 
         println("ActiveDbCollection after inserts ${activeCollection.makeString(", ", "[", "]")}")
 
@@ -58,6 +66,9 @@ class ActiveDbCollectionIntTest: MongoTestSupport() {
         waitForActiveChange()
         println("ActiveDbCollection after remove ${activeCollection.makeString(", ", "[", "]")}")
         assertEquals(1, activeCollection.size())
+        assertEquals(arrayList("Add:James", "Update:James2", "Add:Hiram", "Remove:Hiram"), results)
+
+        println("ObservableCollection results $results")
     }
 
     fun waitForActiveChange() {

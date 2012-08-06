@@ -7,7 +7,7 @@ import io.kool.collection.support.FunctionCollectionEventListener
 /**
  * Represents an observable collection
  */
-public trait ObservableCollection<T> {
+public trait ObservableCollection<T>: Collection<T> {
 
     public fun addCollectionEventListener(listener: CollectionEventListener<T>): Unit
 
