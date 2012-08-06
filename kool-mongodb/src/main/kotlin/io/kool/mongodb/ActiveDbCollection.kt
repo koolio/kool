@@ -72,6 +72,10 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
                             _idMap.remove(id)
                         }
                     } else {
+                        // TODO if we have a query defined we may need to
+                        // decide if the change matches the query
+                        // and if not, remove it if its no longer part of the view
+                        // or include it if it does match
                         if (old != null) {
                             // lets process an update
                             val newValue = old.merge(change)
@@ -87,6 +91,13 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
 
     protected fun checkLoaded() {
         if (loaded.compareAndSet(false, true)) {
+            if (!handler.isOpen()) {
+                val db = dbCollection.getDB()!!
+                val dbName = db.getName()!!
+                val collName = dbCollection.getName()!!
+                val eventStream = db.getMongo()!!.replicationStream(databaseName = dbName, collectionName = collName, tail = true)
+                eventStream.open(handler)
+            }
             val cursor = if (query != null) {
                 dbCollection.find(query)
             } else {
@@ -148,12 +159,20 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         dbCollection.drop()
         flush()
     }
-    public override fun contains(o: Any?): Boolean {
-        throw UnsupportedOperationException()
+
+    public override fun contains(element: Any?): Boolean {
+        if (element is DBObject) {
+            val id = element.id
+            return idMap.containsKey(id)
+        }
+        return false;
     }
 
     public override fun containsAll(c: Collection<out Any?>): Boolean {
-        throw UnsupportedOperationException()
+        for (e in c) {
+            if (!contains(e)) return false
+        }
+        return true
     }
 
     public override fun isEmpty(): Boolean = idMap.isEmpty()

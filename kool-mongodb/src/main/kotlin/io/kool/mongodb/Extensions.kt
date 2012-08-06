@@ -29,11 +29,14 @@ public fun Mongo.replicaLog(val replicaLogDatabaseName: String = "local", replic
  */
 public fun DB.activeCollection(val collName: String): ActiveDbCollection {
     val dbCollection = getCollection(collName)!!
-    val dbName = getName()!!
-    val eventStream = getMongo()!!.replicationStream(databaseName = dbName, collectionName = collName, tail = true)
-    val activeCollection = ActiveDbCollection(dbCollection)
-    eventStream.open(activeCollection.handler)
-    return activeCollection
+    return ActiveDbCollection(dbCollection)
+}
+
+/**
+ * Creates an active collection for this underlying [[DBCollection]]
+ */
+public fun DBCollection.activeCollection(): ActiveDbCollection {
+    return ActiveDbCollection(this)
 }
 
 /**
