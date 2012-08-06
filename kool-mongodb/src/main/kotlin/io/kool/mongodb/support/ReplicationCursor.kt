@@ -20,11 +20,13 @@ class ReplicationCursor(val stream: ReplicationStream, val handler: Handler<Repl
             if (timestamp == null && stream.tail) {
                 // lets load the last timestamp from the collection
                 val cursor = oplog.find()?.sort(BasicDBObject("\$natural", -1))?.limit(1)!!
-                val last = cursor.next()
-                if (last != null) {
-                    val entry = ReplicaEvent(last)
-                    timestamp = entry.timestamp
-                    //println("$this starting from timestamp $timestamp from entry $entry")
+                if (cursor.hasNext()) {
+                    val last = cursor.next()
+                    if (last != null) {
+                        val entry = ReplicaEvent(last)
+                        timestamp = entry.timestamp
+                        //println("$this starting from timestamp $timestamp from entry $entry")
+                    }
                 }
             }
             if (timestamp == null) {
@@ -32,7 +34,18 @@ class ReplicationCursor(val stream: ReplicationStream, val handler: Handler<Repl
                 timestamp = BSONTimestamp(0, 1)
             }
             while (!isClosed()) {
-                val cursor = oplog.find(BasicDBObject("ts", BasicDBObject("\$gt", timestamp)))!!
+                val query = BasicDBObject("ts", BasicDBObject("\$gt", timestamp))
+                val dbName = stream.databaseName
+                val collName = stream.collectionName
+                if (dbName != null && collName != null) {
+                    val ns = dbName + "." + collName
+                    query.put("ns", ns)
+                } else if (dbName != null) {
+                    query.put("ns", "/$dbName\\..*/i")
+                } else if (collName != null) {
+                    query.put("ns", "/.*\\.$collName/i")
+                }
+                val cursor = oplog.find(query)!!
                 cursor.addOption(Bytes.QUERYOPTION_TAILABLE)
                 cursor.addOption(Bytes.QUERYOPTION_AWAITDATA)
 
