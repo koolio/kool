@@ -30,7 +30,7 @@ public fun Mongo.replicaLog(val replicaLogDatabaseName: String = "local", replic
 public fun DB.activeCollection(val collName: String): ActiveDbCollection {
     val dbCollection = getCollection(collName)!!
     val dbName = getName()!!
-    val eventStream = getMongo()!!.replicationStream(databaseName = dbName, collectionName = collName)
+    val eventStream = getMongo()!!.replicationStream(databaseName = dbName, collectionName = collName, tail = true)
     val activeCollection = ActiveDbCollection(dbCollection)
     eventStream.open(activeCollection.handler)
     return activeCollection
@@ -61,5 +61,15 @@ public inline fun dbObject(vararg values: #(String, Any?)): DBObject {
     for (v in values) {
         answer.put(v._1, v._2)
     }
+    return answer
+}
+
+
+/**
+ * Creates a new DBObject with this object and the given delta changes applied
+ */
+public fun DBObject.merge(delta: DBObject): DBObject {
+    val answer = BasicDBObject(this.toMap())
+    answer.putAll(delta)
     return answer
 }
