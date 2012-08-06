@@ -35,7 +35,7 @@ class ReplicationCursor(val stream: ReplicationStream, val handler: Handler<Repl
                 cursor.addOption(Bytes.QUERYOPTION_TAILABLE)
                 cursor.addOption(Bytes.QUERYOPTION_AWAITDATA)
 
-                while (cursor.hasNext()) {
+                while (!isClosed() && cursor.hasNext()) {
                     val x = cursor.next()
                     if (x != null) {
                         val entry = ReplicaEvent(x)

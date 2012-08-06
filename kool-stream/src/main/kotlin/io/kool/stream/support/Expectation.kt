@@ -27,6 +27,8 @@ private class FunctionExpectation(override val failMessage: String, val predicat
     public override fun invoke(): Boolean {
         return (predicate)()
     }
+
+    public fun toString(): String = "FunctionExpectation(failMessage: $failMessage, predicate: $predicate)"
 }
 
 /**
