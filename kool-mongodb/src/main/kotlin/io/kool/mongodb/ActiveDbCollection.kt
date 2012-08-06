@@ -22,9 +22,7 @@ val DBObject.id: Any?
 /**
  * Represents an active collection which is kept to date using replication events
  */
-public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObject? = null): List<DBObject> {
-    // TODO do we really need both the List and the Map?
-    private var _list: List<DBObject> = ArrayList<DBObject>()
+public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObject? = null): Collection<DBObject> {
     private var _idMap: Map<Any?, DBObject> = HashMap<Any?, DBObject>()
 
     val handler = ActiveDbCollectionHandler(this)
@@ -46,10 +44,9 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         return answer;
     }
 
-    protected val list: List<DBObject>
+    protected val collection: Collection<DBObject>
         get() {
-            checkLoaded()
-            return _list
+            return idMap.values()
         }
 
     protected val idMap: Map<Any?, DBObject>
@@ -74,18 +71,14 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
                     if (event.isDelete()) {
                         if (old != null) {
                             _idMap.remove(id)
-                            _list.remove(old)
                         }
                     } else {
                         if (old != null) {
                             // lets process an update
                             val newValue = old.merge(change)
                             _idMap.put(id, newValue)
-                            _list.remove(old)
-                            _list.add(newValue)
                         } else {
                             _idMap.put(id, change)
-                            _list.add(change)
                         }
                     }
                 }
@@ -101,17 +94,13 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
                 dbCollection.find()
             }
             val newMap = LinkedHashMap<Any?, DBObject>()
-            val newList = if (cursor != null) {
+            if (cursor != null) {
                 for (e in cursor) {
                     val id = e.id
                     newMap[id] = e
                 }
-                ArrayList<DBObject>(newMap.values())
-            } else {
-                ArrayList<DBObject>()
             }
             sync {
-                _list = newList
                 _idMap = newMap
             }
         }
@@ -119,7 +108,6 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
 
     public fun flush() {
         sync {
-            _list = ArrayList<DBObject>()
             _idMap = HashMap<Any?, DBObject>()
             loaded.set(false)
         }
@@ -132,10 +120,14 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         return synchronized (handler, block)
     }
 
-    // List API
-    public override fun <T: Any?> toArray(a: Array<T>): Array<T> = list.toArray(a)
+    public fun get(key: Any?): DBObject? {
+        return idMap.get(key)
+    }
 
-    public override fun toArray(): Array<Any?> = list.toArray()
+    // Collection API
+    public override fun <T: Any?> toArray(a: Array<T>): Array<T> = collection.toArray(a)
+
+    public override fun toArray(): Array<Any?> = collection.toArray()
 
     public override fun add(element: DBObject): Boolean {
         var answer = false
@@ -143,17 +135,13 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         val id = result?.getField("_id") ?: element.id
         val old = idMap.get(id)
         if (old != null) {
-            list.remove(old)
+            collection.remove(old)
         } else {
             answer = true
         }
-        list.add(element)
+        collection.add(element)
         idMap.put(id, element)
         return answer
-    }
-
-    public override fun add(index: Int, element: DBObject) {
-        add(element)
     }
 
     public override fun addAll(c: Collection<out DBObject>): Boolean {
@@ -162,10 +150,6 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
             answer = answer || add(element)
         }
         return answer
-    }
-
-    public override fun addAll(index: Int, c: Collection<out DBObject>): Boolean {
-        return addAll(c)
     }
 
     public override fun clear() {
@@ -180,32 +164,9 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         throw UnsupportedOperationException()
     }
 
-    public override fun get(index: Int): DBObject {
-        return list.get(index)
-    }
+    public override fun isEmpty(): Boolean = collection.isEmpty()
 
-    public override fun indexOf(o: Any?): Int {
-        throw UnsupportedOperationException()
-    }
-
-    public override fun isEmpty(): Boolean = list.isEmpty()
-
-    public override fun iterator(): java.util.Iterator<DBObject> = list.iterator()
-
-    public override fun lastIndexOf(o: Any?): Int {
-        throw UnsupportedOperationException()
-    }
-    public override fun listIterator(): ListIterator<DBObject> = list.listIterator()
-
-    public override fun listIterator(index: Int): ListIterator<DBObject> = list.listIterator(index)
-
-    public override fun remove(index: Int): DBObject {
-        val answer = list.remove(index)
-        if (answer != null) {
-            dbCollection.remove(answer)
-        }
-        return answer
-    }
+    public override fun iterator(): java.util.Iterator<DBObject> = collection.iterator()
 
     public override fun remove(element: Any?): Boolean {
         if (element is DBObject) {
@@ -213,7 +174,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
             val old = idMap.remove(id)
             if (old != null) {
                 dbCollection.remove(element)
-                list.remove(element)
+                collection.remove(element)
                 return true
             }
         }
@@ -232,13 +193,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         throw UnsupportedOperationException()
     }
 
-    public override fun set(index: Int, element: DBObject): DBObject {
-        throw UnsupportedOperationException()
-    }
-
-    public override fun size(): Int = list.size()
-
-    public override fun subList(fromIndex: Int, toIndex: Int): List<DBObject> = list.subList(fromIndex, toIndex)
+    public override fun size(): Int = collection.size()
 }
 
 
