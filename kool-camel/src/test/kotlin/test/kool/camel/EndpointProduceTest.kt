@@ -27,7 +27,7 @@ class EndpointProduceTest {
 
     test fun endpointExchangeStream() {
         val context = createCamelContext()
-        context.use<Unit> {
+        context.use {
 
             val inStream = context.endpoint("timer://foo?fixedRate=true&period=1000").toExchangeStream()
 
