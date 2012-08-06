@@ -61,7 +61,6 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
 
     public fun onReplicaEvent(event: ReplicaEvent) {
         // we can discard events before we've loaded
-        println("Got a change event $event")
         if (loaded.get()) {
             val change = event.change
             val id = change.get("_id")
@@ -130,18 +129,11 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
     public override fun toArray(): Array<Any?> = collection.toArray()
 
     public override fun add(element: DBObject): Boolean {
-        var answer = false
         val result = dbCollection.save(element)
         val id = result?.getField("_id") ?: element.id
         val old = idMap.get(id)
-        if (old != null) {
-            collection.remove(old)
-        } else {
-            answer = true
-        }
-        collection.add(element)
         idMap.put(id, element)
-        return answer
+        return old == null
     }
 
     public override fun addAll(c: Collection<out DBObject>): Boolean {
@@ -164,7 +156,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         throw UnsupportedOperationException()
     }
 
-    public override fun isEmpty(): Boolean = collection.isEmpty()
+    public override fun isEmpty(): Boolean = idMap.isEmpty()
 
     public override fun iterator(): java.util.Iterator<DBObject> = collection.iterator()
 
@@ -174,7 +166,6 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
             val old = idMap.remove(id)
             if (old != null) {
                 dbCollection.remove(element)
-                collection.remove(element)
                 return true
             }
         }
@@ -193,7 +184,7 @@ public class ActiveDbCollection(val dbCollection: DBCollection, val query: DBObj
         throw UnsupportedOperationException()
     }
 
-    public override fun size(): Int = collection.size()
+    public override fun size(): Int = idMap.size()
 }
 
 
