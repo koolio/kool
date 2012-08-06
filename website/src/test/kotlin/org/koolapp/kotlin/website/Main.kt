@@ -72,7 +72,14 @@ fun main(args: Array<String>): Unit {
     val annotationConfiguration = object : AnnotationConfiguration() {
 
         public override fun parseWebInfClasses(context: WebAppContext?, parser: AnnotationParser?) {
+            /*
+             TODO causes compiler error
+
+Caused by: java.lang.NullPointerException
+	at org.jetbrains.jet.codegen.ExpressionCodegen.invokeFunction(ExpressionCodegen.java:1387)
+
             super.parseWebInfClasses(context, parser)
+             */
 
             if (parser != null && context != null) {
                 for (file in extraClassDirs) {

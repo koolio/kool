@@ -1,6 +1,6 @@
 ## Kool MongoDb
 
-** Kool MongoDb ** provides
+**Kool MongoDb** provides
 
 * a number of Kotlin extension functions for working with [MongoDb](http://www.mongodb.org/)
 * support for [Kool Streams](http://kool.io/streams.html) and [MongoDb Replica Sets](http://www.mongodb.org/display/DOCS/Replica+Set+Tutorial) so that you can process database change events in MongoDb using [Kool Streams](http://kool.io/streams.html)
