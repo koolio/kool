@@ -1,24 +1,28 @@
 angular.module('Koolio', ['ngResource']);
 
-function ProductController($scope, $resource) {
-    var Model = $resource('rest/products');
+function ProductController($scope, $resource, $location) {
+    var Model = $resource($location.path() + '/rest/products');
     $scope.results = Model.get();
+
+    $scope.reset = function() {
+        $scope.formData = {};
+    };
 
     $scope.save = function (formData) {
         new Model(formData).$save();
-        $scope.formData = {};
+        $scope.reset();
         // lets force a reload
         $scope.results = Model.get();
     };
 }
 
-function ChatController($scope, $resource) {
+function ChatController($scope, $resource, $location) {
     $scope.status = "name";
     $scope.disabled = true;
     $scope.connectionStatus = 'Connecting...';
 
-    var Message = $resource('rest/chat');
-
+    var resourceUrl = $location.path() + '/rest/chat';
+    var Message = $resource(resourceUrl);
     $scope.collection = Message.get();
 
     $scope.post = function (message) {
@@ -46,7 +50,7 @@ function ChatController($scope, $resource) {
 
     // Atomsphere socket stuff
     var socket = $.atmosphere;
-    var request = { url:document.location.toString() + 'rest/chat/events',
+    var request = { url: resourceUrl + '/events',
         contentType:"application/json",
         logLevel:'debug',
         transport:'websocket',
@@ -67,7 +71,6 @@ function ChatController($scope, $resource) {
             console.log('This doesn\'t look like a valid JSON: ', message.data);
             return;
         }
-        console.log("Got message " + json);
         $scope.collection.messages.push(json);
         $scope.$apply();
     };

@@ -3,14 +3,36 @@
 <head>
     <meta charset="utf-8">
     <title>Chat</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
 </head>
 <body ng-controller="ChatController">
-<div id="header"><h3>Chat {{me}}</h3></div>
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">kool.io sample</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Chat</a></li>
+                    <li><a href="product.html">Products</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a href="#>">{{me}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="content">
     <span id="status">{{connectionStatus}}</span>
 
-    <table>
+    <table class="table-condensed table-striped">
         <tr ng-repeat="message in collection.messages">
             <td class="time">
                 [{{message.time | date:'shortTime'}}]
@@ -24,10 +46,10 @@
         </tr>
     </table>
 
-    <form ng-submit="post(message)">
+    <form class="well form-inline" ng-submit="post(message)">
         <label>{{status}}: </label>
         <input type="text" ng-model="message.text" name="text"/>
-        <input type="submit" id="submit" value="Submit"/>
+        <input type="submit" class="btn btn-primary" id="submit" value="Submit"/>
     </form>
 </div>
 
