@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!--
-<script type="text/javascript" src="jquery/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="jquery/jquery.atmosphere.js"></script>
-<script type="text/javascript" src="jquery/application.js"></script>
--->
-
-<html ng-app>
+<html ng-app="Koolio">
 <head>
     <meta charset="utf-8">
     <title>Chat</title>
@@ -17,7 +11,7 @@
     <span id="status">{{connectionStatus}}</span>
 
     <table>
-        <tr ng-repeat="message in messages">
+        <tr ng-repeat="message in collection.messages">
             <td class="time">
                 [{{message.time | date:'shortTime'}}]
             </td>
@@ -41,6 +35,6 @@
 <script type="text/javascript" src="lib/angular-resource-1.0.1.js"></script>
 <script type="text/javascript" src="jquery/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="jquery/jquery.atmosphere.js"></script>
-<script type="text/javascript" src="js/chat.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
 </body>
 </html>

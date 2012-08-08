@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="Koolio">
+<head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body ng-controller="ProductController">
+<div id="header"><h3>Products</h3></div>
+<div id="input">
+    <form ng-submit="save(formData)">
+        <label>name: </label>
+        <input type="text" ng-model="formData.name" name="text"/>
+        <label>price: </label>
+        <input type="text" ng-model="formData.price" name="text"/>
+        <input type="submit" id="submit" value="Submit"/>
+    </form>
+</div>
+<div id="content">
+    <table>
+        <tr ng-repeat="row in results.list">
+            <td class="id">
+                {{row.id}}
+            </td>
+            <td class="name">
+                {{row.name}}
+            </td>
+            <td class="price">
+                {{row.price}}
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript" src="lib/angular-1.0.1.js"></script>
+<script type="text/javascript" src="lib/angular-resource-1.0.1.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+</body>
+</html>
