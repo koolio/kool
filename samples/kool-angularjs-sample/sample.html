@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample</title>
+
+    <!-- this is the bootstrap mechanism to initialise our Kotlin application -->
+    <script type="text/javascript" src="src/main/webapp/js/jquery.js"></script>
+    <script type="text/javascript" src="target/js/kotlin-lib-ecma3.js"></script>
+    <script type="text/javascript" src="target/js/kotlin-lib.js"></script>
+    <script type="text/javascript" src="target/js/kool-template-bind-sample.js"></script>
+</head>
+<body>
+<h1>Sample</h1>
+
+<p>This example HTML was loaded from a local file!</p>
+
+<div id="view"/>
+
+<p>Should have generated stuff above...</p>
+
+<script  type="text/javascript">
+    $(document).ready(Kotlin.modules['kool-template-bind-sample'].test.kool.myapp.myApp)
+</script>
+
+</body>
+</html>

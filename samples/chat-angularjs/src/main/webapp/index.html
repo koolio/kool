@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+<script type="text/javascript" src="jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="jquery/jquery.atmosphere.js"></script>
+<script type="text/javascript" src="jquery/application.js"></script>
+-->
+
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body ng-controller="ChatController">
+<div id="header"><h3>Chat {{me}}</h3></div>
+<div id="content">
+    <span id="status">{{connectionStatus}}</span>
+
+    <table>
+        <tr ng-repeat="message in messages">
+            <td class="time">
+                [{{message.time | date:'shortTime'}}]
+            </td>
+            <td class="author" ng-style="authorStyle(message.author)">
+                &lt;{{message.author}}&gt;
+            </td>
+            <td>
+                {{message.text}}
+            </td>
+        </tr>
+    </table>
+
+    <form ng-submit="post(message)">
+        <label>{{status}}: </label>
+        <input type="text" ng-model="message.text" name="text"/>
+        <input type="submit" id="submit" value="Submit"/>
+    </form>
+</div>
+
+<script type="text/javascript" src="lib/angular-1.0.1.js"></script>
+<script type="text/javascript" src="lib/angular-resource-1.0.1.js"></script>
+<script type="text/javascript" src="jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="jquery/jquery.atmosphere.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>
+</body>
+</html>

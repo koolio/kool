@@ -16,6 +16,7 @@
 
     <modules>
         <module>chat</module>
+        <module>chat-angularjs</module>
 <!--
         <module>kool-angularjs-sample</module>
 -->
