@@ -63,7 +63,7 @@
             see: http://www.mongodb.org/display/DOCS/Replica+Set+Tutorial
         -->
         <profile>
-            <id>itest</id>
+            <id>mongo</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>

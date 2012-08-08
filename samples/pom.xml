@@ -15,8 +15,31 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>chat</module>
+<!--
+        <module>kool-angularjs-sample</module>
+-->
         <module>kool-template-sample</module>
         <module>kool-template-bind-sample</module>
+        <module>kool-template-mongodb-sample</module>
     </modules>
 
+    <profiles>
+        <!--
+            This profile requires a mongodb installation on localhost on 127.0.0.1 which is running with the 'replSet' command line option
+            to enable the opslog.rs collection generation
+
+            see: http://www.mongodb.org/display/DOCS/Replica+Set+Tutorial
+        -->
+        <profile>
+            <id>mongo</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+
+            <modules>
+                <module>kool-template-mongodb-sample</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>
