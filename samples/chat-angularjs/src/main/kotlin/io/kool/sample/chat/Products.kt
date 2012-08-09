@@ -1,14 +1,9 @@
 package io.kool.sample.chat
 
 import com.sun.jersey.spi.resource.Singleton
-import java.util.ArrayList
 import java.util.List
-import javax.ws.rs.*
-import org.atmosphere.annotation.Broadcast
-import javax.ws.rs.core.Context
-import javax.ws.rs.core.ExecutionContext
-import java.util.UUID
 import java.util.concurrent.atomic.AtomicInteger
+import javax.ws.rs.*
 
 Path("/products")
 Produces("application/json")
@@ -18,21 +13,26 @@ public open class Products() {
     protected val collection: List<Product> = arrayList(Product.init(nextId, "Beer", 3.99), Product.init(nextId, "Wine", 5.99))
 
     public val nextId: String
-    get() = idGenerator.incrementAndGet().toString()
+        get() = idGenerator.incrementAndGet().toString()
 
     GET
+    Produces("application/json")
     public open fun results(): Results<Product> = Results<Product>(collection)
 
     GET
-    Path("{id}")
-    public open fun get(id: String): Product? {
-        return collection.find { it.id == id }
+    Path("id/{id}")
+    //Produces("application/json")
+    public open fun byId([PathParam("id")] id: String?): Product? {
+        println("get id '$id'")
+        val answer = collection.find { it.id == id }
+        return answer
     }
 
     DELETE
-    Path("{id}")
-    public open fun remove(id: String): Product? {
-        val element = get(id)
+    Path("id/{id}")
+    public open fun remove(PathParam("id") id: String): Product? {
+        println("remove id '$id'")
+        val element = byId(id)
         if (element != null) {
             collection.remove(element)
         }
