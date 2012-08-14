@@ -5,8 +5,7 @@
 
     <description>Atmosphere REST Chat</description>
     <display-name>Atmosphere REST Chat</display-name>
-
-<!--    <servlet>
+   <servlet>
         <description>AtmosphereServlet</description>
         <servlet-name>AtmosphereServlet</servlet-name>
         <servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
@@ -14,12 +13,12 @@
             <param-name>com.sun.jersey.config.property.packages</param-name>
             <param-value>io.kool.sample.chat</param-value>
         </init-param>
-&lt;!&ndash;
+<!--
         <init-param>
             <param-name>com.sun.jersey.config.feature.TracePerRequest</param-name>
             <param-value>true</param-value>
         </init-param>
-&ndash;&gt;
+-->
         <init-param>
             <param-name>org.atmosphere.websocket.messageContentType</param-name>
             <param-value>application/json</param-value>
@@ -28,23 +27,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AtmosphereServlet</servlet-name>
-        <url-pattern>/rest/chat/*</url-pattern>
-    </servlet-mapping>-->
-
-
-    <servlet>
-   		<servlet-name>JerseyServlet</servlet-name>
-   		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-        <init-param>
-            <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>io.kool.sample.chat</param-value>
-        </init-param>
-   		<load-on-startup>1</load-on-startup>
-   	</servlet>
-
-   	<servlet-mapping>
-   		<servlet-name>JerseyServlet</servlet-name>
-   		<url-pattern>/rest/*</url-pattern>
-   	</servlet-mapping>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
 </web-app>
 

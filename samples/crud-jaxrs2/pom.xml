@@ -7,16 +7,18 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>chat-angularjs</artifactId>
+    <artifactId>crud-jaxrs2</artifactId>
     <packaging>war</packaging>
     <name>chat-angular</name>
 
     <properties>
-<!--
         <jersey-version>1.13</jersey-version>
+<!--
+        <jersey2-version>2.0-m06</jersey2-version>
 -->
-        <jersey-version>1.14-SNAPSHOT</jersey-version>
+        <jersey2-version>2.0-SNAPSHOT</jersey2-version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -29,6 +31,11 @@
         	<version>${jackson-version}</version>
         </dependency>
         <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-xc</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback-version}</version>
@@ -38,6 +45,7 @@
             <artifactId>logback-core</artifactId>
             <version>${logback-version}</version>
         </dependency>
+<!--
         <dependency>
             <groupId>org.atmosphere</groupId>
             <artifactId>atmosphere-jaxrs2</artifactId>
@@ -63,7 +71,9 @@
             <version>${atmosphere-version}</version>
             <type>war</type>
         </dependency>
+-->
 
+<!--
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-server</artifactId>
@@ -79,6 +89,26 @@
             <artifactId>jersey-core</artifactId>
             <version>${jersey-version}</version>
         </dependency>
+-->
+<!--
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey2-version}</version>
+        </dependency>
+-->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-grizzly2-servlet</artifactId>
+            <version>${jersey2-version}</version>
+        </dependency>
+<!--
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>${jersey2-version}</version>
+        </dependency>
+-->
 
         <!-- testing -->
         <dependency>
