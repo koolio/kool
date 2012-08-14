@@ -18,17 +18,18 @@ function ProductController($scope, $resource, $location) {
     }
 
     $scope.delete = function (formData) {
-        console.log('deleting ' + formData);
-        $scope.elementResource(formData).delete();
-        // lets force a reload
-        $scope.results = Model.get();
+        $scope.elementResource(formData).delete(function() {
+            // lets force a reload
+            $scope.results = Model.get();
+        });
     };
 
     $scope.save = function (formData) {
-        new Model(formData).$save();
-        $scope.reset();
-        // lets force a reload
-        $scope.results = Model.get();
+        new Model(formData).$save(function() {
+            $scope.reset();
+            // lets force a reload
+            $scope.results = Model.get();
+        });
     };
 }
 
