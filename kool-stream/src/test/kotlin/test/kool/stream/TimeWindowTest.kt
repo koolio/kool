@@ -21,7 +21,7 @@ class TimeWindowTest {
         val window = stream.timeWindow(1000)
         window.take(9).open { println("Has window of $it") }
 
-        for (i in 0.upto(10)) {
+        for (i in 0.rangeTo(10)) {
             stream.onNext(value())
             stream.onNext(value())
             Thread.sleep(800)

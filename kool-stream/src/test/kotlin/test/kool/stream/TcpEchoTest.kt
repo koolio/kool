@@ -44,7 +44,7 @@ class TcpEchoTest {
                 threadPool.execute(runnable{
                     println("Transmitting socket data...")
                     val os = socket.getOutputStream()!!.buffered(1024*64)
-                    for( i in 0 upto data_count ) {
+                    for( i in 0.rangeTo(data_count)) {
                         os.write(data)
                     }
                     os.flush()

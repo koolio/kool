@@ -88,7 +88,7 @@ public fun writeHtmlElementAsKoolTemplate(element: Element, writer: PrintWriter,
     val attributes = element.attributes
     if (attributes != null) {
         val size = attributes.length
-        for (i in 0.upto(size)) {
+        for (i in 0.rangeTo(size)) {
             val attr = attributes.item(i)
             if (attr != null) {
                 attributeMap[attr.localName] = attr.text
@@ -144,7 +144,7 @@ public fun writeHtmlElementAsKoolTemplate(element: Element, writer: PrintWriter,
 }
 
 fun indent(writer: PrintWriter, indent: Int) {
-    for (i in 1.upto(indent)) {
+    for (i in 1.rangeTo(indent)) {
         writer.print("    ")
     }
 }
