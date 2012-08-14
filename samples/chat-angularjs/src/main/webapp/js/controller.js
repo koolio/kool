@@ -13,7 +13,7 @@ function ProductController($scope, $resource, $location) {
         $scope.formData = {};
     };
 
-    $scope.edit = function (row) {
+    $scope.startEdit = function (row) {
         $scope.formData = row;
     }
 
