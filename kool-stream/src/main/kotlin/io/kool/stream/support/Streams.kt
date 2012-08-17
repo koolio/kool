@@ -23,7 +23,7 @@ class FunctionStream<T>(val fn: (Handler<T>) -> Cursor): Stream<T>() {
 /**
  * Converts a collection into an [[Stream]]
  */
-class StreamCollection<T>(val coll: java.lang.Iterable<T>, val executor: Executor) : Stream<T>() {
+class StreamCollection<T>(val coll: Iterable<T>, val executor: Executor) : Stream<T>() {
     public override fun open(handler: Handler<T>): Cursor {
         val subscription = IteratorTask(coll.iterator()!!, handler)
         executor.execute(subscription)

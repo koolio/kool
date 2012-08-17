@@ -61,7 +61,7 @@ public class ObservableCollectionFacade<T>(protected val delegate: Collection<T>
         return delegate.isEmpty()
     }
 
-    public override fun iterator(): java.util.Iterator<T> {
+    public override fun iterator(): Iterator<T> {
         return delegate.iterator()
     }
     public override fun remove(o: Any?): Boolean {

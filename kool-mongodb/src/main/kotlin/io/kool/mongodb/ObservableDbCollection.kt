@@ -34,7 +34,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
     val handler = ActiveDbCollectionHandler(this)
     var loaded = AtomicBoolean(false)
 
-    public override fun toString(): String = "ActiveDbCollection($dbCollection, $query)"
+    public fun toString(): String = "ObservableDbCollection($dbCollection, $query)"
 
     public override fun equals(o: Any?): Boolean {
         return if (o is ObservableDbCollection) {
@@ -211,7 +211,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
 
     public override fun isEmpty(): Boolean = idMap.isEmpty()
 
-    public override fun iterator(): java.util.Iterator<DBObject> = collection.iterator()
+    public override fun iterator(): Iterator<DBObject> = collection.iterator()
 
     public override fun remove(element: Any?): Boolean {
         if (element is DBObject) {

@@ -23,7 +23,7 @@ public class CompositeCursor(val cursors: List<Cursor>): AbstractCursor() {
  * A task which iterates over an iterator invoking the [[Handler]]
  * until its complete
  */
-public open class IteratorTask<T>(val iter: java.util.Iterator<T>, val handler: Handler<T>): DefaultCursor(), Runnable {
+public open class IteratorTask<T>(val iter: Iterator<T>, val handler: Handler<T>): DefaultCursor(), Runnable {
     public override fun run(): Unit {
         try {
             for (element in iter) {

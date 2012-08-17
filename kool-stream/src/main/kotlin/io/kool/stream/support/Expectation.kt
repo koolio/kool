@@ -35,7 +35,7 @@ private class FunctionExpectation(override val failMessage: String, val predicat
 /**
  * Returns true if the expectations are satisfied (i.e. they are true)
  */
-public fun java.lang.Iterable<Expectation>.isSatisfied(): Boolean {
+public fun Iterable<Expectation>.isSatisfied(): Boolean {
     for (expectation in this) {
         if (expectation.invoke() == false)
             return false
@@ -46,7 +46,7 @@ public fun java.lang.Iterable<Expectation>.isSatisfied(): Boolean {
 /**
  * Returns the list of failure messages
  */
-public fun java.lang.Iterable<Expectation>.failures(): List<String> {
+public fun Iterable<Expectation>.failures(): List<String> {
     val failures = ArrayList<String>()
     for (expectation in this) {
         if (expectation() == false) {
@@ -59,7 +59,7 @@ public fun java.lang.Iterable<Expectation>.failures(): List<String> {
 /**
  * Asserts that all the expectations are satisfied, throwing a failure exception for any that are not
  */
-public fun java.lang.Iterable<Expectation>.assertSatisfied() {
+public fun Iterable<Expectation>.assertSatisfied() {
     val failures = this.failures()
     assertTrue(failures.isEmpty(), failures.makeString(", "))
 }

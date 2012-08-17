@@ -198,7 +198,7 @@ public abstract class Stream<out T> {
  * Transforms the Stream<Iterable<T>> by grouping the contents of each stream element into a [[Map<K, List<T>>]]
  * using the given *toKey* function to calculate the key to use in the map for each value
  */
-public fun <T, K> Stream<java.lang.Iterable<T>>.groupBy(toKey: (T) -> K): Stream<Map<K, List<T>>> {
+public fun <T, K> Stream<Iterable<T>>.groupBy(toKey: (T) -> K): Stream<Map<K, List<T>>> {
     return this.map<Map<K, List<T>>> {
         it.groupBy(toKey)
     }
