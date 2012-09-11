@@ -2,7 +2,7 @@ package io.kool.stream.support
 
 import java.util.ArrayList
 import kotlin.test.assertTrue
-import java.util.List
+
 
 public trait Expectation {
     val failMessage: String

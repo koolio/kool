@@ -4,7 +4,7 @@ import io.kool.stream.support.*
 
 import java.io.Closeable
 import java.util.ArrayList
-import java.util.Collection
+
 import java.util.concurrent.ConcurrentLinkedQueue
 
 /**

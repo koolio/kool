@@ -21,11 +21,11 @@ class MarketDataMonitorTest {
     /**
      * Lets transpose a list of maps of values into a map of list of values
      */
-    fun <K,V> transposeListOfMapsToMapOfLists(listOfMaps: java.util.List<Map<K,V>>): Map<K,java.util.List<V>> {
-        val answer = HashMap<K,java.util.List<V>>()
+    fun <K,V> transposeListOfMapsToMapOfLists(listOfMaps: List<Map<K,V>>): Map<K,MutableList<V>> {
+        val answer = HashMap<K,MutableList<V>>()
         for (map in listOfMaps) {
             for (e in map) {
-                val list = answer.getOrPut<K,List<V>>(e.key) {java.util.ArrayList<V>()}
+                val list = answer.getOrPut<K,MutableList<V>>(e.key) {ArrayList<V>()}
                 list.add(e.value)
             }
         }

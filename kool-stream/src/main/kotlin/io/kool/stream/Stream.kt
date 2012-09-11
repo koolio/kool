@@ -3,8 +3,8 @@ package io.kool.stream
 import io.kool.stream.support.*
 import java.io.Closeable
 import java.util.Queue
-import java.util.List
-import java.util.Map
+
+
 
 /**
  * Represents an asynchronous stream of events which can be composed and processed asynchronously.

@@ -3,7 +3,7 @@ package io.kool.stream.support
 import kotlin.concurrent.*
 import java.util.ArrayDeque
 import java.util.ArrayList
-import java.util.List
+
 import java.util.Queue
 import io.kool.stream.*
 import java.util.concurrent.atomic.AtomicReference

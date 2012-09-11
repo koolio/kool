@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>io.kool</groupId>
-            <artifactId>kool-html</artifactId>
+            <artifactId>kool-html-parse</artifactId>
             <version>${project.version}</version>
         </dependency>
 

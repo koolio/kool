@@ -6,7 +6,7 @@ import io.kool.stream.*
 import io.kool.math.*
 
 import org.junit.Test as test
-import java.util.List
+
 
 class WindowTest {
 

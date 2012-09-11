@@ -5,7 +5,7 @@ import kotlin.test.*
 import io.kool.math.*
 
 import org.junit.Test as test
-import java.util.List
+
 
 class CalculationsTest {
 

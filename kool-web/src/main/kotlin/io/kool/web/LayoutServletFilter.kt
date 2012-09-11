@@ -10,7 +10,7 @@ import io.kool.template.Output
 import io.kool.template.Template
 import io.kool.web.support.*
 
-import java.util.List
+
 
 /**
  * A Servlet [[Filter]] which performs layouts

@@ -16,7 +16,9 @@
 
     <modules>
         <module>chat-angularjs</module>
+<!--
         <module>crud-jaxrs2</module>
+-->
         <module>kool-template-sample</module>
         <module>kool-template-bind-sample</module>
         <module>kool-template-mongodb-sample</module>

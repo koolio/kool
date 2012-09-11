@@ -5,11 +5,11 @@ import com.mongodb.DBCollection
 import com.mongodb.DBObject
 import io.kool.stream.support.AbstractHandler
 import java.util.ArrayList
-import java.util.Collection
+
 import java.util.HashMap
-import java.util.List
-import java.util.ListIterator
-import java.util.Map
+
+Iterator
+
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.LinkedHashMap
 import io.kool.collection.ObservableCollection

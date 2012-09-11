@@ -1,6 +1,6 @@
 package io.kool.camel
 
-import java.util.List
+
 import org.apache.camel.Endpoint
 import org.apache.camel.Exchange
 import org.apache.camel.model.*

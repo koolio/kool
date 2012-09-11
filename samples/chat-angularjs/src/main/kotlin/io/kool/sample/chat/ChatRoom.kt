@@ -2,7 +2,7 @@ package io.kool.sample.chat
 
 import com.sun.jersey.spi.resource.Singleton
 import java.util.ArrayList
-import java.util.List
+
 import javax.ws.rs.*
 import org.atmosphere.annotation.Broadcast
 import javax.ws.rs.core.Context

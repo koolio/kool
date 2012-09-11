@@ -7,7 +7,7 @@ import io.kool.stream.support.assertSatisfied
 import io.kool.stream.support.expectation
 import io.kool.stream.support.isSatisfied
 import java.util.ArrayList
-import java.util.List
+
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
@@ -17,7 +17,7 @@ import kotlin.test.assertTrue
 * A handler used for testing that enough messages are received.
 */
 public class MockHandler<T>: AbstractHandler<T>() {
-    private val _events: List<T> = ArrayList<T>()
+    private val _events: MutableList<T> = ArrayList<T>()
     val expectations = ArrayList<Expectation>()
     val openLatch = CountDownLatch(1)
     val assertLatch = CountDownLatch(1)

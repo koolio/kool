@@ -1,7 +1,7 @@
 package io.kool.sample.chat
 
 import com.sun.jersey.spi.resource.Singleton
-import java.util.List
+
 import java.util.concurrent.atomic.AtomicInteger
 import javax.ws.rs.*
 

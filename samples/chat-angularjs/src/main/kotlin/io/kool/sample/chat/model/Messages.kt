@@ -1,7 +1,7 @@
 package io.kool.sample.chat
 
 import java.util.ArrayList
-import java.util.List
+
 
 public open class Messages() {
     public var messages: List<Message> = ArrayList<Message>()

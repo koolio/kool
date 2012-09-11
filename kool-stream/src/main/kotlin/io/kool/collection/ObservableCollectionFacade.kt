@@ -1,12 +1,12 @@
 package io.kool.collection
 
-import java.util.Collection
+
 import io.kool.collection.support.CollectionEventPublisher
 
 /**
  * A facade which adds [[ObservableCollection<T>]] to a collection
  */
-public class ObservableCollectionFacade<T>(protected val delegate: Collection<T>): Collection<T>, ObservableCollection<T> {
+public class ObservableCollectionFacade<T>(protected val delegate: MutableCollection<T>): MutableCollection<T>, ObservableCollection<T> {
     val publisher = CollectionEventPublisher<T>(this)
 
     public override fun addCollectionEventListener(listener: CollectionEventListener<T>) {
@@ -61,9 +61,10 @@ public class ObservableCollectionFacade<T>(protected val delegate: Collection<T>
         return delegate.isEmpty()
     }
 
-    public override fun iterator(): Iterator<T> {
+    public override fun iterator(): MutableIterator<T> {
         return delegate.iterator()
     }
+
     public override fun remove(o: Any?): Boolean {
         return if (delegate.remove(o)) {
             publisher.fireRemoveEvent(o as T)

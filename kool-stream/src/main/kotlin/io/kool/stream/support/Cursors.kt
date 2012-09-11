@@ -4,7 +4,7 @@ import io.kool.stream.*
 import java.io.Closeable
 import java.util.TimerTask
 import java.util.concurrent.Future
-import java.util.List
+
 
 public open class DefaultCursor(): AbstractCursor() {
     protected override fun doClose() {

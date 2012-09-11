@@ -11,7 +11,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kool-html</artifactId>
+    <artifactId>kool-html-parse</artifactId>
 
     <dependencies>
         <dependency>

@@ -1,6 +1,6 @@
 package io.kool.sample.crud
 
-import java.util.List
+
 import java.util.concurrent.atomic.AtomicInteger
 import javax.ws.rs.*
 import javax.inject.Singleton

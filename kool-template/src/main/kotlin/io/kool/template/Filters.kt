@@ -2,7 +2,7 @@ package io.kool.template
 
 import kotlin.util. *
 import java.util.ServiceLoader
-import java.util.List
+
 
 
 /**
@@ -17,7 +17,7 @@ fun loadTextFilters(classLoader: ClassLoader? = null): List<TextFilter> {
     }
     val answer = arrayList<TextFilter>()
     if (loader != null) {
-        for (s in loader.iterator()) {
+        for (s in loader) {
             answer.add(s)
         }
     }

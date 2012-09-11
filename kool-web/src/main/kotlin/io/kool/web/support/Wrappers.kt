@@ -10,7 +10,7 @@ import io.kool.template.Output
 import io.kool.template.Template
 import io.kool.web.filterContext
 
-import java.util.List
+
 
 class ResponseOutput(val response: ServletResponse): Output() {
 

@@ -26,7 +26,9 @@ class DefaultConcurrentContainer<T> : ConcurrentContainer<T> {
     val list = ConcurrentLinkedQueue<T>()
 
     override fun forEach(fn: (T) -> Unit) {
-        for (element in list) {
+        // TODO using an array would be better but for some reason iteration not supported?
+        val copy = list.toList()
+        for (element in copy) {
             if (element != null) {
                 (fn)(element)
             }

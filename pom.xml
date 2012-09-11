@@ -85,6 +85,7 @@
         <module>kool-template</module>
         <module>kool-web</module>
         <module>kool-html-modelgen</module>
+        <module>angular</module>
         <module>kool-js-library</module>
         <module>kool-ui</module>
         <module>kool-mongodb</module>

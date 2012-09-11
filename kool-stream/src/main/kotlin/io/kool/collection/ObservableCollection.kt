@@ -1,6 +1,6 @@
 package io.kool.collection
 
-import java.util.Collection
+
 import java.io.Closeable
 import io.kool.collection.support.FunctionCollectionEventListener
 
