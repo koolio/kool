@@ -1,15 +1,12 @@
 package io.kool.camel.support
 
-import org.apache.camel.model.ExpressionNode
-import org.apache.camel.model.ProcessorDefinition
 import org.apache.camel.Exchange
-import org.apache.camel.Processor
 import org.apache.camel.Expression
 import org.apache.camel.util.ExchangeHelper
 
 /**
- * Implements [[Expression]] using a function block
- */
+* Implements [[Expression]] using a function block
+*/
 public class FunctionExpression(val block: Exchange.() -> Any?) : Expression {
 
     public override fun toString(): String? {

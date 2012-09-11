@@ -1,12 +1,9 @@
 package test.kool.math
 
-import kotlin.test.*
-
 import io.kool.stream.*
 import io.kool.math.*
 
 import org.junit.Test as test
-
 
 class WindowTest {
 

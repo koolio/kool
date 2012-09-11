@@ -1,8 +1,8 @@
 package io.kool.stream
 
+import io.kool.stream.support.*
 import java.util.*
 import kotlin.concurrent.*
-import io.kool.stream.support.*
 
 /**
 * Creates a [[TimerTask]] for the given handler

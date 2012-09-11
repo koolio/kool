@@ -1,11 +1,8 @@
 package test.kool.math
 
-import kotlin.test.*
-
 import io.kool.math.*
-
+import kotlin.test.*
 import org.junit.Test as test
-
 
 class CalculationsTest {
 

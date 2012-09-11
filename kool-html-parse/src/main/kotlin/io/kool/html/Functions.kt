@@ -1,27 +1,17 @@
 package io.kool.html
 
-import kotlin.*
+import java.io.*
 import kotlin.dom.*
-import kotlin.util.*
-import org.w3c.dom.*
-
-import org.cyberneko.html.HTMLConfiguration
 import org.apache.xerces.parsers.DOMParser
-import org.xml.sax.InputSource
-import java.net.URL
-import java.io.FileInputStream
-import java.util.*
-import java.io.InputStream
-import java.io.File
-import java.io.OutputStream
 import org.apache.xml.serialize.HTMLSerializer
 import org.apache.xml.serialize.OutputFormat
-import java.io.FileWriter
-import java.io.*
+import org.cyberneko.html.HTMLConfiguration
+import org.w3c.dom.*
+import org.xml.sax.InputSource
 
 /**
- * Returns the element with the given id or throws an exception if it can't be found
- */
+* Returns the element with the given id or throws an exception if it can't be found
+*/
 public fun Document.id(idValue: String): Element? {
     val element = getElementById(idValue)
     if (element != null) {

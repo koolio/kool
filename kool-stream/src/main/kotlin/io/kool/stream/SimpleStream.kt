@@ -2,14 +2,9 @@ package io.kool.stream
 
 import io.kool.stream.support.*
 
-import java.io.Closeable
-import java.util.ArrayList
-
-import java.util.concurrent.ConcurrentLinkedQueue
-
 /**
- * A simple [[Stream]] that can have elements injected into its active [[Handler]] instances
- */
+* A simple [[Stream]] that can have elements injected into its active [[Handler]] instances
+*/
 public open class SimpleStream<in T>(val handlers: ConcurrentContainer<Handler<T>> = DefaultConcurrentContainer<Handler<T>>()): Stream<T>() {
 
     override fun open(handler: Handler<T>): Cursor {

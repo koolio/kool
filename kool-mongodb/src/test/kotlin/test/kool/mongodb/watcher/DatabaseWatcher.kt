@@ -1,9 +1,9 @@
 package test.kool.mongodb.watcher
 
 import com.mongodb.*
-import org.junit.Test as test
-import kotlin.test.*
 import io.kool.mongodb.ReplicaEvent
+import kotlin.test.*
+import org.junit.Test as test
 import test.kool.mongodb.MongoTestSupport
 
 class DatabaseWatcher : MongoTestSupport() {

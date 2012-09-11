@@ -1,16 +1,9 @@
 package io.kool.web.support
 
+import io.kool.template.Output
 import java.io.*
 import javax.servlet.*
 import javax.servlet.http.*
-
-import io.kool.template.ByteArrayInput
-import io.kool.template.FilterContext
-import io.kool.template.Output
-import io.kool.template.Template
-import io.kool.web.filterContext
-
-
 
 class ResponseOutput(val response: ServletResponse): Output() {
 

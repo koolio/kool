@@ -1,9 +1,7 @@
 package test.kool.camel
 
 import io.kool.camel.*
-
 import org.junit.Test as test
-import org.apache.camel.component.mock.MockEndpoint
 
 class ProcessTest {
     test fun createRoute() {

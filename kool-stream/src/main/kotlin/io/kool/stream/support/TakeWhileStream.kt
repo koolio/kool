@@ -1,19 +1,14 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-import java.io.Closeable
-import java.util.concurrent.Executor
-import java.util.Timer
-import java.util.TimerTask
-import java.util.concurrent.ScheduledFuture
 
 /**
- * Creates an [[Stream]] which takes elements from the delegate stream until the *predicate* is false
- * then the stream closes the *delegate* stream.
- *
- * If *includeNonMatching* is true then the final value which caused the *predicate* to return false will
- * also be passed to the *delegate* stream
- */
+* Creates an [[Stream]] which takes elements from the delegate stream until the *predicate* is false
+* then the stream closes the *delegate* stream.
+*
+* If *includeNonMatching* is true then the final value which caused the *predicate* to return false will
+* also be passed to the *delegate* stream
+*/
 class TakeWhileStream<T>(val delegate: Stream<T>, val includeNonMatching: Boolean, val predicate: (T) -> Boolean) : Stream<T>() {
 
     public override fun open(handler: Handler<T>): Cursor {

@@ -1,12 +1,7 @@
 package test.kool.stream
 
-import kotlin.test.*
-
 import io.kool.stream.*
-
 import org.junit.Test as test
-
-import java.util.*
 
 class WindowTest {
 

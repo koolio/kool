@@ -1,16 +1,11 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-import java.io.Closeable
 import java.util.concurrent.Executor
-import java.util.Timer
-import java.util.TimerTask
-import java.util.concurrent.ScheduledFuture
-
 
 /**
- * A [[Stream]] which invokes the given function to open a stream and return a cursor
- */
+* A [[Stream]] which invokes the given function to open a stream and return a cursor
+*/
 class FunctionStream<T>(val fn: (Handler<T>) -> Cursor): Stream<T>() {
     fun toString() = "FunctionStream($fn)"
 

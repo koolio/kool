@@ -1,14 +1,10 @@
 package io.kool.mongodb
 
-import com.mongodb.BasicDBObject
 import com.mongodb.DBCollection
 import com.mongodb.DBObject
 import io.kool.stream.support.AbstractHandler
 import java.util.ArrayList
-
 import java.util.HashMap
-
-Iterator
 
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.LinkedHashMap
@@ -29,7 +25,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
     val publisher = CollectionEventPublisher<DBObject>(this)
 
     private val updateLocalCollectionEagerly = false
-    private var _idMap: Map<Any?, DBObject> = HashMap<Any?, DBObject>()
+    private var _idMap: MutableMap<Any?, DBObject> = HashMap<Any?, DBObject>()
 
     val handler = ActiveDbCollectionHandler(this)
     var loaded = AtomicBoolean(false)
@@ -58,12 +54,12 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         publisher.removeCollectionEventListener(listener)
     }
 
-    protected val collection: Collection<DBObject>
+    protected val collection: MutableCollection<DBObject>
         get() {
             return idMap.values()
         }
 
-    protected val idMap: Map<Any?, DBObject>
+    protected val idMap: MutableMap<Any?, DBObject>
         get() {
             checkLoaded()
             return _idMap
@@ -122,9 +118,12 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
             }
             val newMap = LinkedHashMap<Any?, DBObject>()
             if (cursor != null) {
-                for (e in cursor) {
-                    val id = e.id
-                    newMap[id] = e
+                // TODO this is fugly
+                for (e in cursor.iterator()!!) {
+                    if (e != null) {
+                        val id = e.id
+                        newMap[id] = e
+                    }
                 }
             }
             sync {

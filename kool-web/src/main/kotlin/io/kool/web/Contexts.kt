@@ -1,8 +1,7 @@
 package io.kool.web
 
-import javax.servlet.*
-import javax.servlet.http.*
 import io.kool.template.*
+import javax.servlet.http.*
 
 fun filterContext(request: HttpServletRequest, response: HttpServletResponse, source: Input): FilterContext? {
     val path = request.getServletPath()

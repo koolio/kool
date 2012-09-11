@@ -1,9 +1,7 @@
 package test.kool.camel
 
 import io.kool.camel.*
-
 import org.junit.Test as test
-import org.apache.camel.component.mock.MockEndpoint
 
 class ChoiceTest {
     test fun createRoute() {
@@ -39,7 +37,7 @@ class ChoiceTest {
             for (result in arrayList(bigEndpoint, smallEndpoint, otherwiseEndpoint)) {
                 result.assertIsSatisfied()
                 println("$result has messages:")
-                for (exchange in result.getReceivedExchanges()) {
+                for (exchange in result.getReceivedExchanges()!!) {
                     println("    ${exchange?.input}")
                 }
                 println()

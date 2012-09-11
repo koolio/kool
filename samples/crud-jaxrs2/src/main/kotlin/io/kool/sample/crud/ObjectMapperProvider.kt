@@ -6,8 +6,8 @@ import org.codehaus.jackson.map.ObjectMapper
 import org.codehaus.jackson.map.SerializationConfig.Feature
 
 /**
- * Configures the Jackson JSON marshalling rules
- */
+* Configures the Jackson JSON marshalling rules
+*/
 public class ObjectMapperProvider: ContextResolver<ObjectMapper> {
     val mapper: ObjectMapper? = ObjectMapper().
     configure(Feature.INDENT_OUTPUT, true)?.

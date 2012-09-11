@@ -1,9 +1,9 @@
 package io.kool.website
 
-import javax.servlet.annotation.WebListener
 import io.kool.web.ContextListener
-import javax.servlet.ServletContext
 import io.kool.web.LayoutServletFilter
+import javax.servlet.ServletContext
+import javax.servlet.annotation.WebListener
 
 [WebListener]
 public class MyContextListener() : ContextListener() {

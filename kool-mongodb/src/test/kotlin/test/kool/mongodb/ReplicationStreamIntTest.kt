@@ -3,7 +3,6 @@ package test.kool.mongodb
 import io.kool.mongodb.*
 import io.kool.stream.MockHandler
 import org.junit.Test as test
-import io.kool.stream.Cursor
 
 /**
 * Tests using a replication stream

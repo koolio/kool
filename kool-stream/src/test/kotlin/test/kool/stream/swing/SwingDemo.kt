@@ -1,14 +1,6 @@
 package test.kool.stream.swing
 
-import kotlin.swing.*
-import kotlin.test.*
-import javax.swing.*
-
-import io.kool.stream.*
-
 import org.junit.Test as test
-import java.awt.event.ActionListener
-import java.awt.event.ActionEvent
 
 fun main(args: Array<String>): Unit{
     /*

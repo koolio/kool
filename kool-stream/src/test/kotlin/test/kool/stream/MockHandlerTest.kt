@@ -1,10 +1,9 @@
 package test.kool.stream
 
 import io.kool.stream.*
-
-import org.junit.Test as test
 import io.kool.stream.support.DefaultCursor
 import kotlin.test.*
+import org.junit.Test as test
 
 class MockHandlerTest {
 

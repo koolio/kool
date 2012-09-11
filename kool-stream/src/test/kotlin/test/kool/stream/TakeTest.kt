@@ -1,10 +1,7 @@
 package test.kool.stream
 
-import kotlin.test.*
-
 import io.kool.stream.*
-import io.kool.stream.support.*
-
+import kotlin.test.*
 import org.junit.Test as test
 
 class TakeTest {

@@ -1,20 +1,12 @@
 package io.kool.stream.support
 
-
 import io.kool.stream.*
-import java.io.Closeable
-import java.util.concurrent.Executor
-import java.util.Timer
-import java.util.TimerTask
-import java.util.concurrent.ScheduledFuture
-import java.io.Closeable
-import java.util.TimerTask
 import java.util.concurrent.Future
-
+import java.util.concurrent.ScheduledFuture
 
 /**
- * A [[Cursor]] for closing an underlying [[Future]]
- */
+* A [[Cursor]] for closing an underlying [[Future]]
+*/
 public class FutureCursor( val handler: Handler<*>, val mayInterruptIfRunningOnClose: Boolean = true) : AbstractCursor() {
 
     /**

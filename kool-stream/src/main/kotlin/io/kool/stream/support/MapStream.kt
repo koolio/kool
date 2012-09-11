@@ -1,16 +1,10 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-import java.io.Closeable
-import java.util.concurrent.Executor
-import java.util.Timer
-import java.util.TimerTask
-import java.util.concurrent.ScheduledFuture
-
 
 /**
- * Creates an [[Stream]] which transforms the handler using the given function
- */
+* Creates an [[Stream]] which transforms the handler using the given function
+*/
 class MapStream<T,R>(val delegate: Stream<T>, val fn: (Handler<R>) -> Handler<T>) : Stream<R>() {
 
     public override fun open(handler: Handler<R>): Cursor {

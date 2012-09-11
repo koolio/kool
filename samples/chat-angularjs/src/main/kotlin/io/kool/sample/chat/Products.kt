@@ -1,7 +1,6 @@
 package io.kool.sample.chat
 
 import com.sun.jersey.spi.resource.Singleton
-
 import java.util.concurrent.atomic.AtomicInteger
 import javax.ws.rs.*
 
@@ -10,7 +9,7 @@ Produces("application/json")
 Singleton
 public open class Products() {
     private val idGenerator = AtomicInteger(0)
-    protected val collection: List<Product> = arrayList(Product.init(nextId, "Beer", 3.99), Product.init(nextId, "Wine", 5.99))
+    protected val collection: MutableList<Product> = arrayList(Product.init(nextId, "Beer", 3.99), Product.init(nextId, "Wine", 5.99))
 
     public val nextId: String
         get() = idGenerator.incrementAndGet().toString()

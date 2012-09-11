@@ -1,13 +1,10 @@
 package io.kool.template
 
-import kotlin.util. *
 import java.util.ServiceLoader
 
-
-
 /**
- * Loads all the filters from the given class loader if specified
- */
+* Loads all the filters from the given class loader if specified
+*/
 fun loadTextFilters(classLoader: ClassLoader? = null): List<TextFilter> {
     val filterClass = javaClass<TextFilter>()
     val loader = if (classLoader != null) {
@@ -17,7 +14,8 @@ fun loadTextFilters(classLoader: ClassLoader? = null): List<TextFilter> {
     }
     val answer = arrayList<TextFilter>()
     if (loader != null) {
-        for (s in loader) {
+        // TODO do we really have to add .iterator()!!?
+        for (s in loader.iterator()!!) {
             answer.add(s)
         }
     }

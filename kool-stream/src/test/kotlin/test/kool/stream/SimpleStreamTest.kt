@@ -1,9 +1,7 @@
 package test.kool.stream
 
-import kotlin.test.*
-
 import io.kool.stream.*
-
+import kotlin.test.*
 import org.junit.Test as test
 
 class SimpleStreamTest {

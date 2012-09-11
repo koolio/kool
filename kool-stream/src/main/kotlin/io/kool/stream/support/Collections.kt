@@ -3,8 +3,8 @@ package io.kool.stream.support
 import java.util.concurrent.ConcurrentLinkedQueue
 
 /**
- * A simple concurrent container API which is easy to implement using various strategies
- */
+* A simple concurrent container API which is easy to implement using various strategies
+*/
 trait ConcurrentContainer<T> {
     /**
      * Process each item in the container

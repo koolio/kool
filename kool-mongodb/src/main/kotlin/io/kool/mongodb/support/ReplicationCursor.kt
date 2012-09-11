@@ -2,10 +2,10 @@ package io.kool.mongodb.support
 
 import com.mongodb.BasicDBObject
 import com.mongodb.Bytes
+import io.kool.mongodb.ReplicaEvent
 import io.kool.stream.Handler
 import io.kool.stream.support.AbstractCursor
 import org.bson.types.BSONTimestamp
-import io.kool.mongodb.ReplicaEvent
 
 class ReplicationCursor(val stream: ReplicationStream, val handler: Handler<ReplicaEvent>): AbstractCursor(), Runnable {
     var timestamp = stream.timestamp

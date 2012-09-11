@@ -1,23 +1,18 @@
 package io.kool.kotlin.website
 
-import org.eclipse.jetty.server.Server
-import org.eclipse.jetty.webapp.*
-import org.eclipse.jetty.annotations.ClassNameResolver
-import org.eclipse.jetty.annotations.AnnotationParser
-import org.eclipse.jetty.annotations.AnnotationConfiguration
-import org.eclipse.jetty.util.resource.Resource
-import org.eclipse.jetty.util.resource.FileResource
-import org.eclipse.jetty.plus.webapp.PlusConfiguration
-import org.eclipse.jetty.plus.webapp.EnvConfiguration
-import org.mortbay.jetty.plugin.JettyWebAppContext
-
 import java.io.File
 import java.util.*
-
+import org.eclipse.jetty.annotations.AnnotationConfiguration
+import org.eclipse.jetty.annotations.AnnotationParser
+import org.eclipse.jetty.annotations.ClassNameResolver
+import org.eclipse.jetty.server.Server
+import org.eclipse.jetty.util.resource.FileResource
+import org.eclipse.jetty.webapp.*
+import org.mortbay.jetty.plugin.JettyWebAppContext
 
 /**
- * Returns true if the file exists
- */
+* Returns true if the file exists
+*/
 fun fileExists(path: String): Boolean {
     val file = File(path)
     return file.exists() && file.isFile()

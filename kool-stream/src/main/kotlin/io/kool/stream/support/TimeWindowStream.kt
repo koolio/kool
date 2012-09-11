@@ -1,9 +1,9 @@
 package io.kool.stream.support
 
+import io.kool.stream.*
 import java.util.ArrayDeque
 import java.util.ArrayList
 import java.util.Queue
-import io.kool.stream.*
 
 /**
 * Creates an [[Stream]] which puts each event into a [[List]] of a fixed size

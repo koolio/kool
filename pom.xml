@@ -80,16 +80,16 @@
     <modules>
         <module>kool-stream</module>
         <module>kool-math</module>
-        <module>kool-camel</module>
         <module>kool-html-parse</module>
         <module>kool-template</module>
         <module>kool-web</module>
         <module>kool-html-modelgen</module>
-        <module>angular</module>
         <module>kool-js-library</module>
         <module>kool-ui</module>
-        <module>kool-mongodb</module>
         <module>samples</module>
+        <module>kool-camel</module>
+        <module>kool-mongodb</module>
+        <module>angular</module>
         <module>apidoc</module>
         <module>website</module>
     </modules>

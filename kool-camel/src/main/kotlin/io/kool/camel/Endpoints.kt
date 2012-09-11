@@ -1,18 +1,14 @@
 package io.kool.camel
 
-import io.kool.stream.*
-import io.kool.stream.support.*
 import io.kool.camel.support.*
-import org.apache.camel.CamelContext
+import io.kool.stream.*
 import org.apache.camel.Endpoint
-import org.apache.camel.util.CamelContextHelper
-import org.apache.camel.impl.DefaultCamelContext
 import org.apache.camel.Exchange
 import org.apache.camel.Message
 
 /**
- * Creates a stream of [[Message]] objects by consuming from the given [[Endpoint]] URI
- */
+* Creates a stream of [[Message]] objects by consuming from the given [[Endpoint]] URI
+*/
 inline fun Endpoint.toStream(): Stream<Message> {
     return toStream{ it.getIn()!! }
 }

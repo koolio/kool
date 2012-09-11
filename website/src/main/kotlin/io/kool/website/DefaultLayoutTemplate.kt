@@ -1,6 +1,5 @@
 package io.kool.website
 
-import io.kool.template.FilterContext
 import io.kool.template.Template
 
 class DefaultLayoutTemplate(val text: String, val title: String = "kool.io"): Template {

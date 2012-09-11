@@ -3,9 +3,9 @@ package io.kool.math
 import org.apache.commons.math.stat.descriptive.DescriptiveStatistics
 
 /**
- * Creates a DescriptiveStatistics for the collection of numbers so that the various
- * calculations can be performed
- */
+* Creates a DescriptiveStatistics for the collection of numbers so that the various
+* calculations can be performed
+*/
 inline fun Iterable<out Number>.descriptiveStatistics(): DescriptiveStatistics {
     val answer = DescriptiveStatistics()
     for (n in this) {

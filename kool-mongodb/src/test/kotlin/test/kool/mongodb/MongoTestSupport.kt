@@ -1,8 +1,8 @@
 package test.kool.mongodb
 
 import com.mongodb.Mongo
-
 import org.junit.After as after
+
 /**
 */
 public abstract class MongoTestSupport {

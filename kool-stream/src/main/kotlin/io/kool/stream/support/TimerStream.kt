@@ -1,17 +1,12 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-import java.io.Closeable
-import java.util.concurrent.Executor
-import java.util.Timer
 import java.util.TimerTask
-import java.util.concurrent.ScheduledFuture
-
 
 /**
- * A [[Stream]] which uses a [[Timer]] to schedule the invocation of the [[Handler]] at specific
- * scheduled times defined by the *schedularFunction*
- */
+* A [[Stream]] which uses a [[Timer]] to schedule the invocation of the [[Handler]] at specific
+* scheduled times defined by the *schedularFunction*
+*/
 class TimerStream(val schedularFunction: (TimerTask) -> Unit): Stream<Long>() {
     fun toString() = "TimerStream($schedularFunction)"
 

@@ -1,10 +1,7 @@
 package test.kool.template.html
 
 import io.kool.template.html.*
-import org.w3c.dom.*
-
 import kotlin.dom.*
-
 import org.junit.Test
 
 class HtmlTextTemplateTest {

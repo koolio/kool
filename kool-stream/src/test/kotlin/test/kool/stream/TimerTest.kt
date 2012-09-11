@@ -2,8 +2,6 @@ package test.kool.stream
 
 import io.kool.stream.*
 import java.util.Timer
-
-import kotlin.test.*
 import org.junit.Test as test
 
 class TimerTest {

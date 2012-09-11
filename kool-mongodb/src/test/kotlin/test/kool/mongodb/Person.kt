@@ -1,11 +1,9 @@
 package test.kool.mongodb
 
-//import org.bson.types.ObjectId
-import org.codehaus.jackson.annotate.JsonIgnore
-import org.codehaus.jackson.annotate.JsonProperty
-import net.vz.mongodb.jackson.Id
 import net.vz.mongodb.jackson.ObjectId
+import org.codehaus.jackson.annotate.JsonProperty
 
+//import org.bson.types.ObjectId
 /*
  TODO when this issue is fixed: http://youtrack.jetbrains.com/issue/KT-2543
  it would be good to be able to use immutable data transfer objects in kotlin

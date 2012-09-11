@@ -1,20 +1,13 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-import java.io.Closeable
-import java.util.concurrent.Executor
-import java.util.Timer
-import java.util.TimerTask
-import java.util.concurrent.ScheduledFuture
-//
-import java.util.Queue
 import java.util.ArrayDeque
 import java.util.ArrayList
-
+import java.util.Queue
 
 /**
- * Creates an [[Stream]] which puts each event into a [[List]] of a fixed size
- */
+* Creates an [[Stream]] which puts each event into a [[List]] of a fixed size
+*/
 class WindowStream<T>(val delegate: Stream<T>, val size: Int) : Stream<List<T>>() {
 
     public override fun open(handler: Handler<List<T>>): Cursor {

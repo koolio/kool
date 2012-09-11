@@ -1,6 +1,5 @@
 package test.kool.mongodb
 
-import com.mongodb.*
 import kotlin.test.*
 import net.vz.mongodb.jackson.JacksonDBCollection
 import net.vz.mongodb.jackson.internal.MongoJacksonMapperModule

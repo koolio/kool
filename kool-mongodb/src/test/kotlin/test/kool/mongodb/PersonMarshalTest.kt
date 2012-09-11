@@ -1,9 +1,9 @@
 package test.kool.mongodb
 
-import org.junit.Test as test
-import org.codehaus.jackson.map.ObjectMapper
 import kotlin.test.assertEquals
 import org.bson.types.ObjectId
+import org.codehaus.jackson.map.ObjectMapper
+import org.junit.Test as test
 
 class PersonMarshalTest {
     test fun marshal() {

@@ -3,7 +3,6 @@ package io.kool.stream.support
 import java.util.ArrayList
 import kotlin.test.assertTrue
 
-
 public trait Expectation {
     val failMessage: String
 

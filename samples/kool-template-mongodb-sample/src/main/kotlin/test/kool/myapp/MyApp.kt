@@ -1,18 +1,18 @@
 package test.kool.myapp
 
+import com.mongodb.Mongo
+import io.kool.collection.*
+import io.kool.mongodb.*
 import io.kool.template.html.*
-import org.w3c.dom.*
+import java.util.Date
 import kotlin.browser.*
 import kotlin.dom.*
-import java.util.Date
-import com.mongodb.Mongo
-import io.kool.mongodb.*
-import io.kool.collection.*
+import org.w3c.dom.*
 
 /**
- * Entry point to my application which can be called
- * from a JS browser when its ready, or from JavaFX
- */
+* Entry point to my application which can be called
+* from a JS browser when its ready, or from JavaFX
+*/
 fun myApp() {
     val app = MyApp()
     document["#view"][0]!!.appendChild(app.myTemplate())

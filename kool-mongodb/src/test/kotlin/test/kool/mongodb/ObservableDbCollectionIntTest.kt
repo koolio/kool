@@ -1,11 +1,9 @@
 package test.kool.mongodb
 
-import io.kool.mongodb.*
-import io.kool.stream.MockHandler
-import org.junit.Test as test
-import io.kool.stream.Cursor
 import io.kool.collection.*
+import io.kool.mongodb.*
 import kotlin.test.*
+import org.junit.Test as test
 
 class ObservableDbCollectionIntTest: MongoTestSupport() {
     val testCollectionName = "observableDbCollectionTest"

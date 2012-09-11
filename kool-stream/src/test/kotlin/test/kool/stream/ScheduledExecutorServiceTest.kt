@@ -1,11 +1,8 @@
 package test.kool.stream
 
 import io.kool.stream.*
-import java.util.Timer
-
-import kotlin.test.*
-import org.junit.Test as test
 import java.util.concurrent.Executors
+import org.junit.Test as test
 
 class ScheduledExecutorServiceTest {
 

@@ -1,7 +1,6 @@
 package test.kool.stream
 
 import io.kool.stream.*
-
 import org.junit.Test as test
 
 class CollectionTest {

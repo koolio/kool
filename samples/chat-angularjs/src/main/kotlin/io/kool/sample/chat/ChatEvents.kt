@@ -1,8 +1,6 @@
 package io.kool.sample.chat
 
 import com.sun.jersey.spi.resource.Singleton
-import java.util.ArrayList
-
 import javax.ws.rs.*
 import javax.ws.rs.core.Context
 import javax.ws.rs.core.ExecutionContext

@@ -3,8 +3,8 @@ package io.kool.collection
 import java.util.EventObject
 
 /**
- * Represents an event on a collection
- */
+* Represents an event on a collection
+*/
 public class CollectionEvent<T>(val collection: ObservableCollection<T>, val element: T, val kind: Int): EventObject(collection) {
 
     fun isAdd() = kind == Add

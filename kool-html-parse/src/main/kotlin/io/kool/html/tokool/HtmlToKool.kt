@@ -1,17 +1,17 @@
 package io.kool.html.tokool
 
+import io.kool.html.parseHtml
 import java.io.File
 import java.io.FileWriter
 import java.io.PrintWriter
 import java.util.LinkedHashMap
-
 import kotlin.dom.*
 import org.w3c.dom.*
-import io.kool.html.parseHtml
+import java.util.ArrayList
 
 /**
- * A main which converts a file/uri into a [Kool Template](http://kool.io/templates.html)
- */
+* A main which converts a file/uri into a [Kool Template](http://kool.io/templates.html)
+*/
 fun main(args: Array<String>) {
     if (args.size < 3) {
         println("Usage: htmlFileOrUri packageName functionName [outputFile]")
@@ -76,13 +76,13 @@ public fun writeHtmlElementAsKoolTemplate(element: Element, writer: PrintWriter,
     val attributeMap = LinkedHashMap<String, String>()
 
     // lets filter out pure whitespace text nodes
-    val children = element.children().filter<Node> { if (it is Text) !it.text.trim().isEmpty() else true }
+    var children = element.children().filter<Node> { if (it is Text) !it.text.trim().isEmpty() else true }
     // lets treat single children text nodes as a parameter
     if (children.size == 1) {
         val firstChild = children[0]
         if (firstChild is Text) {
             attributeMap["text"] = firstChild.text
-            children.clear()
+            children = ArrayList<Node>()
         }
     }
     val attributes = element.attributes

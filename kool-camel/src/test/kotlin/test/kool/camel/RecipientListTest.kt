@@ -1,7 +1,7 @@
 package test.kool.camel
 
-import org.junit.Test as test
 import io.kool.camel.*
+import org.junit.Test as test
 
 class RecipientListTest {
     test fun createRoute() {

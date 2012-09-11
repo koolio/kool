@@ -6,8 +6,8 @@ import io.kool.collection.support.FunctionCollectionEventListener
 import org.w3c.dom.Element
 
 /**
- * Invokes the given block on every [[CollectionEvent<T>]]
- */
+* Invokes the given block on every [[CollectionEvent<T>]]
+*/
 public inline fun <T> ObservableCollection<T>.onCollectionEvent(block: (CollectionEvent<T>) -> Unit): Closeable {
     return FunctionCollectionEventListener<T>(this, block)
 }

@@ -1,15 +1,14 @@
 package test.kool.myapp
 
 import io.kool.template.html.*
+import kotlin.browser.*
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-import kotlin.browser.*
-import kotlin.dom.*
 
 /**
- * Entry point to my application which can be called
- * from a JS browser when its ready, or from JavaFX
- */
+* Entry point to my application which can be called
+* from a JS browser when its ready, or from JavaFX
+*/
 fun myApp() {
     val newNode = sampleTemplate(document)
     println("About to insert DOM node $newNode into document $document")

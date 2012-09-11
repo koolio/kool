@@ -1,9 +1,8 @@
 package io.kool.sample.crud
 
-
 import java.util.concurrent.atomic.AtomicInteger
-import javax.ws.rs.*
 import javax.inject.Singleton
+import javax.ws.rs.*
 
 Path("/products")
 Produces("application/json")

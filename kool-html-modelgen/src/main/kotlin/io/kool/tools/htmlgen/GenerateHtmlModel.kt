@@ -1,14 +1,14 @@
 package io.kool.tools.htmlgen
 
+import io.kool.html.*
+import java.io.File
 import java.io.FileInputStream
+import java.io.FileWriter
+import java.io.PrintWriter
 import java.util.*
 import kotlin.dom.*
-import io.kool.html.*
 import org.w3c.dom.*
 import org.xml.sax.InputSource
-import java.io.PrintWriter
-import java.io.FileWriter
-import java.io.File
 
 fun main(args: Array<String>): Unit {
     val tool = GenerateHtmlModel()

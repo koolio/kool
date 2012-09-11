@@ -1,20 +1,18 @@
 package io.kool.template
 
-import java.io.Reader
+import java.io.ByteArrayInputStream
 import java.io.File
-import java.io.InputStream
 import java.io.FileInputStream
 import java.io.FileReader
-import java.net.URL
-import java.io.ByteArrayInputStream
+import java.io.InputStream
+import java.io.Reader
 import java.io.StringReader
-
-import kotlin.io.defaultCharset
+import java.net.URL
 import java.nio.charset.Charset
 
 /**
- * Represents an input
- */
+* Represents an input
+*/
 abstract class Input() {
 
     /**

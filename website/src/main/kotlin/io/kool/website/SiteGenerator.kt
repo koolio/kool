@@ -1,13 +1,11 @@
 package io.kool.website
 
-import kotlin.io.*
-
-import java.io.File
-import org.pegdown.Extensions
-import org.pegdown.PegDownProcessor
-import org.pegdown.LinkRenderer
 import io.kool.template.Template
 import io.kool.template.renderTo
+import java.io.File
+import org.pegdown.Extensions
+import org.pegdown.LinkRenderer
+import org.pegdown.PegDownProcessor
 
 class SiteGenerator(val sourceDir: File, val outputDir: File) : Runnable {
     public var markdownProcessor: PegDownProcessor = PegDownProcessor(Extensions.ALL)

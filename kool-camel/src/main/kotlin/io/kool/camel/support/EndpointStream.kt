@@ -1,18 +1,18 @@
 package io.kool.camel.support
 
-import org.apache.camel.Consumer
-import org.apache.camel.Endpoint
-import org.apache.camel.Exchange
-import org.apache.camel.Processor as ExchangeProcessor
 import io.kool.stream.Cursor
 import io.kool.stream.Handler
 import io.kool.stream.Stream
 import io.kool.stream.support.*
+import org.apache.camel.Consumer
+import org.apache.camel.Endpoint
+import org.apache.camel.Exchange
+import org.apache.camel.Processor as ExchangeProcessor
 import org.apache.camel.Producer
 
 /**
- * A [[Stream]] which consumes messages on a Camel [[Endpoint]]
- */
+* A [[Stream]] which consumes messages on a Camel [[Endpoint]]
+*/
 public class EndpointStream<T>(val endpoint: Endpoint,val fn: (Exchange) -> T): Stream<T>() {
     public fun toString(): String = "EndpointStream($endpoint)"
 

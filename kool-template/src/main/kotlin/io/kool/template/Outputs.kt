@@ -1,12 +1,11 @@
 package io.kool.template
 
-import kotlin.io.*
 import java.io.*
 import java.nio.charset.Charset
 
 /**
- * Represents an output which may be textual
- */
+* Represents an output which may be textual
+*/
 abstract class Output {
     /**
      * Returns the [[Writer]] of the Output

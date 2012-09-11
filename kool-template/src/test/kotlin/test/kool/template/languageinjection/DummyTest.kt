@@ -1,7 +1,7 @@
 package test.kool.template.languageinjection
 
-import org.junit.Test as test
 import org.intellij.lang.annotations.Language
+import org.junit.Test as test
 
 class DummyTest {
     test fun useFunction() {

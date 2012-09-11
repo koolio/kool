@@ -1,8 +1,6 @@
 package io.kool.camel
 
-import org.apache.camel.Exchange
 import org.apache.camel.Message
-
 
 var Message.body: Any?
     get() = getBody()

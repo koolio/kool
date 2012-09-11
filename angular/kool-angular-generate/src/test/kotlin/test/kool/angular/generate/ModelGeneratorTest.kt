@@ -1,7 +1,7 @@
 package test.kool.html.tokool
 
-import org.junit.Test as test
 import io.kool.angular.generate.main
+import org.junit.Test as test
 
 class ModelGeneratorTest {
     test fun generator() {

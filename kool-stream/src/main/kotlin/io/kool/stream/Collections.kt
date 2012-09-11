@@ -1,7 +1,7 @@
 package io.kool.stream
 
-import java.util.concurrent.Executor
 import io.kool.stream.support.*
+import java.util.concurrent.Executor
 
 /**
 * Converts a collection into an event stream

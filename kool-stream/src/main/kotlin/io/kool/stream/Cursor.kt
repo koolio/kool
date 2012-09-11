@@ -4,9 +4,9 @@ import io.kool.stream.support.NonBlockingCursorAdapter
 import java.io.Closeable
 
 /**
- * Represents the processing of a [[Stream]] by a [[Handler]]
- * which can be closed via the [[Closeable]] interface
- */
+* Represents the processing of a [[Stream]] by a [[Handler]]
+* which can be closed via the [[Closeable]] interface
+*/
 public trait Cursor: Closeable {
     fun isClosed(): Boolean
 }

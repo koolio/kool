@@ -1,13 +1,9 @@
 package io.kool.collection
 
-
-import java.io.Closeable
-import io.kool.collection.support.FunctionCollectionEventListener
-
 /**
- * Represents an observable collection
- */
-public trait ObservableCollection<T>: Collection<T> {
+* Represents an observable collection
+*/
+public trait ObservableCollection<T>: MutableCollection<T> {
 
     public fun addCollectionEventListener(listener: CollectionEventListener<T>): Unit
 

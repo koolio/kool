@@ -1,23 +1,6 @@
 package io.kool.javafx
 
 import java.io.File
-import javafx.application.Application
-import javafx.beans.value.ChangeListener
-import javafx.beans.value.ObservableValue
-import javafx.concurrent.Worker.State
-import javafx.event.ActionEvent
-import javafx.event.EventHandler
-import javafx.geometry.HPos
-import javafx.geometry.VPos
-import javafx.scene.Scene
-import javafx.scene.control.Button
-import javafx.scene.control.TextField
-import javafx.scene.layout.ColumnConstraints
-import javafx.scene.layout.GridPane
-import javafx.scene.layout.Priority
-import javafx.scene.web.WebEngine
-import javafx.scene.web.WebView
-import javafx.stage.Stage
 import kotlin.browser.*
 import kotlin.dom.*
 import org.w3c.dom.Document

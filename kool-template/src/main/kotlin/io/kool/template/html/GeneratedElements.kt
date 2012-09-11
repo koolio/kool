@@ -4,10 +4,8 @@
 
 package io.kool.template.html
 
-import org.w3c.dom.*
-
 import kotlin.dom.*
-
+import org.w3c.dom.*
 
 /** Creates a new <a href="http://dev.w3.org/html5/spec/the-a-element.html#the-a-element" title="Hyperlink">a</a> element: Hyperlink */
 fun Node.a(text: String? = null, href: String? = null, target: String? = null, rel: String? = null, media: String? = null, hreflang: String? = null, typeName: String? = null, accesskey: String? = null, klass: String? = null, contenteditable: String? = null, contextmenu: String? = null, dir: String? = null, draggable: String? = null, dropzone: String? = null, hidden: String? = null, id: String? = null, lang: String? = null, spellcheck: String? = null, style: String? = null, tabindex: String? = null, title: String? = null, translate: String? = null, init: Element.()-> Unit): Element {

@@ -1,7 +1,7 @@
 package test.kool.template.markdown
 
-import junit.framework.TestCase
 import io.kool.template.loadTextFilters
+import junit.framework.TestCase
 import kotlin.test.assertFalse
 
 class MarkdownTest : TestCase() {

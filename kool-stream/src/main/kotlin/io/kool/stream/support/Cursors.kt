@@ -1,10 +1,6 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-import java.io.Closeable
-import java.util.TimerTask
-import java.util.concurrent.Future
-
 
 public open class DefaultCursor(): AbstractCursor() {
     protected override fun doClose() {

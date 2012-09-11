@@ -1,11 +1,9 @@
 package test.kool.template.html
 
 import io.kool.template.html.*
-import org.w3c.dom.*
 import kotlin.dom.*
-
-import org.junit.Test as test
 import kotlin.test.*
+import org.junit.Test as test
 
 class HtmlDocTemplateTest {
     test fun createDom() {

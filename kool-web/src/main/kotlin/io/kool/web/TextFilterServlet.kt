@@ -1,8 +1,7 @@
 package io.kool.web
 
-import javax.servlet.*
-import javax.servlet.http.*
 import io.kool.template.*
+import javax.servlet.http.*
 
 class TextFilterServlet(val textFilter: TextFilter): HttpServlet() {
 

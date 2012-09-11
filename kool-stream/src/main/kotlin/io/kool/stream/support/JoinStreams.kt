@@ -1,17 +1,13 @@
 package io.kool.stream.support
 
-import kotlin.concurrent.*
-import java.util.ArrayDeque
-import java.util.ArrayList
-
-import java.util.Queue
 import io.kool.stream.*
 import java.util.concurrent.atomic.AtomicReference
 import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.*
 
 /**
- * Creates an [[Stream]] which emits a tuple of [[#(A,B)]] when *stream1* has had an event and *stream2* has had an event
- */
+* Creates an [[Stream]] which emits a tuple of [[#(A,B)]] when *stream1* has had an event and *stream2* has had an event
+*/
 abstract class JoinStream<A,B,T>(val streamA: Stream<A>, val streamB: Stream<B>): Stream<T>() {
 
     public override fun open(handler: Handler<T>): Cursor {

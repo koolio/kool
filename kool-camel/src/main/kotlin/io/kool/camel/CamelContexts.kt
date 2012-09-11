@@ -1,24 +1,18 @@
 package io.kool.camel
 
-import io.kool.stream.*
-import io.kool.stream.support.*
-import io.kool.camel.support.*
 import org.apache.camel.CamelContext
-import org.apache.camel.Endpoint
-import org.apache.camel.util.CamelContextHelper
-import org.apache.camel.impl.DefaultCamelContext
-import org.apache.camel.Exchange
-import org.apache.camel.Message
-import org.apache.camel.model.ModelCamelContext
-import org.apache.camel.model.RouteDefinition
-import org.apache.camel.model.RoutesDefinition
-import org.apache.camel.component.mock.MockEndpoint
-import org.apache.camel.ProducerTemplate
 import org.apache.camel.ConsumerTemplate
+import org.apache.camel.Endpoint
+import org.apache.camel.ProducerTemplate
+import org.apache.camel.component.mock.MockEndpoint
+import org.apache.camel.impl.DefaultCamelContext
+import org.apache.camel.model.ModelCamelContext
+import org.apache.camel.model.RoutesDefinition
+import org.apache.camel.util.CamelContextHelper
 
 /**
- * Helper method to create a new [[ModelCamelContext]]
- */
+* Helper method to create a new [[ModelCamelContext]]
+*/
 inline fun <T> camel(useBlock: ModelCamelContext.() -> T): T {
     val context = createCamelContext()
     return context.use(useBlock)

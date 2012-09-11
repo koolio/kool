@@ -1,11 +1,11 @@
 package io.kool.mongodb.support
 
 import com.mongodb.DBCollection
+import io.kool.mongodb.ReplicaEvent
 import io.kool.stream.Cursor
 import io.kool.stream.Handler
 import io.kool.stream.Stream
 import org.bson.types.BSONTimestamp
-import io.kool.mongodb.ReplicaEvent
 
 /**
 * A [[Stream]] of [[ReplicationEntry]] events

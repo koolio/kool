@@ -1,11 +1,10 @@
 package io.kool.angular.generate
 
-
 import java.util.HashMap
 
 /**
- * Represents the metadata about the model we can extract from the
- */
+* Represents the metadata about the model we can extract from the
+*/
 public class ClassDefinition(override val name: String): TypeDefinition {
     val members: Map<String, TypeDefinition> = HashMap<String, TypeDefinition>()
 

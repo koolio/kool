@@ -1,23 +1,21 @@
 package test.kool.stream
 
-import kotlin.test.*
-
+import io.kool.stream.*
 import java.io.*
+import java.net.*
 import java.nio.*
 import java.nio.channels.*
-import java.net.*
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.Executors
 import org.fusesource.hawtdispatch.*
 import org.junit.Test as test
-import java.util.concurrent.Executors
-import java.util.concurrent.CountDownLatch
-import io.kool.stream.*
 
 /**
- * <p>
- * </p>
- *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
- */
+* <p>
+* </p>
+*
+* @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+*/
 class TcpEchoTest {
 
     test fun testSimpleEchoServer() {

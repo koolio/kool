@@ -4,8 +4,8 @@ package io.kool.collection
 import io.kool.collection.support.CollectionEventPublisher
 
 /**
- * A facade which adds [[ObservableCollection<T>]] to a collection
- */
+* A facade which adds [[ObservableCollection<T>]] to a collection
+*/
 public class ObservableCollectionFacade<T>(protected val delegate: MutableCollection<T>): MutableCollection<T>, ObservableCollection<T> {
     val publisher = CollectionEventPublisher<T>(this)
 

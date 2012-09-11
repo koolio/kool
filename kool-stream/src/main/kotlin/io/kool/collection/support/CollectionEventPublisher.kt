@@ -1,14 +1,14 @@
 package io.kool.collection.support
 
-import io.kool.collection.ObservableCollection
-import io.kool.collection.CollectionEventListener
-import java.util.ArrayList
 import io.kool.collection.CollectionEvent
+import io.kool.collection.CollectionEventListener
+import io.kool.collection.ObservableCollection
+import java.util.ArrayList
 
 /**
- * A default implementation of [[ObservableCollection<T>]] which manages listener registration
- * and provides helper methods for raising events
- */
+* A default implementation of [[ObservableCollection<T>]] which manages listener registration
+* and provides helper methods for raising events
+*/
 public class CollectionEventPublisher<T>(val collection: ObservableCollection<T>) {
     private val listeners = ArrayList<CollectionEventListener<T>>()
 

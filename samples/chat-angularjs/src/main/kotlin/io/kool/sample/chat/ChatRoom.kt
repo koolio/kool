@@ -2,17 +2,16 @@ package io.kool.sample.chat
 
 import com.sun.jersey.spi.resource.Singleton
 import java.util.ArrayList
-
 import javax.ws.rs.*
-import org.atmosphere.annotation.Broadcast
 import javax.ws.rs.core.Context
 import javax.ws.rs.core.ExecutionContext
+import org.atmosphere.annotation.Broadcast
 
 Path("/chat")
 Produces("application/json")
 Singleton
 public open class ChatRoom() {
-    protected val messages: List<Message> = ArrayList<Message>()
+    protected val messages: MutableList<Message> = ArrayList<Message>()
     Context var ctx: ExecutionContext? = null
 
     GET

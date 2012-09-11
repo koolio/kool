@@ -1,16 +1,16 @@
 package io.kool.stream.support
 
+import io.kool.stream.*
+import java.io.Closeable
 import java.util.ArrayDeque
 import java.util.Queue
 import java.util.concurrent.atomic.AtomicBoolean
-import io.kool.stream.*
-import java.io.Closeable
 
 /**
- * Adapts a [[NonBlockingHandler]] to work with a regular [[Stream]] which works with a [[Handler]]
- * by buffering up any events which could not be offered so they can be retried before the next event is
- * offered
- */
+* Adapts a [[NonBlockingHandler]] to work with a regular [[Stream]] which works with a [[Handler]]
+* by buffering up any events which could not be offered so they can be retried before the next event is
+* offered
+*/
 open class NonBlockingHandlerAdapter<T>(val delegate: NonBlockingHandler<T>): Handler<T>() {
     val buffer: Queue<T> = ArrayDeque<T>()
     var suspendableCursor: NonBlockingCursor? = null

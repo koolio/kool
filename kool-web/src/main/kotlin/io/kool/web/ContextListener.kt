@@ -1,16 +1,13 @@
 package io.kool.web
 
 import io.kool.template.*
-
-import javax.servlet.annotation.WebListener
-import javax.servlet.ServletContextListener
-import javax.servlet.ServletContextEvent
-
 import javax.servlet.ServletContext
+import javax.servlet.ServletContextEvent
+import javax.servlet.ServletContextListener
 
 /**
- * Base class for creating your own context listener
- */
+* Base class for creating your own context listener
+*/
 abstract class ContextListener : ServletContextListener {
 
     public override fun contextInitialized(event: ServletContextEvent?) {

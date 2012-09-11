@@ -1,8 +1,8 @@
 package io.kool.website
 
+import java.io.File
 import kotlin.test.*
 import org.junit.Test as test
-import java.io.File
 
 class GenerateSiteTest {
     val srcDir = findTemplateDir()

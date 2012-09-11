@@ -1,18 +1,15 @@
 package io.kool.angular.generate
 
-import kotlin.dom.*
-import kotlin.io.*
 import io.kool.html.*
 import java.io.File
-import org.w3c.dom.Element
-import io.kool.angular.generate.ClassDefinition
-import io.kool.angular.generate.TypeDefinition
+import kotlin.dom.*
 import org.w3c.dom.DOMLocator
+import org.w3c.dom.Element
 
 /**
- * Generates a typesafe Kotlin model for AngularJS templates
- * to ease developement of Kotlin based controllers for AngularJS
- */
+* Generates a typesafe Kotlin model for AngularJS templates
+* to ease developement of Kotlin based controllers for AngularJS
+*/
 class ModelGenerator(val args: Array<String>) {
     val model = ClassDefinition("model")
     var _controller: ClassDefinition? = null

@@ -1,13 +1,11 @@
 package io.kool.stream.support
 
 import io.kool.stream.*
-
-import java.io.Closeable
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * A useful base class for implementing a [[Cursor]]
- */
+* A useful base class for implementing a [[Cursor]]
+*/
 abstract class AbstractCursor: Cursor {
     private val closedFlag = AtomicBoolean(false)
 

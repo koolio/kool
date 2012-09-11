@@ -1,20 +1,15 @@
 package io.kool.web
 
-import java.io.*
+import io.kool.template.ByteArrayInput
+import io.kool.template.FilterContext
+import io.kool.template.Template
+import io.kool.web.support.*
 import javax.servlet.*
 import javax.servlet.http.*
 
-import io.kool.template.ByteArrayInput
-import io.kool.template.FilterContext
-import io.kool.template.Output
-import io.kool.template.Template
-import io.kool.web.support.*
-
-
-
 /**
- * A Servlet [[Filter]] which performs layouts
- */
+* A Servlet [[Filter]] which performs layouts
+*/
 abstract class LayoutServletFilter: Filter {
 
     public var config: FilterConfig? = null

@@ -1,13 +1,12 @@
 package io.kool.camel
 
-
+import io.kool.camel.support.*
+import java.util.Comparator
 import org.apache.camel.Endpoint
 import org.apache.camel.Exchange
 import org.apache.camel.model.*
-import org.apache.camel.spi.IdempotentRepository
-import io.kool.camel.support.*
 import org.apache.camel.processor.aggregate.AggregationStrategy
-import java.util.Comparator
+import org.apache.camel.spi.IdempotentRepository
 
 /**
 * A builder API to help create a new [[RouteDefinition]] on a [[CamelContext]]

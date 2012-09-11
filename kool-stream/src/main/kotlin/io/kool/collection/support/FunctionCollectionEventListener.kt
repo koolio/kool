@@ -6,8 +6,8 @@ import io.kool.collection.ObservableCollection
 import java.io.Closeable
 
 /**
- * Allows a [[CollectionEventListener<T>]] to be implemented using a function block which can be closed to remove the listener
- */
+* Allows a [[CollectionEventListener<T>]] to be implemented using a function block which can be closed to remove the listener
+*/
 public class FunctionCollectionEventListener<T>(val collection: ObservableCollection<T>,
                                                 val block: (CollectionEvent<T>) -> Unit): CollectionEventListener<T>, Closeable {
 
