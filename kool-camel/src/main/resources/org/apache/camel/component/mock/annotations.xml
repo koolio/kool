@@ -1,0 +1,5 @@
+<root>
+    <item name='org.apache.camel.component.mock.MockEndpoint java.util.List&lt;org.apache.camel.Exchange&gt; getReceivedExchanges()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>
