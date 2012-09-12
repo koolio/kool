@@ -31,12 +31,14 @@ class ModelGenerator(val args: Array<String>) {
 
     fun scanDirectory(dir: File): Unit {
         val files = dir.listFiles()
-        for (file in files) {
-            if (file != null) {
-                if (file.isDirectory()) {
-                    scanDirectory(file)
-                } else if (fileFilter(file)) {
-                    processFile(file)
+        if (files != null) {
+            for (file in files) {
+                if (file != null) {
+                    if (file.isDirectory()) {
+                        scanDirectory(file)
+                    } else if (fileFilter(file)) {
+                        processFile(file)
+                    }
                 }
             }
         }

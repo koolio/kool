@@ -88,9 +88,9 @@
         <module>kool-js-library</module>
         <module>kool-ui</module>
         <module>samples</module>
-        <module>kool-camel</module>
-        <module>kool-mongodb</module>
         <module>angular</module>
+        <module>kool-mongodb</module>
+        <module>kool-camel</module>
         <module>apidoc</module>
         <module>website</module>
     </modules>

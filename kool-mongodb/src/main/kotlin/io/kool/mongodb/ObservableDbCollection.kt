@@ -2,15 +2,14 @@ package io.kool.mongodb
 
 import com.mongodb.DBCollection
 import com.mongodb.DBObject
+import io.kool.collection.CollectionEventListener
+import io.kool.collection.ObservableCollection
+import io.kool.collection.support.CollectionEventPublisher
 import io.kool.stream.support.AbstractHandler
 import java.util.ArrayList
 import java.util.HashMap
-
-import java.util.concurrent.atomic.AtomicBoolean
 import java.util.LinkedHashMap
-import io.kool.collection.ObservableCollection
-import io.kool.collection.CollectionEventListener
-import io.kool.collection.support.CollectionEventPublisher
+import java.util.concurrent.atomic.AtomicBoolean
 
 /**
 * Returns the primary key of the given database object
@@ -54,7 +53,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         publisher.removeCollectionEventListener(listener)
     }
 
-    protected val collection: MutableCollection<DBObject>
+    protected val collection: Collection<DBObject>
         get() {
             return idMap.values()
         }
@@ -122,7 +121,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
                 for (e in cursor.iterator()!!) {
                     if (e != null) {
                         val id = e.id
-                        newMap[id] = e
+                        newMap.put(id, e)
                     }
                 }
             }
@@ -157,7 +156,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
 
     public override fun toArray(): Array<Any?> = collection.toArray()
 
-    public override fun add(element: DBObject): Boolean {
+    public fun add(element: DBObject): Boolean {
         println("Adding $element")
         val result = dbCollection.save(element)
         if (updateLocalCollectionEagerly) {
@@ -176,7 +175,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         }
     }
 
-    public override fun addAll(c: Collection<out DBObject>): Boolean {
+    public fun addAll(c: Collection<out DBObject>): Boolean {
         var answer = false
         for (element in c) {
             answer = answer || add(element)
@@ -184,7 +183,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         return answer
     }
 
-    public override fun clear() {
+    public fun clear() {
         val removed = ArrayList<DBObject>()
         dbCollection.drop()
         flush()
@@ -210,9 +209,10 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
 
     public override fun isEmpty(): Boolean = idMap.isEmpty()
 
+    //public override fun iterator(): MutableIterator<DBObject> = collection.iterator() as MutableIterator<DBObject>
     public override fun iterator(): Iterator<DBObject> = collection.iterator()
 
-    public override fun remove(element: Any?): Boolean {
+    public fun remove(element: Any?): Boolean {
         if (element is DBObject) {
             val result = dbCollection.remove(element)
             if (updateLocalCollectionEagerly) {
@@ -228,8 +228,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         }
         return false
     }
-
-    public override fun removeAll(c: Collection<out Any?>): Boolean {
+    public fun removeAll(c: Collection<out Any?>): Boolean {
         var answer = false
         for (element in c) {
             answer = answer || remove(element)
@@ -237,7 +236,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         return answer
     }
 
-    public override fun retainAll(c: Collection<out Any?>): Boolean {
+    public fun retainAll(c: Collection<out Any?>): Boolean {
         throw UnsupportedOperationException()
     }
 

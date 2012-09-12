@@ -59,10 +59,10 @@ public fun DBCollection.replicationStream(val databaseName: String? = null, val 
  * Helper method to create a [[DBObject]] using either tuple notation or using
  * the 'to' infix operator.
  */
-public inline fun dbObject(vararg values: #(String, Any?)): DBObject {
+public inline fun dbObject(vararg values: Pair<String, *>): DBObject {
     val answer = BasicDBObject()
     for (v in values) {
-        answer.put(v._1, v._2)
+        answer.put(v.first, v.second)
     }
     return answer
 }

@@ -216,7 +216,7 @@ import kotlin.dom.*
                 // lets camelCase the string
                 paths.fold(""){ a, b -> a + if (a.isEmpty()) b else b.capitalize() }
             }
-        }
+        }!!
     }
 }
 
