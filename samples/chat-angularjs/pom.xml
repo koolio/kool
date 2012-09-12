@@ -11,12 +11,6 @@
     <packaging>war</packaging>
     <name>chat-angular</name>
 
-    <properties>
-<!--
-        <jersey-version>1.13</jersey-version>
--->
-        <jersey-version>1.14-SNAPSHOT</jersey-version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>

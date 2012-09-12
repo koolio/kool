@@ -12,10 +12,6 @@
     <name>crud-jaxrs2</name>
 
     <properties>
-        <jersey-version>1.13</jersey-version>
-<!--
-        <jersey2-version>2.0-m06</jersey2-version>
--->
         <jersey2-version>2.0-SNAPSHOT</jersey2-version>
     </properties>
 
