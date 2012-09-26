@@ -4,7 +4,7 @@ import kotlin.dom.*
 import org.w3c.dom.*
 
 fun Node.element(localName: String, init: Element.()-> Unit): Element {
-    val element = ownerDocument().createElement(localName).sure()
+    val element = ownerDocument().createElement(localName)!!
     element.init()
     if (this.nodeType == Node.ELEMENT_NODE) {
         appendChild(element)

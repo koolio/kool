@@ -67,9 +67,9 @@ abstract class JoinHandlerSupport<A,B,T>(val streamA: Stream<A>, val streamB: St
 /**
  * Creates an [[Stream]] which emits events of type [[#(A,B)]] when *stream1* has had an event and *stream2* has had an event
  */
-class FollowedByStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B,#(A,B)>(streamA, streamB) {
+class FollowedByStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B, Pair<A, B>>(streamA, streamB) {
 
-    protected override fun createHandler(handler: Handler<#(A, B)>): JoinHandlerSupport<A, B, #(A, B)> {
+    protected override fun createHandler(handler: Handler<Pair<A, B>>): JoinHandlerSupport<A, B, Pair<A, B>> {
         return FollowedByHandler<A,B>(streamA, streamB, handler)
     }
 }
@@ -78,7 +78,7 @@ class FollowedByStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream
  * Creates an [[Stream]] of an events of type [[#(A,B)]] when an event occurs on *streamA* followed by an event on *streamB*.
  * We filter out consecutive events on *streamA* or events on *streamB* before there is an event on *streamA*.
  */
-open class FollowedByHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Handler<#(A,B)>): JoinHandlerSupport<A, B, #(A,B)>(streamA, streamB, delegate) {
+open class FollowedByHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Handler<Pair<A, B>>): JoinHandlerSupport<A, B, Pair<A, B>>(streamA, streamB, delegate) {
     open var valueA: A? = null
     open var valueB: B? = null
 
@@ -99,14 +99,14 @@ open class FollowedByHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delega
             if (a != null && b != null) {
                 valueA = null
                 valueB = null
-                val next: #(A, B) = #(a, b)
+                val next: Pair<A, B> = Pair(a!!, b!!)
                 onNext(next)
             }
         }
     }
 
     // TODO compiler bug - must have this redundant method here for some reason
-    public override fun onNext(next: #(A, B)) {
+    public override fun onNext(next: Pair<A, B>) {
         super.onNext(next)
     }
 }
@@ -114,9 +114,9 @@ open class FollowedByHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delega
 /**
  * Creates an [[Stream]] which emits events of type [[#(A?,B?)]] when either *stream1* or *stream2* raises an event
  */
-class MergeStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B,#(A?,B?)>(streamA, streamB) {
+class MergeStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B, Pair<A?, B?>>(streamA, streamB) {
 
-    protected override fun createHandler(handler: Handler<#(A?, B?)>): JoinHandlerSupport<A, B, #(A?, B?)> {
+    protected override fun createHandler(handler: Handler<Pair<A?, B?>>): JoinHandlerSupport<A, B, Pair<A?, B?>> {
         return MergeHandler<A,B>(streamA, streamB, handler)
     }
 }
@@ -125,17 +125,17 @@ class MergeStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B,
  * Creates an [[Stream]] of an events of type [[#(A,B)]] when an event occurs on *streamA* followed by an event on *streamB*.
  * We filter out consecutive events on *streamA* or events on *streamB* before there is an event on *streamA*.
  */
-open class MergeHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Handler<#(A?,B?)>): JoinHandlerSupport<A, B, #(A?,B?)>(streamA, streamB, delegate) {
+open class MergeHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Handler<Pair<A?, B?>>): JoinHandlerSupport<A, B, Pair<A?, B?>>(streamA, streamB, delegate) {
     protected override fun onNextA(a: A): Unit {
-        onNext(#(a, null))
+        onNext(Pair(a, null))
     }
 
     protected override fun onNextB(b: B): Unit {
-        onNext(#(null, b))
+        onNext(Pair(null, b))
     }
 
     // TODO compiler bug - must have this redundant method here for some reason
-    public override fun onNext(next: #(A?, B?)) {
+    public override fun onNext(next: Pair<A?, B?>) {
         super.onNext(next)
     }
 }
@@ -144,14 +144,14 @@ open class MergeHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: H
  * Creates an [[Stream]] which emits events of type [[#(A,B)]] when either *stream1* or *stream2* raises an event, sending the previous value
  * of the other ovent. i.e. so each event on *stream1* will be processed twice if the events alternate between streams.
  */
-class AndStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B,#(A,B)>(streamA, streamB) {
+class AndStream<A,B>(streamA: Stream<A>, streamB: Stream<B>) : JoinStream<A,B, Pair<A, B>>(streamA, streamB) {
 
-    protected override fun createHandler(handler: Handler<#(A,B)>): JoinHandlerSupport<A, B, #(A,B)> {
+    protected override fun createHandler(handler: Handler<Pair<A, B>>): JoinHandlerSupport<A, B, Pair<A, B>> {
         return AndHandler<A,B>(streamA, streamB, handler)
     }
 }
 
-open class AndHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Handler<#(A,B)>): JoinHandlerSupport<A, B, #(A,B)>(streamA, streamB, delegate) {
+open class AndHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Handler<Pair<A, B>>): JoinHandlerSupport<A, B, Pair<A, B>>(streamA, streamB, delegate) {
     val lastA = AtomicReference<A?>(null)
     val lastB = AtomicReference<B?>(null)
 
@@ -159,7 +159,7 @@ open class AndHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Han
         lastA.set(a)
         val b = lastB.get()
         if (b != null) {
-            onNext(#(a, b))
+            onNext(Pair(a, b!!))
         }
     }
 
@@ -167,12 +167,12 @@ open class AndHandler<A,B>(streamA: Stream<A>, streamB: Stream<B>, delegate: Han
         lastB.set(b)
         val a = lastA.get()
         if (a != null) {
-            onNext(#(a, b))
+            onNext(Pair(a!!, b))
         }
     }
 
     // TODO compiler bug - must have this redundant method here for some reason
-    public override fun onNext(next: #(A, B)) {
+    public override fun onNext(next: Pair<A, B>) {
         super.onNext(next)
     }
 }

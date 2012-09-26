@@ -50,7 +50,7 @@ abstract class ContextListener : ServletContextListener {
     }
 
     open protected fun loadContextFilterRendererServlets(sc: ServletContext): List<TextFilter> {
-       return loadTextFilters(Thread.currentThread().sure().getContextClassLoader())
+       return loadTextFilters(Thread.currentThread()!!.getContextClassLoader())
        //return loadTextFilters(sc.getClassLoader())
     }
 }

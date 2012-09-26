@@ -156,7 +156,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
 
     public override fun toArray(): Array<Any?> = collection.toArray()
 
-    public fun add(element: DBObject): Boolean {
+    public override fun add(element: DBObject): Boolean {
         println("Adding $element")
         val result = dbCollection.save(element)
         if (updateLocalCollectionEagerly) {
@@ -175,7 +175,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         }
     }
 
-    public fun addAll(c: Collection<out DBObject>): Boolean {
+    public override fun addAll(c: Collection<out DBObject>): Boolean {
         var answer = false
         for (element in c) {
             answer = answer || add(element)
@@ -183,7 +183,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         return answer
     }
 
-    public fun clear() {
+    public override fun clear() {
         val removed = ArrayList<DBObject>()
         dbCollection.drop()
         flush()
@@ -209,10 +209,10 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
 
     public override fun isEmpty(): Boolean = idMap.isEmpty()
 
-    //public override fun iterator(): MutableIterator<DBObject> = collection.iterator() as MutableIterator<DBObject>
-    public override fun iterator(): Iterator<DBObject> = collection.iterator()
+    public override fun iterator(): MutableIterator<DBObject> = collection.iterator() as MutableIterator<DBObject>
+    //public override fun iterator(): MutableIterator<DBObject> = collection.iterator()
 
-    public fun remove(element: Any?): Boolean {
+    public override fun remove(element: Any?): Boolean {
         if (element is DBObject) {
             val result = dbCollection.remove(element)
             if (updateLocalCollectionEagerly) {
@@ -228,7 +228,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         }
         return false
     }
-    public fun removeAll(c: Collection<out Any?>): Boolean {
+    public override fun removeAll(c: Collection<out Any?>): Boolean {
         var answer = false
         for (element in c) {
             answer = answer || remove(element)
@@ -236,7 +236,7 @@ public class ObservableDbCollection(val dbCollection: DBCollection, val query: D
         return answer
     }
 
-    public fun retainAll(c: Collection<out Any?>): Boolean {
+    public override fun retainAll(c: Collection<out Any?>): Boolean {
         throw UnsupportedOperationException()
     }
 

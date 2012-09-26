@@ -45,7 +45,7 @@ abstract class LayoutServletFilter: Filter {
                     findLayoutTemplate(context)
                 } else null
                 if (context != null && layout != null) {
-                    val writer = response.getWriter().sure()
+                    val writer = response.getWriter()!!
                     layout.render(writer)
                     writer.flush()
                     response.setContentLength(bytesSize)

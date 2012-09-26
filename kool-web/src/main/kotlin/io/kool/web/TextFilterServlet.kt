@@ -18,7 +18,7 @@ class TextFilterServlet(val textFilter: TextFilter): HttpServlet() {
                     null
                 }
                 if (filterContext != null) {
-                    val writer = response.getWriter().sure()
+                    val writer = response.getWriter()!!
                     textFilter.filter(filterContext, writer)
                     writer.flush()
                     val contentType = filterContext.outputContentType

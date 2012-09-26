@@ -75,7 +75,7 @@ public abstract class Stream<out T> {
      *
      * We filter out consecutive events on *this* stream or events on *that* stream before there is an event on *this*.
      */
-    fun <R> followedBy(stream: Stream<R>): Stream<#(T,R)> {
+    fun <R> followedBy(stream: Stream<R>): Stream<Pair<T, R>> {
         return FollowedByStream(this, stream)
     }
 
@@ -96,7 +96,7 @@ public abstract class Stream<out T> {
      *
      * If there are multiple events on *this* stream then the previous event on *that* stream will be included
      */
-    fun <R> and(stream: Stream<R>): Stream<#(T,R)> {
+    fun <R> and(stream: Stream<R>): Stream<Pair<T, R>> {
         return AndStream(this, stream)
     }
 
@@ -106,7 +106,7 @@ public abstract class Stream<out T> {
      *
      * When there is an event on *this* stream then the event on *that* will be null and vice versa
      */
-    fun <R> merge(stream: Stream<R>): Stream<#(T?,R?)> {
+    fun <R> merge(stream: Stream<R>): Stream<Pair<T?, R?>> {
         return MergeStream(this, stream)
     }
 

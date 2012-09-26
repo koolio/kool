@@ -29,7 +29,7 @@ class SiteGenerator(val sourceDir: File, val outputDir: File) : Runnable {
                 val outFile = File(outputDir, relativePath)
                 outFile.directory.mkdirs()
                 if (output != null) {
-                    val template = layout(relativePath, it, output.sure())
+                    val template = layout(relativePath, it, output!!)
                     template.renderTo(outFile)
                 } else {
                     it.copyTo(outFile)

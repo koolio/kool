@@ -8,11 +8,11 @@ import javax.servlet.http.*
 class ResponseOutput(val response: ServletResponse): Output() {
 
     public override fun outputStream(): OutputStream {
-        return response.getOutputStream().sure()
+        return response.getOutputStream()!!
     }
 
     public override fun writer(): Writer {
-        return response.getWriter().sure()
+        return response.getWriter()!!
     }
 }
 
@@ -22,7 +22,7 @@ class BufferedResponseWrapper(response: HttpServletResponse): HttpServletRespons
 
     fun toBytes(): ByteArray {
         writer.flush()
-        return buffer.toByteArray().sure()
+        return buffer.toByteArray()!!
     }
 
     public override fun getWriter(): PrintWriter {
@@ -49,7 +49,7 @@ class TextBufferResponseWrapper(response: HttpServletResponse): HttpServletRespo
     val output = StringWriter();
 
     fun getOutputText(): String {
-        return output.toString().sure()
+        return output.toString()!!
     }
 
     public override fun getWriter(): PrintWriter {

@@ -40,6 +40,6 @@ class ByteArrayOutput() : TextOutputSupport() {
 
     override fun outputStream(): OutputStream = buffer
 
-    fun toByteArray(): ByteArray = buffer.toByteArray().sure()
+    fun toByteArray(): ByteArray = buffer.toByteArray()!!
 }
 

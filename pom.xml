@@ -124,6 +124,11 @@
           <groupId>org.jetbrains.kotlin</groupId>
           <artifactId>kotlin-maven-plugin</artifactId>
           <version>${kotlin.version}</version>
+          <configuration>
+            <annotationPaths>
+              <annotationPath>${basedir}/src/main/resources</annotationPath>
+            </annotationPaths>
+          </configuration>
           <executions>
             <execution>
               <id>compile</id>

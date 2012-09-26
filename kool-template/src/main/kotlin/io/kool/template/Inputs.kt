@@ -84,7 +84,7 @@ class FileInput(val file: File): TextInputSupport() {
 
 class URLInput(val url: URL): TextInputSupport() {
 
-    override fun inputStream(): InputStream = url.openStream().sure()
+    override fun inputStream(): InputStream = url.openStream()!!
 
     override fun reader(): Reader = inputStream().reader(charSet)
 

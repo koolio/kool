@@ -34,8 +34,8 @@ class JoinWindowsTest {
         val joinStream = withdrawStream.and(fraudStream)
 
         joinStream.open {
-            val withdraws = it._1
-            val frauds = it._2
+            val withdraws = it.first
+            val frauds = it.second
             for (withdraw in withdraws) {
                 for (fraud in frauds) {
                     if (withdraw.accountNumber == fraud.accountNumber) {
