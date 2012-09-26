@@ -19,8 +19,8 @@
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>concurrent</span><span class='DOT'>.</span><span class='IDENTIFIER'>Executor</span><span>
 
 </span><span class='hl-comment'>/**
- * A simple synchronous implementation of [[Executor]]
- */</span><span>
+* A simple synchronous implementation of [[Executor]]
+*/</span><span>
 </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>SynchronousExecutor</span><span> </span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Executor</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='public'>public</span><span> </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>execute</span><span class='LPAR'>(</span><span class='IDENTIFIER'>command</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Runnable</span><span class='QUEST'>?</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
         </span><span class='hl-keyword'>if</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>command</span><span> </span><span class='EXCLEQ'>!=</span><span> </span><span class='hl-keyword'>null</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>

@@ -27,18 +27,14 @@
 <a href='#26' name='26'>26</a>
 <a href='#27' name='27'>27</a>
 <a href='#28' name='28'>28</a>
-<a href='#29' name='29'>29</a>
-<a href='#30' name='30'>30</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
-
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Closeable</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>concurrent</span><span class='DOT'>.</span><span class='IDENTIFIER'>atomic</span><span class='DOT'>.</span><span class='IDENTIFIER'>AtomicBoolean</span><span>
 
 </span><span class='hl-comment'>/**
- * A useful base class for implementing a [[Cursor]]
- */</span><span>
+* A useful base class for implementing a [[Cursor]]
+*/</span><span>
 </span><span class='abstract'>abstract</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>AbstractCursor</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Cursor</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='private'>private</span><span> </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>closedFlag</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>AtomicBoolean</span><span class='LPAR'>(</span><span class='hl-keyword'>false</span><span class='RPAR'>)</span><span>
 

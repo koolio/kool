@@ -31,23 +31,13 @@
 <a href='#30' name='30'>30</a>
 <a href='#31' name='31'>31</a>
 <a href='#32' name='32'>32</a>
-<a href='#33' name='33'>33</a>
-<a href='#34' name='34'>34</a>
-<a href='#35' name='35'>35</a>
-<a href='#36' name='36'>36</a>
-<a href='#37' name='37'>37</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Closeable</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>ArrayList</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Collection</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>concurrent</span><span class='DOT'>.</span><span class='IDENTIFIER'>ConcurrentLinkedQueue</span><span>
-
 </span><span class='hl-comment'>/**
- * A simple [[Stream]] that can have elements injected into its active [[Handler]] instances
- */</span><span>
+* A simple [[Stream]] that can have elements injected into its active [[Handler]] instances
+*/</span><span>
 </span><span class='public'>public</span><span> </span><span class='open'>open</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>SimpleStream</span><span class='LT'>&lt;</span><span class='hl-keyword'>in</span><span> </span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>handlers</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>ConcurrentContainer</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>DefaultConcurrentContainer</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
 
     </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>open</span><span class='LPAR'>(</span><span class='IDENTIFIER'>handler</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Cursor</span><span> </span><span class='LBRACE'>{</span><span>

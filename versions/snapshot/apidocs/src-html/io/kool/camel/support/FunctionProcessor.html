@@ -19,18 +19,14 @@
 <a href='#18' name='18'>18</a>
 <a href='#19' name='19'>19</a>
 <a href='#20' name='20'>20</a>
-<a href='#21' name='21'>21</a>
-<a href='#22' name='22'>22</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>model</span><span class='DOT'>.</span><span class='IDENTIFIER'>ExpressionNode</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>model</span><span class='DOT'>.</span><span class='IDENTIFIER'>ProcessorDefinition</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Exchange</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Processor</span><span>
 
 </span><span class='hl-comment'>/**
- * Implements [[Processor]] using a function block
- */</span><span>
+* Implements [[Processor]] using a function block
+*/</span><span>
 </span><span class='public'>public</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>FunctionProcessor</span><span class='LPAR'>(</span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>block</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Exchange</span><span class='DOT'>.</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Unit</span><span class='RPAR'>)</span><span> </span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Processor</span><span> </span><span class='LBRACE'>{</span><span>
 
     </span><span class='public'>public</span><span> </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>toString</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>String</span><span class='QUEST'>?</span><span> </span><span class='LBRACE'>{</span><span>

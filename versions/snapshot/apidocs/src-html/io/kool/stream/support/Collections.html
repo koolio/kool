@@ -43,13 +43,15 @@
 <a href='#42' name='42'>42</a>
 <a href='#43' name='43'>43</a>
 <a href='#44' name='44'>44</a>
+<a href='#45' name='45'>45</a>
+<a href='#46' name='46'>46</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>concurrent</span><span class='DOT'>.</span><span class='IDENTIFIER'>ConcurrentLinkedQueue</span><span>
 
 </span><span class='hl-comment'>/**
- * A simple concurrent container API which is easy to implement using various strategies
- */</span><span>
+* A simple concurrent container API which is easy to implement using various strategies
+*/</span><span>
 </span><span class='hl-keyword'>trait</span><span> </span><span class='IDENTIFIER'>ConcurrentContainer</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='hl-comment'>/**
      * Process each item in the container
@@ -71,7 +73,9 @@
     </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>list</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>ConcurrentLinkedQueue</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
 
     </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>forEach</span><span class='LPAR'>(</span><span class='IDENTIFIER'>fn</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Unit</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
-        </span><span class='hl-keyword'>for</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>element</span><span> </span><span class='hl-keyword'>in</span><span> </span><span class='IDENTIFIER'>list</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
+        </span><span class='EOL_COMMENT'>// TODO using an array would be better but for some reason iteration not supported?</span><span>
+        </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>copy</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>list</span><span class='DOT'>.</span><span class='IDENTIFIER'>toList</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
+        </span><span class='hl-keyword'>for</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>element</span><span> </span><span class='hl-keyword'>in</span><span> </span><span class='IDENTIFIER'>copy</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
             </span><span class='hl-keyword'>if</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>element</span><span> </span><span class='EXCLEQ'>!=</span><span> </span><span class='hl-keyword'>null</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
                 </span><span class='LPAR'>(</span><span class='IDENTIFIER'>fn</span><span class='RPAR'>)</span><span class='LPAR'>(</span><span class='IDENTIFIER'>element</span><span class='RPAR'>)</span><span>
             </span><span class='RBRACE'>}</span><span>

@@ -20,8 +20,8 @@
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>model</span><span class='DOT'>.</span><span class='IDENTIFIER'>ProcessorDefinition</span><span>
 
 </span><span class='hl-comment'>/**
- * Supports the *then* syntax in the DSL to chain predicates and action blocks
- */</span><span>
+* Supports the *then* syntax in the DSL to chain predicates and action blocks
+*/</span><span>
 </span><span class='public'>public</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>ThenDefinition</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>ProcessorDefinition</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>expressionBlock</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>ExpressionNode</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
 
     </span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>then</span><span class='LPAR'>(</span><span class='IDENTIFIER'>block</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>ExpressionNode</span><span class='DOT'>.</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Any</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>T</span><span> </span><span class='LBRACE'>{</span><span>

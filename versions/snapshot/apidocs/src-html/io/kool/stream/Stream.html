@@ -199,13 +199,18 @@
 <a href='#198' name='198'>198</a>
 <a href='#199' name='199'>199</a>
 <a href='#200' name='200'>200</a>
+<a href='#201' name='201'>201</a>
+<a href='#202' name='202'>202</a>
+<a href='#203' name='203'>203</a>
+<a href='#204' name='204'>204</a>
+<a href='#205' name='205'>205</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Closeable</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Queue</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>List</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Map</span><span>
+
+
 
 </span><span class='hl-comment'>/**
  * Represents an asynchronous stream of events which can be composed and processed asynchronously.
@@ -261,12 +266,22 @@
     </span><span class='RBRACE'>}</span><span>
 
     </span><span class='hl-comment'>/**
+     * Returns a new [[Stream]] which processes each event with the given handler first before calling the underlying
+     * handler
+     */</span><span>
+    </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>forEach</span><span class='LPAR'>(</span><span class='IDENTIFIER'>block</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Unit</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span>  </span><span class='LBRACE'>{</span><span>
+        </span><span class='hl-keyword'>return</span><span> </span><span class='IDENTIFIER'>DelegateStream</span><span class='LPAR'>(</span><span class='hl-keyword'>this</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
+            </span><span class='IDENTIFIER'>ForEachHandler</span><span class='LPAR'>(</span><span class='IDENTIFIER'>it</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>block</span><span class='RPAR'>)</span><span>
+        </span><span class='RBRACE'>}</span><span>
+    </span><span class='RBRACE'>}</span><span>
+
+    </span><span class='hl-comment'>/**
      * Returns a [[Stream]] which consumes events from *this* stream and *that* stream
      * and then raises events of type [[#(A,B)]] when there is an event on *stream1* followed by an event on *stream2*
      *
      * We filter out consecutive events on *this* stream or events on *that* stream before there is an event on *this*.
      */</span><span>
-    </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>followedBy</span><span class='LPAR'>(</span><span class='IDENTIFIER'>stream</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='HASH'>#</span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span class='IDENTIFIER'>R</span><span class='RPAR'>)</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
+    </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>followedBy</span><span class='LPAR'>(</span><span class='IDENTIFIER'>stream</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Pair</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
         </span><span class='hl-keyword'>return</span><span> </span><span class='IDENTIFIER'>FollowedByStream</span><span class='LPAR'>(</span><span class='hl-keyword'>this</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>stream</span><span class='RPAR'>)</span><span>
     </span><span class='RBRACE'>}</span><span>
 
@@ -287,7 +302,7 @@
      *
      * If there are multiple events on *this* stream then the previous event on *that* stream will be included
      */</span><span>
-    </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>and</span><span class='LPAR'>(</span><span class='IDENTIFIER'>stream</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='HASH'>#</span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span class='IDENTIFIER'>R</span><span class='RPAR'>)</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
+    </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>and</span><span class='LPAR'>(</span><span class='IDENTIFIER'>stream</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Pair</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
         </span><span class='hl-keyword'>return</span><span> </span><span class='IDENTIFIER'>AndStream</span><span class='LPAR'>(</span><span class='hl-keyword'>this</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>stream</span><span class='RPAR'>)</span><span>
     </span><span class='RBRACE'>}</span><span>
 
@@ -297,7 +312,7 @@
      *
      * When there is an event on *this* stream then the event on *that* will be null and vice versa
      */</span><span>
-    </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>merge</span><span class='LPAR'>(</span><span class='IDENTIFIER'>stream</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='HASH'>#</span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='QUEST'>?</span><span class='COMMA'>,</span><span class='IDENTIFIER'>R</span><span class='QUEST'>?</span><span class='RPAR'>)</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
+    </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>merge</span><span class='LPAR'>(</span><span class='IDENTIFIER'>stream</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>R</span><span class='GT'>&gt;</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Pair</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='QUEST'>?</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>R</span><span class='QUEST'>?</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
         </span><span class='hl-keyword'>return</span><span> </span><span class='IDENTIFIER'>MergeStream</span><span class='LPAR'>(</span><span class='hl-keyword'>this</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>stream</span><span class='RPAR'>)</span><span>
     </span><span class='RBRACE'>}</span><span>
 
@@ -389,14 +404,9 @@
  * Transforms the Stream&lt;Iterable&lt;T&gt;&gt; by grouping the contents of each stream element into a [[Map&lt;K, List&lt;T&gt;&gt;]]
  * using the given *toKey* function to calculate the key to use in the map for each value
  */</span><span>
-</span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>K</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>lang</span><span class='DOT'>.</span><span class='IDENTIFIER'>Iterable</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='DOT'>.</span><span class='IDENTIFIER'>groupBy</span><span class='LPAR'>(</span><span class='IDENTIFIER'>toKey</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>K</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>K</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>List</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
-</span><span class='BLOCK_COMMENT'>/*
-    TODO: depends on http://youtrack.jetbrains.com/issue/KT-2513 being fixed
-
-    return this.map&lt;Map&lt;K, List&lt;T&gt;&gt;&gt; { (t: java.lang.Iterable&lt;T&gt;) -&gt;
-        t.groupBy&lt;T,K&gt;(toKey)
-    }
-*/</span><span>
-    </span><span class='hl-keyword'>throw</span><span> </span><span class='IDENTIFIER'>UnsupportedOperationException</span><span class='LPAR'>(</span><span class='OPEN_QUOTE'>&quot;</span><span class='REGULAR_STRING_PART'>TODO: requires http://youtrack.jetbrains.com/issue/KT-2513 being fixed</span><span class='CLOSING_QUOTE'>&quot;</span><span class='RPAR'>)</span><span>
+</span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>K</span><span class='GT'>&gt;</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Iterable</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='DOT'>.</span><span class='IDENTIFIER'>groupBy</span><span class='LPAR'>(</span><span class='IDENTIFIER'>toKey</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>K</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>K</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>List</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
+    </span><span class='hl-keyword'>return</span><span> </span><span class='hl-keyword'>this</span><span class='DOT'>.</span><span class='IDENTIFIER'>map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Map</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>K</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>List</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
+        </span><span class='IDENTIFIER'>it</span><span class='DOT'>.</span><span class='IDENTIFIER'>groupBy</span><span class='LPAR'>(</span><span class='IDENTIFIER'>toKey</span><span class='RPAR'>)</span><span>
+    </span><span class='RBRACE'>}</span><span>
 </span><span class='RBRACE'>}</span><span>
 </span></td></tr></table></body></html>

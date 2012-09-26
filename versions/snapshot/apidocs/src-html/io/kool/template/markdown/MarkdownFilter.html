@@ -28,18 +28,16 @@
 <a href='#27' name='27'>27</a>
 <a href='#28' name='28'>28</a>
 <a href='#29' name='29'>29</a>
-<a href='#30' name='30'>30</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>template</span><span class='DOT'>.</span><span class='IDENTIFIER'>markdown</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>template</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
-
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>pegdown</span><span class='DOT'>.</span><span class='IDENTIFIER'>PegDownProcessor</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>pegdown</span><span class='DOT'>.</span><span class='IDENTIFIER'>Extensions</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>pegdown</span><span class='DOT'>.</span><span class='IDENTIFIER'>LinkRenderer</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>pegdown</span><span class='DOT'>.</span><span class='IDENTIFIER'>PegDownProcessor</span><span>
 
 </span><span class='hl-comment'>/**
- * Converts markdown into HTML
- */</span><span>
+* Converts markdown into HTML
+*/</span><span>
 </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>MarkdownFilter</span><span> </span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>TextFilter</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='public'>public</span><span> </span><span class='hl-keyword'>var</span><span> </span><span class='IDENTIFIER'>markdownProcessor</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>PegDownProcessor</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>PegDownProcessor</span><span class='LPAR'>(</span><span class='IDENTIFIER'>Extensions</span><span class='DOT'>.</span><span class='IDENTIFIER'>ALL</span><span class='RPAR'>)</span><span>
     </span><span class='public'>public</span><span> </span><span class='hl-keyword'>var</span><span> </span><span class='IDENTIFIER'>linkRendered</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>LinkRenderer</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>LinkRenderer</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>

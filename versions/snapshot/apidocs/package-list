@@ -1,5 +1,10 @@
 io.kool.camel
+io.kool.collection
+io.kool.collection.support
 io.kool.math
+io.kool.mongodb
+io.kool.mongodb.support
 io.kool.stream
 io.kool.template
 io.kool.template.html
+kotlin

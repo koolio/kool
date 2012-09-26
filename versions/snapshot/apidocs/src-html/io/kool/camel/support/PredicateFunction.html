@@ -22,12 +22,12 @@
 <a href='#21' name='21'>21</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Predicate</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Exchange</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Predicate</span><span>
 
 </span><span class='hl-comment'>/**
- * An implementation of [[Predicate]] which takes a function
- */</span><span>
+* An implementation of [[Predicate]] which takes a function
+*/</span><span>
 </span><span class='public'>public</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>PredicateFunction</span><span class='LPAR'>(</span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>fn</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Exchange</span><span class='DOT'>.</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Boolean</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Predicate</span><span> </span><span class='LBRACE'>{</span><span>
 </span><span class='EOL_COMMENT'>//public class PredicateFunction(val fn: (Exchange) -&gt; Boolean): Predicate {</span><span>
     </span><span class='public'>public</span><span> </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>matches</span><span class='LPAR'>(</span><span class='IDENTIFIER'>exchange</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Exchange</span><span class='QUEST'>?</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Boolean</span><span> </span><span class='LBRACE'>{</span><span>

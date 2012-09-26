@@ -92,24 +92,39 @@
 <a href='#91' name='91'>91</a>
 <a href='#92' name='92'>92</a>
 <a href='#93' name='93'>93</a>
+<a href='#94' name='94'>94</a>
+<a href='#95' name='95'>95</a>
+<a href='#96' name='96'>96</a>
+<a href='#97' name='97'>97</a>
+<a href='#98' name='98'>98</a>
+<a href='#99' name='99'>99</a>
+<a href='#100' name='100'>100</a>
+<a href='#101' name='101'>101</a>
+<a href='#102' name='102'>102</a>
+<a href='#103' name='103'>103</a>
+<a href='#104' name='104'>104</a>
+<a href='#105' name='105'>105</a>
+<a href='#106' name='106'>106</a>
+<a href='#107' name='107'>107</a>
+<a href='#108' name='108'>108</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span>
 
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Closeable</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>concurrent</span><span class='DOT'>.</span><span class='IDENTIFIER'>atomic</span><span class='DOT'>.</span><span class='IDENTIFIER'>AtomicBoolean</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>ArrayDeque</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Queue</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>concurrent</span><span class='DOT'>.</span><span class='IDENTIFIER'>atomic</span><span class='DOT'>.</span><span class='IDENTIFIER'>AtomicBoolean</span><span>
 
 </span><span class='hl-comment'>/**
- * Useful base class for [[Handler]] to avoid having to implement [[onComplete()]] or [[onError()]]
- */</span><span>
-</span><span class='abstract'>abstract</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>AbstractHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span> </span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>Closeable</span><span> </span><span class='LBRACE'>{</span><span>
+* Useful base class for [[Handler]] to avoid having to implement [[onComplete()]] or [[onError()]]
+*/</span><span>
+</span><span class='abstract'>abstract</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>AbstractHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>Closeable</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='private'>private</span><span> </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>closedFlag</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>AtomicBoolean</span><span class='LPAR'>(</span><span class='hl-keyword'>false</span><span class='RPAR'>)</span><span>
 
     </span><span class='public'>public</span><span> </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>close</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
         </span><span class='hl-keyword'>if</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>closedFlag</span><span class='DOT'>.</span><span class='IDENTIFIER'>compareAndSet</span><span class='LPAR'>(</span><span class='hl-keyword'>false</span><span class='COMMA'>,</span><span> </span><span class='hl-keyword'>true</span><span class='RPAR'>)</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
-            </span><span class='IDENTIFIER'>cursor</span><span class='SAFE_ACCESS'>?.</span><span class='IDENTIFIER'>close</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
             </span><span class='IDENTIFIER'>doClose</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
+            </span><span class='IDENTIFIER'>cursor</span><span class='SAFE_ACCESS'>?.</span><span class='IDENTIFIER'>close</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
         </span><span class='RBRACE'>}</span><span>
     </span><span class='RBRACE'>}</span><span>
 
@@ -118,6 +133,10 @@
      */</span><span>
     </span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>isClosed</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Boolean</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>closedFlag</span><span class='DOT'>.</span><span class='IDENTIFIER'>get</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
 
+    </span><span class='hl-comment'>/**
+     * Returns true if this object has been opened
+     */</span><span>
+    </span><span class='public'>public</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>isOpen</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Boolean</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>cursor</span><span> </span><span class='EXCLEQ'>!=</span><span> </span><span class='hl-keyword'>null</span><span> </span><span class='ANDAND'>&amp;&amp;</span><span> </span><span class='EXCL'>!</span><span class='IDENTIFIER'>isClosed</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
 
     </span><span class='hl-keyword'>var</span><span> </span><span class='IDENTIFIER'>cursor</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Cursor</span><span class='QUEST'>?</span><span> </span><span class='EQ'>=</span><span> </span><span class='hl-keyword'>null</span><span>
 
@@ -177,12 +196,23 @@
 </span><span class='hl-comment'>/**
  * A [[Handler]] which filters elements in the stream
  */</span><span>
-</span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>FilterHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>delegate</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='COMMA'>,</span><span> </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>predicate</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Boolean</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>DelegateHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>delegate</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
+</span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>FilterHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>delegate</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='COMMA'>,</span><span> </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>predicate</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Boolean</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>DelegateHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>delegate</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
 
     </span><span class='public'>public</span><span> </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>onNext</span><span class='LPAR'>(</span><span class='IDENTIFIER'>next</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
         </span><span class='hl-keyword'>if</span><span> </span><span class='LPAR'>(</span><span class='LPAR'>(</span><span class='IDENTIFIER'>predicate</span><span class='RPAR'>)</span><span class='LPAR'>(</span><span class='IDENTIFIER'>next</span><span class='RPAR'>)</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
             </span><span class='IDENTIFIER'>delegate</span><span class='DOT'>.</span><span class='IDENTIFIER'>onNext</span><span class='LPAR'>(</span><span class='IDENTIFIER'>next</span><span class='RPAR'>)</span><span>
         </span><span class='RBRACE'>}</span><span>
+    </span><span class='RBRACE'>}</span><span>
+</span><span class='RBRACE'>}</span><span>
+
+</span><span class='hl-comment'>/**
+ * A [[Handler]] which processes elements in the stream with a function first before delegating to the underlying handler
+ */</span><span>
+</span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>ForEachHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>delegate</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Handler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='COMMA'>,</span><span> </span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>fn</span><span class='COLON'>:</span><span> </span><span class='LPAR'>(</span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='ARROW'>-&gt;</span><span> </span><span class='IDENTIFIER'>Unit</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>DelegateHandler</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>T</span><span class='COMMA'>,</span><span> </span><span class='IDENTIFIER'>T</span><span class='GT'>&gt;</span><span class='LPAR'>(</span><span class='IDENTIFIER'>delegate</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
+
+    </span><span class='public'>public</span><span> </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>onNext</span><span class='LPAR'>(</span><span class='IDENTIFIER'>next</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>T</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
+        </span><span class='LPAR'>(</span><span class='IDENTIFIER'>fn</span><span class='RPAR'>)</span><span class='LPAR'>(</span><span class='IDENTIFIER'>next</span><span class='RPAR'>)</span><span>
+        </span><span class='IDENTIFIER'>delegate</span><span class='DOT'>.</span><span class='IDENTIFIER'>onNext</span><span class='LPAR'>(</span><span class='IDENTIFIER'>next</span><span class='RPAR'>)</span><span>
     </span><span class='RBRACE'>}</span><span>
 </span><span class='RBRACE'>}</span><span>
 </span></td></tr></table></body></html>

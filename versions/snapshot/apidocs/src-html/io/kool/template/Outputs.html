@@ -44,16 +44,14 @@
 <a href='#43' name='43'>43</a>
 <a href='#44' name='44'>44</a>
 <a href='#45' name='45'>45</a>
-<a href='#46' name='46'>46</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>template</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>kotlin</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>nio</span><span class='DOT'>.</span><span class='IDENTIFIER'>charset</span><span class='DOT'>.</span><span class='IDENTIFIER'>Charset</span><span>
 
 </span><span class='hl-comment'>/**
- * Represents an output which may be textual
- */</span><span>
+* Represents an output which may be textual
+*/</span><span>
 </span><span class='abstract'>abstract</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>Output</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='hl-comment'>/**
      * Returns the [[Writer]] of the Output
@@ -88,7 +86,7 @@
 
     </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>outputStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>OutputStream</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>buffer</span><span>
 
-    </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>toByteArray</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>ByteArray</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>buffer</span><span class='DOT'>.</span><span class='IDENTIFIER'>toByteArray</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='DOT'>.</span><span class='IDENTIFIER'>sure</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
+    </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>toByteArray</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>ByteArray</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>buffer</span><span class='DOT'>.</span><span class='IDENTIFIER'>toByteArray</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='EXCLEXCL'>!!</span><span>
 </span><span class='RBRACE'>}</span><span>
 
 </span></td></tr></table></body></html>

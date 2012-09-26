@@ -457,17 +457,15 @@
 <a href='#456' name='456'>456</a>
 <a href='#457' name='457'>457</a>
 <a href='#458' name='458'>458</a>
-<a href='#459' name='459'>459</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>List</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Comparator</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Endpoint</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Exchange</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>model</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>spi</span><span class='DOT'>.</span><span class='IDENTIFIER'>IdempotentRepository</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>processor</span><span class='DOT'>.</span><span class='IDENTIFIER'>aggregate</span><span class='DOT'>.</span><span class='IDENTIFIER'>AggregationStrategy</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>Comparator</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>spi</span><span class='DOT'>.</span><span class='IDENTIFIER'>IdempotentRepository</span><span>
 
 </span><span class='hl-comment'>/**
 * A builder API to help create a new [[RouteDefinition]] on a [[CamelContext]]

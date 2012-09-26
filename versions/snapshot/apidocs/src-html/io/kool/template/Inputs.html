@@ -98,25 +98,21 @@
 <a href='#97' name='97'>97</a>
 <a href='#98' name='98'>98</a>
 <a href='#99' name='99'>99</a>
-<a href='#100' name='100'>100</a>
-<a href='#101' name='101'>101</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>template</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Reader</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>ByteArrayInputStream</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>File</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>InputStream</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>FileInputStream</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>FileReader</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>net</span><span class='DOT'>.</span><span class='IDENTIFIER'>URL</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>ByteArrayInputStream</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>InputStream</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>Reader</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>StringReader</span><span>
-
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>kotlin</span><span class='DOT'>.</span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>defaultCharset</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>net</span><span class='DOT'>.</span><span class='IDENTIFIER'>URL</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>java</span><span class='DOT'>.</span><span class='IDENTIFIER'>nio</span><span class='DOT'>.</span><span class='IDENTIFIER'>charset</span><span class='DOT'>.</span><span class='IDENTIFIER'>Charset</span><span>
 
 </span><span class='hl-comment'>/**
- * Represents an input
- */</span><span>
+* Represents an input
+*/</span><span>
 </span><span class='abstract'>abstract</span><span> </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>Input</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
 
     </span><span class='hl-comment'>/**
@@ -188,7 +184,7 @@
 
 </span><span class='hl-keyword'>class</span><span> </span><span class='IDENTIFIER'>URLInput</span><span class='LPAR'>(</span><span class='hl-keyword'>val</span><span> </span><span class='IDENTIFIER'>url</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>URL</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>TextInputSupport</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span> </span><span class='LBRACE'>{</span><span>
 
-    </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>inputStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>InputStream</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>url</span><span class='DOT'>.</span><span class='IDENTIFIER'>openStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='DOT'>.</span><span class='IDENTIFIER'>sure</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span>
+    </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>inputStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>InputStream</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>url</span><span class='DOT'>.</span><span class='IDENTIFIER'>openStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='EXCLEXCL'>!!</span><span>
 
     </span><span class='override'>override</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>reader</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Reader</span><span> </span><span class='EQ'>=</span><span> </span><span class='IDENTIFIER'>inputStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='DOT'>.</span><span class='IDENTIFIER'>reader</span><span class='LPAR'>(</span><span class='IDENTIFIER'>charSet</span><span class='RPAR'>)</span><span>
 

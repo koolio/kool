@@ -52,25 +52,17 @@
 <a href='#51' name='51'>51</a>
 <a href='#52' name='52'>52</a>
 <a href='#53' name='53'>53</a>
-<a href='#54' name='54'>54</a>
-<a href='#55' name='55'>55</a>
-<a href='#56' name='56'>56</a>
-<a href='#57' name='57'>57</a>
 </td><td><span class='hl-keyword'>package</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span>
 
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>support</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>CamelContext</span><span>
+</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>io</span><span class='DOT'>.</span><span class='IDENTIFIER'>kool</span><span class='DOT'>.</span><span class='IDENTIFIER'>stream</span><span class='DOT'>.</span><span class='MUL'>*</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Endpoint</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>util</span><span class='DOT'>.</span><span class='IDENTIFIER'>CamelContextHelper</span><span>
-</span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>impl</span><span class='DOT'>.</span><span class='IDENTIFIER'>DefaultCamelContext</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Exchange</span><span>
 </span><span class='import'>import</span><span> </span><span class='IDENTIFIER'>org</span><span class='DOT'>.</span><span class='IDENTIFIER'>apache</span><span class='DOT'>.</span><span class='IDENTIFIER'>camel</span><span class='DOT'>.</span><span class='IDENTIFIER'>Message</span><span>
 
 </span><span class='hl-comment'>/**
- * Creates a stream of [[Message]] objects by consuming from the given [[Endpoint]] URI
- */</span><span>
+* Creates a stream of [[Message]] objects by consuming from the given [[Endpoint]] URI
+*/</span><span>
 </span><span class='inline'>inline</span><span> </span><span class='hl-keyword'>fun</span><span> </span><span class='IDENTIFIER'>Endpoint</span><span class='DOT'>.</span><span class='IDENTIFIER'>toStream</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='COLON'>:</span><span> </span><span class='IDENTIFIER'>Stream</span><span class='LT'>&lt;</span><span class='IDENTIFIER'>Message</span><span class='GT'>&gt;</span><span> </span><span class='LBRACE'>{</span><span>
     </span><span class='hl-keyword'>return</span><span> </span><span class='IDENTIFIER'>toStream</span><span class='LBRACE'>{</span><span> </span><span class='IDENTIFIER'>it</span><span class='DOT'>.</span><span class='IDENTIFIER'>getIn</span><span class='LPAR'>(</span><span class='RPAR'>)</span><span class='EXCLEXCL'>!!</span><span> </span><span class='RBRACE'>}</span><span>
 </span><span class='RBRACE'>}</span><span>
