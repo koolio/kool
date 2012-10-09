@@ -73,7 +73,10 @@
             <ignorePackage>org.slf4j</ignorePackage>
             <ignorePackage>org.xml</ignorePackage>
             <ignorePackage>org.apache</ignorePackage>
+            <ignorePackage>kotlin</ignorePackage>
             <ignorePackage>io.kool.camel.support</ignorePackage>
+            <ignorePackage>io.kool.collection.support</ignorePackage>
+            <ignorePackage>io.kool.mongodb.support</ignorePackage>
             <ignorePackage>io.kool.stream.beans</ignorePackage>
             <ignorePackage>io.kool.stream.support</ignorePackage>
             <ignorePackage>io.kool.template.markdown</ignorePackage>
@@ -89,13 +92,14 @@
             <io.kool.camel>[Kool Camel DSL](http://kool.io/camel.html), extensions and integration with [Kool
               Streams](http://kool.io/streams.html)
             </io.kool.camel>
+            <io.kool.collection>Observable Collection API
+            </io.kool.collection>
             <io.kool.math>Extension functions using [Apache Commons Math](http://commons.apache.org/math/) to easily
               perform calculations and statistics on collections
             </io.kool.math>
             <io.kool.stream>[Kool Streams](http://kool.io/streams.html) for working with events and asynchronous
               collections
             </io.kool.stream>
-            ah lemme check :)
             <io.kool.mongodb>[Kool MongoDb](http://kool.io/mongodb.html) for working with
               [MongoDb](http://www.mongodb.org/)
             </io.kool.mongodb>
