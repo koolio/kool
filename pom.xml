@@ -38,6 +38,7 @@
     <camel.version>2.9.2</camel.version>
     <common-math-version>2.2</common-math-version>
     <jackson-version>1.9.8</jackson-version>
+    <jackson-2-version>2.1.0</jackson-2-version>
     <javafx-jar>${java.home}/lib/jfxrt.jar</javafx-jar>
     <javax.servlet.api.version>3.0.1</javax.servlet.api.version>
     <jersey-version>1.14</jersey-version>

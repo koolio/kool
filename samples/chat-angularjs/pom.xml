@@ -18,9 +18,9 @@
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
-        	<groupId>org.codehaus.jackson</groupId>
-        	<artifactId>jackson-jaxrs</artifactId>
-        	<version>${jackson-version}</version>
+          <groupId>com.fasterxml.jackson.jaxrs</groupId>
+          <artifactId>jackson-jaxrs-json-provider</artifactId>
+          <version>${jackson-2-version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -136,7 +136,7 @@
                     </webAppConfig>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>8080</port>
+                            <port>9080</port>
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>

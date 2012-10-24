@@ -1,7 +1,7 @@
 angular.module('Koolio', ['ngResource']);
 
 function ProductController($scope, $resource, $location) {
-    var resourceURI = $location.path() + '/rest/products';
+    var resourceURI = $location.path() + '/api/products';
     var Model = $resource(resourceURI);
     $scope.results = Model.get();
 

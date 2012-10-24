@@ -5,7 +5,7 @@ function ChatController($scope, $resource, $location) {
     $scope.disabled = true;
     $scope.connectionStatus = 'Connecting...';
 
-    var resourceUrl = $location.path() + '/rest/chat';
+    var resourceUrl = $location.path() + '/api/chat';
     var Message = $resource(resourceUrl);
     $scope.collection = Message.get();
 
