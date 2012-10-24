@@ -1,0 +1,8 @@
+<root>
+  <item name='com.mongodb.DBCollection com.mongodb.DBCursor find()'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='com.mongodb.DBCursor java.util.Iterator&lt;com.mongodb.DBObject&gt; iterator()'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+</root>
