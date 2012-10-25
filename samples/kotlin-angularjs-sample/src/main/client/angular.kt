@@ -12,7 +12,7 @@ native("angular") public var angular: Angular = null!!
 
 native
 trait Angular {
-    fun module(name: String): AngularModule
+    fun module(name: String, arguments: Array<Any>): AngularModule
 }
 
 native

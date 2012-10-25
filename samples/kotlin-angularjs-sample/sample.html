@@ -5,20 +5,29 @@
 
     <!-- this is the bootstrap mechanism to initialise our Kotlin application -->
     <script type="text/javascript" src="src/main/webapp/lib/jquery.js"></script>
+    <script type="text/javascript" src="src/main/webapp/lib/angular-1.0.1.js"></script>
     <script type="text/javascript" src="target/js/kotlin-lib-ecma3.js"></script>
     <script type="text/javascript" src="target/js/kotlin-lib.js"></script>
+    <script type="text/javascript" src="target/js/kotlin-maps.js"></script>
     <script type="text/javascript" src="target/js/kotlin-angularjs-sample.js"></script>
 </head>
-<body>
+<body ng-app="myApp">
+
 <h1>Sample</h1>
 
-<p>This example HTML was loaded from a local file!</p>
+<div ng-controller="ProductController">
+    <form ng-submit="save()">
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
 
-<div id="view"/>
+        <input class="btn-primary" type="submit" value="add">
 
-<p>Should have generated stuff above...</p>
+        <h1>Hello {{yourName}}!</h1>
+    </form>
+</div>
 
-<script  type="text/javascript">
+<script type="text/javascript">
     $(document).ready(Kotlin.modules['kotlin-angularjs-sample'].client.main())
 </script>
 

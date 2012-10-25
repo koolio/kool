@@ -1,21 +1,18 @@
 package client
 
+import js.Json
+
 fun main(args: Array<String>) {
-    println("Hello world!")
-
-    angular.module("Foo").controller("ProductController",  {
-        (`$scope`: Any) -> ProductController(`$scope`)
-    } )
-
-    println("Added controller!")
-}
-
-class ProductController(val scope: Any) {
-    fun clear() {
-        println("Cleared!")
-    }
-
-    fun save() {
-        println("Saved!")
-    }
+    println("Registering angularjs controller...")
+    val myApp = angular.module("myApp", array())
+    myApp.controller("ProductController",  {
+        (`$scope`: Json) ->
+            `$scope`["clear"] = {() ->
+                println("Cleared!")
+            }
+            `$scope`["save"] = {() ->
+                println("Saved!")
+            }
+    })
+    println("Controller added!")
 }
