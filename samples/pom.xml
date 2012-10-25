@@ -16,6 +16,7 @@
 
     <modules>
         <module>chat-angularjs</module>
+        <module>kotlin-angularjs-sample</module>
 <!--
         <module>crud-jaxrs2</module>
 -->
