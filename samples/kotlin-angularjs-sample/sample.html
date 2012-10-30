@@ -3,8 +3,6 @@
 <head>
     <title>Sample</title>
 
-    <!-- this is the bootstrap mechanism to initialise our Kotlin application -->
-    <script type="text/javascript" src="src/main/webapp/lib/jquery.js"></script>
     <script type="text/javascript" src="src/main/webapp/lib/angular-1.0.1.js"></script>
     <script type="text/javascript" src="target/js/kotlin-lib-ecma3.js"></script>
     <script type="text/javascript" src="target/js/kotlin-lib.js"></script>
@@ -26,10 +24,6 @@
         <h1>Hello {{yourName}}!</h1>
     </form>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(Kotlin.modules['kotlin-angularjs-sample'].client.main())
-</script>
 
 </body>
 </html>

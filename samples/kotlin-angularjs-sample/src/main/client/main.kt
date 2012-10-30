@@ -1,4 +1,4 @@
-package client
+// we are a global entry point so no package
 
 import js.Json
 
